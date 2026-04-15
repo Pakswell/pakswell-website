@@ -124,7 +124,11 @@
     "gallery_cap7": "Single collar on EPAL pallet",
     "gallery_cap8": "Products ready for export",
     "gallery_cap9": "Full height assembly",
-    "gallery_cap10": "Versatile applications"
+    "gallery_cap10": "Versatile applications",
+    "about_hinge_title": "Pallet Collar Hinges",
+    "about_hinge": "PAKSWELL operates its own dedicated production line for <strong style=\"color:var(--primary);\">pallet collar hinges</strong>. With a monthly production capacity of over 1.5 million pieces, we offer a reliable and consistent supply of high-quality galvanized steel hinges — ensuring full compatibility with our pallet collars and meeting the demands of large-volume buyers worldwide.",
+    "about_privacy_title": "Client Confidentiality",
+    "about_privacy": "We do not display any client names, logos, or partnership details on our website. Protecting the privacy and commercial interests of every partner is a core principle of how we do business. Your trust matters — every partnership detail stays between us."
   },
   "th": {
     "topbar_quote": "ขอใบเสนอราคา",
@@ -251,7 +255,11 @@
     "gallery_cap7": "คอลลาร์ชั้นเดียวบนพาเลท EPAL",
     "gallery_cap8": "ผลิตภัณฑ์พร้อมส่งออก",
     "gallery_cap9": "การประกอบเต็มความสูง",
-    "gallery_cap10": "การใช้งานที่หลากหลาย"
+    "gallery_cap10": "การใช้งานที่หลากหลาย",
+    "about_hinge_title": "บานพับคอลลาร์พาเลท",
+    "about_hinge": "PAKSWELL มีสายการผลิต<strong style=\"color:var(--primary);\">บานพับคอลลาร์พาเลท</strong>โดยเฉพาะ กำลังการผลิตรายเดือนกว่า 1.5 ล้านชิ้น เราให้บริการบานพับเหล็กชุบสังกะสีคุณภาพสูงอย่างสม่ำเสมอ — รับประกันความเข้ากันได้กับคอลลาร์พาเลทของเราและตอบสนองความต้องการของผู้ซื้อปริมาณมากทั่วโลก",
+    "about_privacy_title": "การรักษาความลับของลูกค้า",
+    "about_privacy": "เราไม่แสดงชื่อลูกค้า โลโก้ หรือรายละเอียดความร่วมมือบนเว็บไซต์ของเรา การปกป้องความเป็นส่วนตัวและผลประโยชน์ทางการค้าของทุกพันธมิตรเป็นหลักการหลักในการดำเนินธุรกิจของเรา"
   },
   "zh-TW": {
     "topbar_quote": "索取報價",
@@ -378,7 +386,11 @@
     "gallery_cap7": "單層圍板搭配EPAL托盤",
     "gallery_cap8": "產品備貨出口",
     "gallery_cap9": "全高度組裝展示",
-    "gallery_cap10": "多功能應用場景"
+    "gallery_cap10": "多功能應用場景",
+    "about_hinge_title": "圍板鉵鏈",
+    "about_hinge": "PAKSWELL 擁有自己的<strong style=\"color:var(--primary);\">圍板鉵鏈</strong>專用生產線。月產能超過150萬件，我們能夠穩定供應高品質鎢鋅鋼鉵鏈——與我們的圍板完全相容，滿足全球大批量採購商的需求。",
+    "about_privacy_title": "客戶資訊保密",
+    "about_privacy": "我們不在網站上展示任何客戶名稱、標識或合作詳情。保護每一位合作夥伴的隱私和商業利益，是我們經營的核心原則。您的信任至關重要——所有合作細節僅限雙方之間。"
   },
   "zh-CN": {
     "topbar_quote": "获取报价",
@@ -531,7 +543,11 @@
     "header_tagline": "包装解决方案",
     "footer_brand": "PAKSWELL GROUP",
     "form_product_lids": "胶合板盖板",
-    "form_product_corner": "塑料堆叠角（黄色）"
+    "form_product_corner": "塑料堆叠角（黄色）",
+    "about_hinge_title": "围板铰链",
+    "about_hinge": "PAKSWELL 拥有自己的<strong style=\"color:var(--primary);\">围板铰链</strong>专用生产线。月产能超过150万件，我们能够稳定供应高品质镀锌钢铰链——与我们的围板完全兼容，满足全球大批量采购商的需求。",
+    "about_privacy_title": "客户信息保密",
+    "about_privacy": "我们不在网站上展示任何客户名称、标识或合作详情。保护每一位合作伙伴的隐私和商业利益，是我们经营的核心原则。您的信任至关重要——所有合作细节仅限双方之间。"
   },
   "vi": {
     "topbar_quote": "Yêu cầu báo giá",
@@ -658,7 +674,11 @@
     "gallery_cap7": "Collar đơn trên pallet EPAL",
     "gallery_cap8": "Sản phẩm sẵn sàng xuất khẩu",
     "gallery_cap9": "Lắp ráp toàn chiều cao",
-    "gallery_cap10": "Ứng dụng đa năng"
+    "gallery_cap10": "Ứng dụng đa năng",
+    "about_hinge_title": "Bản lề Pallet Collar",
+    "about_hinge": "PAKSWELL vận hành dây chuyền sản xuất chuyên dụng cho <strong style=\"color:var(--primary);\">bản lề pallet collar</strong>. Với công suất hàng tháng hơn 1,5 triệu chiếc, chúng tôi cung cấp nguồn bản lề thép mạ kẽm chất lượng cao ổn định — đảm bảo tương thích hoàn toàn với pallet collar và đáp ứng nhu cầu của người mua số lượng lớn trên toàn thế giới.",
+    "about_privacy_title": "Bảo mật thông tin khách hàng",
+    "about_privacy": "Chúng tôi không hiển thị tên khách hàng, logo hoặc chi tiết hợp tác trên trang web. Bảo vệ quyền riêng tư và lợi ích thương mại của mọi đối tác là nguyên tắc cốt lõi trong cách chúng tôi kinh doanh."
   },
   "ko": {
     "topbar_quote": "견적 요청",
@@ -785,7 +805,11 @@
     "gallery_cap7": "EPAL 팔레트 위 단층 칼라",
     "gallery_cap8": "수출 준비 완료 제품",
     "gallery_cap9": "전체 높이 조립",
-    "gallery_cap10": "다양한 활용 사례"
+    "gallery_cap10": "다양한 활용 사례",
+    "about_hinge_title": "팔레트 칼라 힌지",
+    "about_hinge": "PAKSWELL은 <strong style=\"color:var(--primary);\">팔레트 칼라 힌지</strong> 전용 생산 라인을 운영하고 있습니다. 월 150만 개 이상의 생산 능력으로 고품질 아연 도금 강철 힌지를 안정적으로 공급하며, 팔레트 칼라와의 완벽한 호환성을 보장하고 전 세계 대량 구매자의 수요를 충족합니다.",
+    "about_privacy_title": "고객 정보 기밀",
+    "about_privacy": "당사는 웹사이트에 고객 이름, 로고 또는 파트너십 세부 정보를 표시하지 않습니다. 모든 파트너의 프라이버시와 상업적 이익을 보호하는 것은 당사 비즈니스의 핵심 원칙입니다."
   },
   "ja": {
     "topbar_quote": "見積もり依頼",
@@ -912,6 +936,10 @@
     "gallery_cap7": "EPALパレット上の単層カラー",
     "gallery_cap8": "輸出準備完了製品",
     "gallery_cap9": "フルハイト組立",
-    "gallery_cap10": "多用途アプリケーション"
+    "gallery_cap10": "多用途アプリケーション",
+    "about_hinge_title": "パレットカラーヒンジ",
+    "about_hinge": "PAKSWELLは<strong style=\"color:var(--primary);\">パレットカラーヒンジ</strong>専用の生産ラインを運営しています。月産150万個以上の生産能力で、高品質の亜鉛メッキ鋼ヒンジを安定供給し、パレットカラーとの完全な互換性を確保し、世界中の大口バイヤーのニーズに対応します。",
+    "about_privacy_title": "顧客情報の機密保持",
+    "about_privacy": "当社はウェブサイトにお客様の名前、ロゴ、パートナーシップの詳細を表示しません。すべてのパートナーのプライバシーと商業的利益を保護することは、当社のビジネスの核心原則です。"
   }
 }

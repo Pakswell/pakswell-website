@@ -2,6 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18091479514"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-18091479514');
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EPAL Pallets & Pallet Collars Manufacturer | PAKSWELL</title>
     <meta name="description" content="PAKSWELL — EPAL certified pallet and pallet collar manufacturer in China. 365-day stock availability. ISPM 15 compliant. Own heat treatment facility. 6 production bases. Fast container shipping to Southeast Asia, Japan, Korea and Taiwan.">
@@ -1345,6 +1353,14 @@
                 result.style.color = '#28a745';
                 result.textContent = getMsg('success');
                 form.reset();
+                // Google Ads conversion tracking
+                if (typeof gtag === 'function') {
+                    gtag('event', 'conversion', {
+                        'send_to': 'AW-18091479514/5nFFCKKxnZwcENqj2LJD',
+                        'value': 1.0,
+                        'currency': 'USD'
+                    });
+                }
             } else {
                 result.style.color = '#dc3545';
                 result.textContent = getMsg('error');

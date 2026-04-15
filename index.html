@@ -846,7 +846,7 @@
             section { padding: 60px 0; }
             .gallery-grid { grid-template-columns: repeat(2, 1fr); }
             .gallery-item.gallery-wide { grid-column: span 1; }
-            .gallery-item.gallery-tall { grid-row: span 1; }
+            .gallery-item.gallery-tall { grid-row: span 1; }\n            #about .container > div:last-child { grid-template-columns: 1fr !important; }
         }
     </style>
 </head>
@@ -1047,18 +1047,34 @@
     </div>
 
     <!-- ABOUT US -->
-    <section id="about" style="padding: 80px 0;">
+    <section id="about" style="padding: 90px 0; background: #fff;">
         <div class="container">
             <div class="section-header">
                 <div class="section-label" data-i18n="about_label">About Us</div>
                 <h2 class="section-title" data-i18n="about_title">Who We Are</h2>
             </div>
-            <div style="max-width:800px; margin:0 auto; text-align:center; font-size:16px; line-height:1.9; color:var(--text-light);">
-                <p data-i18n="about_desc">Founded in 2015, PAKSWELL has been dedicated to the wooden packaging industry for over 11 years. With self-owned production facilities and warehouses across China, we have established ourselves as a leading manufacturer of EPAL pallets and pallet collars. Over a decade of focused expertise in production and export means we understand exactly what our customers need — from quality packaging solutions to full import & export compliance documentation. We welcome you to visit our factories for inspection and cooperation.</p>
-                <p style="margin-top:16px;" data-i18n="about_hinge">In addition to EPAL pallets and pallet collars, PAKSWELL operates its own dedicated production line for <strong style="color:var(--primary);">pallet collar hinges</strong>. With a monthly production capacity of over 1.5 million pieces, we offer a reliable and consistent supply of high-quality galvanized steel hinges — ensuring full compatibility with our pallet collars and meeting the demands of large-volume buyers worldwide.</p>
-                <p style="margin-top:20px; padding:16px 24px; background:rgba(27,58,92,0.05); border-left:3px solid var(--accent); border-radius:4px; font-size:14.5px; color:var(--text-light); text-align:left;" data-i18n="about_privacy">
-                    <strong style="color:var(--primary);">Client Confidentiality</strong> &mdash; We do not display any client names, logos, or partnership details on our website. Protecting the privacy and commercial interests of every partner is a core principle of how we do business.
-                </p>
+            <div style="max-width:860px; margin:0 auto 48px; text-align:center;">
+                <p style="font-size:17px; line-height:1.95; color:var(--text-light); margin:0;" data-i18n="about_desc">Founded in 2015, PAKSWELL has been dedicated to the wooden packaging industry for over 11 years. With self-owned production facilities and warehouses across China, we have established ourselves as a leading manufacturer of EPAL pallets and pallet collars. Over a decade of focused expertise in production and export means we understand exactly what our customers need — from quality packaging solutions to full import & export compliance documentation. We welcome you to visit our factories for inspection and cooperation.</p>
+            </div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:28px; max-width:920px; margin:0 auto 0;">
+                <div style="background:linear-gradient(135deg, rgba(27,58,92,0.04) 0%, rgba(27,58,92,0.08) 100%); border-radius:12px; padding:36px 32px; border:1px solid rgba(27,58,92,0.08);">
+                    <div style="display:flex; align-items:center; gap:12px; margin-bottom:18px;">
+                        <div style="width:44px; height:44px; background:var(--accent); border-radius:10px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                        </div>
+                        <h3 style="margin:0; font-size:18px; font-weight:700; color:var(--primary);" data-i18n="about_hinge_title">Pallet Collar Hinges</h3>
+                    </div>
+                    <p style="font-size:15px; line-height:1.85; color:var(--text-light); margin:0;" data-i18n-html="about_hinge">PAKSWELL operates its own dedicated production line for <strong style="color:var(--primary);">pallet collar hinges</strong>. With a monthly production capacity of over 1.5 million pieces, we offer a reliable and consistent supply of high-quality galvanized steel hinges — ensuring full compatibility with our pallet collars and meeting the demands of large-volume buyers worldwide.</p>
+                </div>
+                <div style="background:linear-gradient(135deg, rgba(27,58,92,0.04) 0%, rgba(27,58,92,0.08) 100%); border-radius:12px; padding:36px 32px; border:1px solid rgba(27,58,92,0.08);">
+                    <div style="display:flex; align-items:center; gap:12px; margin-bottom:18px;">
+                        <div style="width:44px; height:44px; background:var(--accent); border-radius:10px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                        </div>
+                        <h3 style="margin:0; font-size:18px; font-weight:700; color:var(--primary);" data-i18n="about_privacy_title">Client Confidentiality</h3>
+                    </div>
+                    <p style="font-size:15px; line-height:1.85; color:var(--text-light); margin:0;" data-i18n="about_privacy">We do not display any client names, logos, or partnership details on our website. Protecting the privacy and commercial interests of every partner is a core principle of how we do business. Your trust matters — every partnership detail stays between us.</p>
+                </div>
             </div>
         </div>
     </section>

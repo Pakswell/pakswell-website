@@ -1191,12 +1191,17 @@
 
                         <div class="form-row">
                             <div class="form-group">
+                        <!-- Extra honeypots -->
+                        <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-5000px;top:-5000px;" aria-hidden="true">
+                        <input type="text" name="confirm_email" tabindex="-1" autocomplete="off" style="position:absolute;left:-5000px;top:-5000px;" aria-hidden="true">
+                        <!-- Form load timestamp for bot detection -->
+                        <input type="hidden" name="ts_load" id="ts_load" value="">
                                 <label data-i18n="form_name">Full Name *</label>
-                                <input type="text" name="name" placeholder="Your name" data-i18n-ph="form_name_ph" required>
+                                <input type="text" name="name" placeholder="Your name" data-i18n-ph="form_name_ph" minlength="2" maxlength="80" required>
                             </div>
                             <div class="form-group">
                                 <label data-i18n="form_company">Company</label>
-                                <input type="text" name="company" placeholder="Company name" data-i18n-ph="form_company_ph">
+                                <input type="text" name="company" placeholder="Company name" data-i18n-ph="form_company_ph" minlength="2" maxlength="100">
                             </div>
                         </div>
                         <div class="form-row">
@@ -1211,7 +1216,7 @@
                         </div>
                         <div class="form-group">
                             <label data-i18n="form_product">Product Interest</label>
-                            <select name="product">
+                            <select name="product" required>
                                 <option value="" data-i18n="form_product_ph">Select a product...</option>
                                 <option value="epal-pallet" data-i18n="form_product_epal">EPAL Euro Pallets</option>
                                 <option value="pallet-collar" data-i18n="form_product_collar">Pallet Collars</option>
@@ -1223,7 +1228,7 @@
                         </div>
                         <div class="form-group">
                             <label data-i18n="form_message">Message</label>
-                            <textarea name="message" placeholder="Tell us about your requirements: quantity, destination, timeline..." data-i18n-ph="form_message_ph"></textarea>
+                            <textarea name="message" placeholder="Tell us about your requirements: quantity, destination, timeline..." data-i18n-ph="form_message_ph" minlength="15" maxlength="2000" required></textarea>
                         </div>
                         <button type="submit" class="btn-submit" data-i18n="form_submit">Send Inquiry to Our Specialist</button>
                         <div id="form-result" style="margin-top:12px; text-align:center; font-size:14px; display:none;"></div>
@@ -1340,8 +1345,33 @@
         }
     });
     // AJAX form submission
+    // Record form-load timestamp for anti-spam time check
+    (function(){ var el = document.getElementById('ts_load'); if (el) el.value = Date.now(); })();
+
     document.getElementById('inquiry-form').addEventListener('submit', function(e) {
         e.preventDefault();
+        // Anti-spam: time check (bots submit instantly)
+        var tsLoadEl = document.getElementById('ts_load');
+        var loadedAt = tsLoadEl && tsLoadEl.value ? parseInt(tsLoadEl.value, 10) : 0;
+        var elapsed = Date.now() - loadedAt;
+        if (!loadedAt || elapsed < 3000) { console.log('blocked: too fast'); return; }
+
+        // Anti-spam: honeypot fields must be empty
+        if (this.website && this.website.value) { console.log('blocked: honeypot website'); return; }
+        if (this.confirm_email && this.confirm_email.value) { console.log('blocked: honeypot ce'); return; }
+
+        // Anti-spam: reject when name equals company (common bot pattern)
+        var _n = (this.name && this.name.value || '').trim().toLowerCase();
+        var _c = (this.company && this.company.value || '').trim().toLowerCase();
+        if (_n && _c && _n === _c && _n.length < 6) { console.log('blocked: n==c'); return; }
+
+        // Anti-spam: 30 second rate limit via localStorage
+        try {
+            var lastSubmit = parseInt(localStorage.getItem('pw_last_submit') || '0', 10);
+            if (lastSubmit && (Date.now() - lastSubmit) < 30000) { console.log('blocked: rate limit'); return; }
+            localStorage.setItem('pw_last_submit', String(Date.now()));
+        } catch (err) {}
+
         var form = this;
         var btn = form.querySelector('.btn-submit');
         var result = document.getElementById('form-result');

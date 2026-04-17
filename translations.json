@@ -157,7 +157,18 @@
     "header_tagline": "Packaging Solutions",
     "footer_brand": "PAKSWELL",
     "form_product_lids": "Plywood Lids",
-    "form_product_corner": "Plastic Stacking Corners (Yellow)"
+    "form_product_corner": "Plastic Stacking Corners (Yellow)",
+    "thank_you_page_title": "Thank You",
+    "thank_you_heading": "Thank You!",
+    "thank_you_subheading": "Your inquiry has been received",
+    "thank_you_body": "We've forwarded your message to our EPAL pallet and pallet collar specialist. You can expect a detailed reply from our team at mark.lee@pakswell.com within 24 business hours.",
+    "thank_you_next_steps": "What happens next",
+    "thank_you_step_1": "Our sales specialist reviews your requirements, quantity, and destination.",
+    "thank_you_step_2": "We email you a detailed quote with pricing, lead time, and shipping options.",
+    "thank_you_step_3": "If needed, we schedule a call to discuss specifications, samples, or OEM requests.",
+    "thank_you_cta_back": "Back to Homepage",
+    "thank_you_cta_products": "Browse Products",
+    "thank_you_signature": "— The PAKSWELL Team"
   },
   "th": {
     "topbar_quote": "ขอใบเสนอราคา",
@@ -317,7 +328,18 @@
     "header_tagline": "โซลูชั่นบรรจุภัณฑ์",
     "footer_brand": "PAKSWELL",
     "form_product_lids": "ฝาไม้อัด",
-    "form_product_corner": "มุมพลาสติกซ้อน (สีเหลือง)"
+    "form_product_corner": "มุมพลาสติกซ้อน (สีเหลือง)",
+    "thank_you_page_title": "ขอบคุณ",
+    "thank_you_heading": "ขอบคุณ!",
+    "thank_you_subheading": "เราได้รับคำสอบถามของคุณแล้ว",
+    "thank_you_body": "เราได้ส่งข้อความของคุณต่อให้ผู้เชี่ยวชาญด้านพาเลท EPAL และ Pallet Collar ของเราแล้ว คุณจะได้รับอีเมลตอบกลับจากทีมงานที่ mark.lee@pakswell.com ภายใน 24 ชั่วโมงทำการ",
+    "thank_you_next_steps": "ขั้นตอนต่อไป",
+    "thank_you_step_1": "ผู้เชี่ยวชาญด้านการขายของเราจะตรวจสอบความต้องการ จำนวน และปลายทางของคุณ",
+    "thank_you_step_2": "เราจะส่งใบเสนอราคาแบบละเอียดทางอีเมล ครอบคลุมราคา ระยะเวลาจัดส่ง และทางเลือกการขนส่ง",
+    "thank_you_step_3": "หากจำเป็น เราจะนัดประชุมทางโทรศัพท์เพื่อหารือสเปค ตัวอย่างสินค้า หรือคำขอ OEM",
+    "thank_you_cta_back": "กลับไปยังหน้าแรก",
+    "thank_you_cta_products": "ดูสินค้า",
+    "thank_you_signature": "— ทีมงาน PAKSWELL"
   },
   "zh-TW": {
     "topbar_quote": "索取報價",
@@ -477,7 +499,18 @@
     "header_tagline": "包裝解決方案",
     "footer_brand": "PAKSWELL",
     "form_product_lids": "膠合板蓋板",
-    "form_product_corner": "塑膠堆疊角（黃色）"
+    "form_product_corner": "塑膠堆疊角（黃色）",
+    "thank_you_page_title": "感謝您的諮詢",
+    "thank_you_heading": "感謝您的諮詢！",
+    "thank_you_subheading": "我們已收到您的詢盤",
+    "thank_you_body": "您的訊息已轉交給我們的 EPAL 托盤和圍板業務專員。請留意信箱，我們會在 24 個工作小時內透過 mark.lee@pakswell.com 給您詳細回覆。",
+    "thank_you_next_steps": "接下來的流程",
+    "thank_you_step_1": "業務專員會仔細核對您的產品需求、數量和目的地。",
+    "thank_you_step_2": "我們會寄送詳細報價單，包含價格、交期和海運方案。",
+    "thank_you_step_3": "如需深入溝通，我們安排電話會議討論規格、樣品或 OEM 需求。",
+    "thank_you_cta_back": "返回首頁",
+    "thank_you_cta_products": "瀏覽產品",
+    "thank_you_signature": "—— PAKSWELL 團隊"
   },
   "zh-CN": {
     "topbar_quote": "获取报价",
@@ -637,7 +670,18 @@
     "about_privacy_title": "客户信息保密",
     "about_privacy": "我们不在网站上展示任何客户名称、标识或合作详情。保护每一位合作伙伴的隐私和商业利益，是我们经营的核心原则。您的信任至关重要——所有合作细节仅限双方之间。",
     "about_export_title": "出口国家",
-    "about_export": "凭借 <strong>长达11年的出口经验</strong>，PAKSWELL 深入了解各国对欧标托盘与围板的进口要求——包括认可的木材树种、ISPM-15 熏蒸处理以及原产地证明（Form A、Form E、FTA 等）。我们的产品常年出口至 <strong>韩国、日本、马来西亚、越南、泰国、菲律宾及台湾地区</strong>。"
+    "about_export": "凭借 <strong>长达11年的出口经验</strong>，PAKSWELL 深入了解各国对欧标托盘与围板的进口要求——包括认可的木材树种、ISPM-15 熏蒸处理以及原产地证明（Form A、Form E、FTA 等）。我们的产品常年出口至 <strong>韩国、日本、马来西亚、越南、泰国、菲律宾及台湾地区</strong>。",
+    "thank_you_page_title": "感谢您的咨询",
+    "thank_you_heading": "感谢您的咨询！",
+    "thank_you_subheading": "我们已收到您的询盘",
+    "thank_you_body": "您的信息已转交给我们的 EPAL 托盘和围板业务专员。请关注邮箱，我们会在 24 个工作小时内通过 mark.lee@pakswell.com 给您详细回复。",
+    "thank_you_next_steps": "接下来的流程",
+    "thank_you_step_1": "业务专员会仔细核对您的产品需求、数量和目的地。",
+    "thank_you_step_2": "我们邮件发送详细报价单，包括价格、交货期和海运方案。",
+    "thank_you_step_3": "如需深入沟通，我们安排电话会议讨论规格、样品或 OEM 需求。",
+    "thank_you_cta_back": "返回首页",
+    "thank_you_cta_products": "浏览产品",
+    "thank_you_signature": "—— PAKSWELL 团队"
   },
   "vi": {
     "topbar_quote": "Yêu cầu báo giá",
@@ -797,7 +841,18 @@
     "header_tagline": "Giải pháp bao bì",
     "footer_brand": "PAKSWELL",
     "form_product_lids": "Nắp gỗ dán",
-    "form_product_corner": "Góc xếp chồng nhựa (Vàng)"
+    "form_product_corner": "Góc xếp chồng nhựa (Vàng)",
+    "thank_you_page_title": "Cảm ơn bạn",
+    "thank_you_heading": "Cảm ơn bạn!",
+    "thank_you_subheading": "Chúng tôi đã nhận được yêu cầu của bạn",
+    "thank_you_body": "Tin nhắn của bạn đã được chuyển đến chuyên viên phụ trách pallet EPAL và Pallet Collar của chúng tôi. Bạn sẽ nhận được phản hồi chi tiết từ mark.lee@pakswell.com trong vòng 24 giờ làm việc.",
+    "thank_you_next_steps": "Các bước tiếp theo",
+    "thank_you_step_1": "Chuyên viên kinh doanh sẽ xem xét yêu cầu, số lượng và địa điểm giao hàng của bạn.",
+    "thank_you_step_2": "Chúng tôi sẽ gửi email báo giá chi tiết bao gồm giá, thời gian giao hàng và phương án vận chuyển.",
+    "thank_you_step_3": "Nếu cần, chúng tôi sẽ sắp xếp cuộc gọi để thảo luận về thông số kỹ thuật, mẫu thử hoặc yêu cầu OEM.",
+    "thank_you_cta_back": "Quay về Trang chủ",
+    "thank_you_cta_products": "Xem Sản phẩm",
+    "thank_you_signature": "— Đội ngũ PAKSWELL"
   },
   "ko": {
     "topbar_quote": "견적 요청",
@@ -957,7 +1012,18 @@
     "header_tagline": "포장 솔루션",
     "footer_brand": "PAKSWELL",
     "form_product_lids": "합판 덮개",
-    "form_product_corner": "플라스틱 적층 코너 (노란색)"
+    "form_product_corner": "플라스틱 적층 코너 (노란색)",
+    "thank_you_page_title": "문의해 주셔서 감사합니다",
+    "thank_you_heading": "감사합니다!",
+    "thank_you_subheading": "문의를 접수하였습니다",
+    "thank_you_body": "고객님의 메시지는 EPAL 파렛트 및 파렛트 칼라 담당 전문가에게 전달되었습니다. 24 영업시간 이내에 mark.lee@pakswell.com 으로 상세한 답변을 드리겠습니다.",
+    "thank_you_next_steps": "다음 단계",
+    "thank_you_step_1": "영업 담당자가 고객님의 요구사항, 수량, 납품지를 검토합니다.",
+    "thank_you_step_2": "가격, 납기, 배송 옵션이 포함된 상세 견적서를 이메일로 발송해 드립니다.",
+    "thank_you_step_3": "필요시 사양, 샘플 또는 OEM 관련 상담을 위한 전화 미팅을 잡습니다.",
+    "thank_you_cta_back": "홈으로 돌아가기",
+    "thank_you_cta_products": "제품 둘러보기",
+    "thank_you_signature": "— PAKSWELL 팀"
   },
   "ja": {
     "topbar_quote": "見積もり依頼",
@@ -1117,6 +1183,17 @@
     "header_tagline": "梱包ソリューション",
     "footer_brand": "PAKSWELL",
     "form_product_lids": "合板蓋",
-    "form_product_corner": "プラスチックスタッキングコーナー（黄色）"
+    "form_product_corner": "プラスチックスタッキングコーナー（黄色）",
+    "thank_you_page_title": "お問い合わせありがとうございます",
+    "thank_you_heading": "ありがとうございます！",
+    "thank_you_subheading": "お問い合わせを受け付けました",
+    "thank_you_body": "お客様のメッセージは、EPAL パレットおよびパレットカラー担当の専任スタッフに転送されました。24 営業時間以内に mark.lee@pakswell.com より詳細なご返信を差し上げます。",
+    "thank_you_next_steps": "次のステップ",
+    "thank_you_step_1": "営業担当が、ご要望・数量・納品先を確認いたします。",
+    "thank_you_step_2": "価格、リードタイム、輸送オプションを含む詳細なお見積もりをメールでお送りします。",
+    "thank_you_step_3": "必要に応じて、仕様・サンプル・OEM のご相談のためにお電話をお願いする場合がございます。",
+    "thank_you_cta_back": "ホームに戻る",
+    "thank_you_cta_products": "製品を見る",
+    "thank_you_signature": "— PAKSWELL チーム"
   }
 }

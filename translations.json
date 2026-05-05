@@ -184,8 +184,8 @@
     "cert_lbl_issued": "Issued",
     "cert_lbl_authorized": "Authorized",
     "cert_request": "Original certificate available upon formal inquiry.",
-    "val6_title": "Export Markets",
-    "val6_desc": "Regular shipments to buyers worldwide"
+    "val6_title": "Export Countries",
+    "val6_desc": "Export to more than 20 countries on a regular basis"
   },
   "th": {
     "topbar_quote": "ขอใบเสนอราคา",
@@ -372,8 +372,8 @@
     "cert_lbl_issued": "ออกที่",
     "cert_lbl_authorized": "ได้รับอนุญาต",
     "cert_request": "ใบรับรองต้นฉบับมีให้เมื่อมีการสอบถามเป็นทางการ",
-    "val6_title": "ตลาดส่งออก",
-    "val6_desc": "จัดส่งทั่วโลกอย่างสม่ำเสมอ"
+    "val6_title": "ประเทศที่ส่งออก",
+    "val6_desc": "ส่งออกไปยัง 20+ ประเทศเป็นประจำ"
   },
   "zh-TW": {
     "topbar_quote": "索取報價",
@@ -560,8 +560,8 @@
     "cert_lbl_issued": "簽發",
     "cert_lbl_authorized": "授權範圍",
     "cert_request": "原件應正式詢盤提供。",
-    "val6_title": "出口市場",
-    "val6_desc": "常態化全球發貨"
+    "val6_title": "出口國家",
+    "val6_desc": "長期穩定出口至 20 多個國家"
   },
   "zh-CN": {
     "topbar_quote": "获取报价",
@@ -748,8 +748,8 @@
     "cert_lbl_issued": "签发",
     "cert_lbl_authorized": "授权范围",
     "cert_request": "原件应正式询盘提供。",
-    "val6_title": "出口市场",
-    "val6_desc": "常态化全球发货"
+    "val6_title": "出口国家",
+    "val6_desc": "长期稳定出口至 20 多个国家"
   },
   "vi": {
     "topbar_quote": "Yêu cầu báo giá",
@@ -936,8 +936,8 @@
     "cert_lbl_issued": "Cấp tại",
     "cert_lbl_authorized": "Được phép",
     "cert_request": "Bản gốc có sẵn theo yêu cầu chính thức.",
-    "val6_title": "Thị trường xuất khẩu",
-    "val6_desc": "Vận chuyển thường xuyên đến khách hàng toàn cầu"
+    "val6_title": "Quốc gia xuất khẩu",
+    "val6_desc": "Xuất khẩu thường xuyên đến hơn 20 quốc gia"
   },
   "ko": {
     "topbar_quote": "견적 요청",
@@ -1124,8 +1124,8 @@
     "cert_lbl_issued": "발급",
     "cert_lbl_authorized": "인가 범위",
     "cert_request": "원본 인증서는 공식 문의 시 제공됩니다.",
-    "val6_title": "수출 시장",
-    "val6_desc": "전 세계 바이어에게 정기 출하"
+    "val6_title": "수출 국가",
+    "val6_desc": "20개국 이상으로 정기 수출"
   },
   "ja": {
     "topbar_quote": "見積もり依頼",
@@ -1312,7 +1312,7 @@
     "cert_lbl_issued": "発行",
     "cert_lbl_authorized": "認可範囲",
     "cert_request": "原本は正式なお問い合わせの際にご提供します。",
-    "val6_title": "輸出市場",
-    "val6_desc": "世界各国の顧客へ定期出荷"
+    "val6_title": "輸出国",
+    "val6_desc": "20カ国以上へ定期的に輸出"
   }
 }

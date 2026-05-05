@@ -345,7 +345,7 @@
         }
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(6, 1fr);
+            grid-template-columns: repeat(5, 1fr);
             border: 1px solid var(--border);
             border-radius: 8px;
             overflow: hidden;
@@ -825,8 +825,8 @@
         /* ===== RESPONSIVE ===== */
         @media (max-width: 1024px) {
             .hero h1 { font-size: 36px; }
-            .stats-grid { grid-template-columns: repeat(3, 1fr); }
-            .stat-item:nth-child(3n) { border-right: none; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .stat-item:nth-child(2n) { border-right: none; }
             .advantages-grid { grid-template-columns: repeat(2, 1fr); }
             .markets-grid { grid-template-columns: repeat(3, 1fr); }
             .footer-grid { grid-template-columns: repeat(2, 1fr); }
@@ -958,11 +958,6 @@
                     <div class="stat-bignum" style="font-size:48px; font-weight:900; color:var(--accent); line-height:1; margin-bottom:6px;">1.5M</div>
                     <div class="stat-number" style="font-size:15px; font-weight:700; color:var(--primary);" data-i18n="val4_title">Hinges per Month</div>
                     <div class="stat-label" data-i18n="val4_desc">In-house galvanized hinge line</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-bignum" style="font-size:48px; font-weight:900; color:var(--accent); line-height:1; margin-bottom:6px;">2</div>
-                    <div class="stat-number" style="font-size:15px; font-weight:700; color:var(--primary);" data-i18n="val5_title">Days to Container</div>
-                    <div class="stat-label" data-i18n="val5_desc">Safety stock ready for shipment</div>
                 </div>
                 <div class="stat-item">
                     <div class="stat-bignum" style="font-size:48px; font-weight:900; color:var(--accent); line-height:1; margin-bottom:6px;">20+</div>

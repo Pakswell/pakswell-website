@@ -345,7 +345,7 @@
         }
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
+            grid-template-columns: repeat(6, 1fr);
             border: 1px solid var(--border);
             border-radius: 8px;
             overflow: hidden;
@@ -825,8 +825,8 @@
         /* ===== RESPONSIVE ===== */
         @media (max-width: 1024px) {
             .hero h1 { font-size: 36px; }
-            .stats-grid { grid-template-columns: repeat(2, 1fr); }
-            .stat-item:nth-child(2) { border-right: none; }
+            .stats-grid { grid-template-columns: repeat(3, 1fr); }
+            .stat-item:nth-child(3n) { border-right: none; }
             .advantages-grid { grid-template-columns: repeat(2, 1fr); }
             .markets-grid { grid-template-columns: repeat(3, 1fr); }
             .footer-grid { grid-template-columns: repeat(2, 1fr); }

@@ -196,7 +196,7 @@
     "structure_3_title": "Strapped & Secured",
     "structure_3_desc": "Pre-strapped bundles ready for forklift handling and export.",
     "structure_4_title": "Bulk-Ready",
-    "structure_4_desc": "High-volume capacity — full container loads (FCL) within 7–14 days."
+    "structure_4_desc": "High-volume capacity — full container loads (FCL) within 2–7 days."
   },
   "th": {
     "topbar_quote": "ขอใบเสนอราคา",
@@ -395,7 +395,7 @@
     "structure_3_title": "Strapped & Secured",
     "structure_3_desc": "Pre-strapped bundles ready for forklift handling and export.",
     "structure_4_title": "Bulk-Ready",
-    "structure_4_desc": "High-volume capacity — full container loads (FCL) within 7–14 days."
+    "structure_4_desc": "High-volume capacity — full container loads (FCL) within 2–7 days."
   },
   "zh-TW": {
     "topbar_quote": "索取報價",
@@ -594,7 +594,7 @@
     "structure_3_title": "已捆紮 · 即裝即運",
     "structure_3_desc": "出廠預捆紮，叉車直接吊運、裝櫃出口。",
     "structure_4_title": "量產能力",
-    "structure_4_desc": "高產能 · 整櫃（FCL）訂單 7–14 天交付。"
+    "structure_4_desc": "高產能 · 整櫃（FCL）訂單 2–7 天交付。"
   },
   "zh-CN": {
     "topbar_quote": "获取报价",
@@ -793,7 +793,7 @@
     "structure_3_title": "已捆扎 · 即装即运",
     "structure_3_desc": "出厂预捆扎，叉车直接吊运、装柜出口。",
     "structure_4_title": "量产能力",
-    "structure_4_desc": "高产能 · 整柜（FCL）订单 7–14 天交付。"
+    "structure_4_desc": "高产能 · 整柜（FCL）订单 2–7 天交付。"
   },
   "vi": {
     "topbar_quote": "Yêu cầu báo giá",
@@ -992,7 +992,7 @@
     "structure_3_title": "Strapped & Secured",
     "structure_3_desc": "Pre-strapped bundles ready for forklift handling and export.",
     "structure_4_title": "Bulk-Ready",
-    "structure_4_desc": "High-volume capacity — full container loads (FCL) within 7–14 days."
+    "structure_4_desc": "High-volume capacity — full container loads (FCL) within 2–7 days."
   },
   "ko": {
     "topbar_quote": "견적 요청",
@@ -1191,7 +1191,7 @@
     "structure_3_title": "Strapped & Secured",
     "structure_3_desc": "Pre-strapped bundles ready for forklift handling and export.",
     "structure_4_title": "Bulk-Ready",
-    "structure_4_desc": "High-volume capacity — full container loads (FCL) within 7–14 days."
+    "structure_4_desc": "High-volume capacity — full container loads (FCL) within 2–7 days."
   },
   "ja": {
     "topbar_quote": "見積もり依頼",
@@ -1390,6 +1390,6 @@
     "structure_3_title": "Strapped & Secured",
     "structure_3_desc": "Pre-strapped bundles ready for forklift handling and export.",
     "structure_4_title": "Bulk-Ready",
-    "structure_4_desc": "High-volume capacity — full container loads (FCL) within 7–14 days."
+    "structure_4_desc": "High-volume capacity — full container loads (FCL) within 2–7 days."
   }
 }

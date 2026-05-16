@@ -15,7 +15,7 @@
     <meta name="description" content="PAKSWELL privacy policy: how we collect, use, and protect data submitted via our inquiry form. Customer confidentiality is a core principle.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.pakswell.com/privacy">
-    <link rel="icon" type="image/png" sizes="32x32" href="logo-PW-1-stacked.png">
+    <link rel="icon" type="image/svg+xml" href="logo-pakswell-mark.svg">
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Privacy Policy - PAKSWELL">
@@ -49,13 +49,14 @@
 
         /* Navbar */
         nav {
-            background-color: var(--primary);
-            color: white;
+            background-color: #fff;
+            color: var(--primary);
             padding: 1.5rem 2rem;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-bottom: 1px solid var(--border);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
         }
 
         nav .container {
@@ -66,15 +67,43 @@
             align-items: center;
         }
 
-        nav .logo {
-            font-size: 1.5rem;
-            font-weight: 600;
-            letter-spacing: 0.05em;
-            color: var(--accent);
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--primary);
+            padding: 0;
         }
 
-        nav a {
-            color: white;
+        .brand-mark {
+            flex: 0 0 auto;
+            width: 44px;
+            height: 44px;
+            display: block;
+        }
+
+        .brand-copy strong {
+            display: block;
+            color: var(--primary);
+            font-size: 26px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            line-height: 1;
+        }
+
+        .brand-copy span {
+            display: block;
+            margin-top: -2px;
+            color: #66717d;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        nav a.home-link {
+            color: var(--primary);
             text-decoration: none;
             font-size: 0.95rem;
             padding: 0.5rem 1rem;
@@ -82,8 +111,8 @@
             transition: background-color 0.3s ease;
         }
 
-        nav a:hover {
-            background-color: rgba(232, 168, 56, 0.2);
+        nav a.home-link:hover {
+            background-color: rgba(27, 58, 92, 0.06);
         }
 
         /* Main content */
@@ -154,6 +183,11 @@
 
         a:hover {
             color: var(--accent);
+        }
+
+        .brand-logo,
+        nav a.home-link {
+            border-bottom: 0;
         }
 
         strong {
@@ -243,8 +277,21 @@
     <!-- Navigation -->
     <nav>
         <div class="container">
-            <div class="logo">PAKSWELL</div>
-            <a href="index.html">← Back to Home</a>
+            <a class="brand-logo" href="/">
+                <svg class="brand-mark" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <rect width="200" height="200" rx="16" fill="#F4F4F4"/>
+                    <text x="100" y="108" text-anchor="middle" font-family="'IBM Plex Sans','Arial',sans-serif" font-size="88" font-weight="900" fill="#253E65">PW</text>
+                    <rect x="48" y="124" width="104" height="5" rx="2" fill="#DAA848"/>
+                    <rect x="56" y="136" width="20" height="14" rx="3" fill="#DAA848"/>
+                    <rect x="90" y="136" width="20" height="14" rx="3" fill="#DAA848"/>
+                    <rect x="124" y="136" width="20" height="14" rx="3" fill="#DAA848"/>
+                </svg>
+                <span class="brand-copy">
+                    <strong>PAKSWELL</strong>
+                    <span>Packaging Solutions</span>
+                </span>
+            </a>
+            <a class="home-link" href="/">← Back to Home</a>
         </div>
     </nav>
 

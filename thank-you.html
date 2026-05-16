@@ -23,8 +23,8 @@
     <!-- Don't let Google index this page; still allow link-following -->
     <meta name="robots" content="noindex, follow">
     <link rel="canonical" href="https://www.pakswell.com/thank-you">
-    <link rel="icon" type="image/png" sizes="32x32" href="logo-PW-1-stacked.png">
-    <link rel="apple-touch-icon" href="logo-PW-1-stacked.png">
+    <link rel="icon" type="image/svg+xml" href="logo-pakswell-mark.svg">
+    <link rel="apple-touch-icon" href="logo-pakswell-mark.svg">
 
     <!-- Fonts (match index.html) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -69,21 +69,18 @@
         }
         .logo { display: flex; align-items: center; gap: 12px; color: #1a2a3a; }
         .logo-mark {
-            width: 40px; height: 40px;
-            border-radius: 6px;
-            background: linear-gradient(135deg, #c88f3b 0%, #a76f25 100%);
-            color: #fff;
-            display: flex; align-items: center; justify-content: center;
-            font-weight: 700; font-family: 'IBM Plex Sans', 'IBM Plex Sans SC', 'IBM Plex Sans TC', 'IBM Plex Sans JP', 'IBM Plex Sans KR', 'IBM Plex Sans Thai', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            width: 44px; height: 44px;
+            display: block;
         }
         .logo-text {
             font-family: 'IBM Plex Sans', 'IBM Plex Sans SC', 'IBM Plex Sans TC', 'IBM Plex Sans JP', 'IBM Plex Sans KR', 'IBM Plex Sans Thai', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            font-size: 22px; font-weight: 700; letter-spacing: 2px; line-height: 1;
+            font-size: 26px; font-weight: 800; letter-spacing: 0.5px; line-height: 1; color: #1B3A5C;
         }
         .logo-tagline {
-            font-size: 11px; color: #6d6557; letter-spacing: 2px; margin-top: 2px;
+            font-size: 10px; color: #66717d; letter-spacing: 1.5px; margin-top: -2px; text-transform: uppercase; font-weight: 700;
         }
         .nav-links { display: none; }
+        .logo:hover { text-decoration: none; }
 
         /* Main - thank-you content */
         .thank-you-main {
@@ -227,7 +224,14 @@
     <nav class="navbar">
         <div class="container">
             <a href="index.html" class="logo">
-                <div class="logo-mark">PW</div>
+                <svg class="logo-mark" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <rect width="200" height="200" rx="16" fill="#F4F4F4"/>
+                    <text x="100" y="108" text-anchor="middle" font-family="'IBM Plex Sans','Arial',sans-serif" font-size="88" font-weight="900" fill="#253E65">PW</text>
+                    <rect x="48" y="124" width="104" height="5" rx="2" fill="#DAA848"/>
+                    <rect x="56" y="136" width="20" height="14" rx="3" fill="#DAA848"/>
+                    <rect x="90" y="136" width="20" height="14" rx="3" fill="#DAA848"/>
+                    <rect x="124" y="136" width="20" height="14" rx="3" fill="#DAA848"/>
+                </svg>
                 <div>
                     <div class="logo-text" data-i18n="header_brand">PAKSWELL</div>
                     <div class="logo-tagline" data-i18n="header_tagline">PACKAGING SOLUTIONS</div>

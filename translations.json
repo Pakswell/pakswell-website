@@ -199,7 +199,8 @@
         "structure_3_title": "Strapped & Secured",
         "structure_3_desc": "Pre-strapped bundles ready for forklift handling and export.",
         "structure_4_title": "Bulk-Ready",
-        "structure_4_desc": "High-volume capacity — full container loads (FCL) within 2–7 days."
+        "structure_4_desc": "High-volume capacity — full container loads (FCL) within 2–7 days.",
+        "product_details_quote": "View Details & Quote"
     },
     "th": {
         "topbar_quote": "ขอใบเสนอราคา",
@@ -401,7 +402,8 @@
         "structure_3_title": "รัดและยึดเรียบร้อย",
         "structure_3_desc": "รัดเรียบร้อยพร้อมยกด้วยรถโฟร์คลิฟท์และส่งออก",
         "structure_4_title": "พร้อมส่งจำนวนมาก",
-        "structure_4_desc": "กำลังการผลิตสูง — ตู้คอนเทนเนอร์เต็ม (FCL) ภายใน 2–7 วัน"
+        "structure_4_desc": "กำลังการผลิตสูง — ตู้คอนเทนเนอร์เต็ม (FCL) ภายใน 2–7 วัน",
+        "product_details_quote": "ดูรายละเอียดและขอใบเสนอราคา"
     },
     "zh-TW": {
         "topbar_quote": "索取報價",
@@ -603,7 +605,8 @@
         "structure_3_title": "穩固捆紮 · 即裝即運",
         "structure_3_desc": "出廠預捆紮，叉車直接吊運、裝櫃出口。",
         "structure_4_title": "量產能力",
-        "structure_4_desc": "高產能 · 整櫃（FCL）訂單 2–7 天交付。"
+        "structure_4_desc": "高產能 · 整櫃（FCL）訂單 2–7 天交付。",
+        "product_details_quote": "查看詳情並詢價"
     },
     "zh-CN": {
         "topbar_quote": "获取报价",
@@ -805,7 +808,8 @@
         "structure_3_title": "稳固捆扎 · 即装即运",
         "structure_3_desc": "出厂预捆扎，叉车直接吊运、装柜出口。",
         "structure_4_title": "量产能力",
-        "structure_4_desc": "高产能 · 整柜（FCL）订单 2–7 天交付。"
+        "structure_4_desc": "高产能 · 整柜（FCL）订单 2–7 天交付。",
+        "product_details_quote": "查看详情并询价"
     },
     "vi": {
         "topbar_quote": "Yêu cầu báo giá",
@@ -1007,7 +1011,8 @@
         "structure_3_title": "Đai chặt & cố định",
         "structure_3_desc": "Đai chặt sẵn, sẵn sàng cho xe nâng và xuất khẩu.",
         "structure_4_title": "Sẵn sàng số lượng lớn",
-        "structure_4_desc": "Năng lực sản xuất lớn — full container (FCL) trong 2–7 ngày."
+        "structure_4_desc": "Năng lực sản xuất lớn — full container (FCL) trong 2–7 ngày.",
+        "product_details_quote": "Xem chi tiết & báo giá"
     },
     "ko": {
         "topbar_quote": "견적 요청",
@@ -1209,7 +1214,8 @@
         "structure_3_title": "결박 및 고정",
         "structure_3_desc": "사전 결박된 번들로 지게차 취급 및 수출 준비.",
         "structure_4_title": "대량 출하 준비",
-        "structure_4_desc": "대량 생산 능력 — 풀 컨테이너 로드(FCL) 2~7일 내 출하."
+        "structure_4_desc": "대량 생산 능력 — 풀 컨테이너 로드(FCL) 2~7일 내 출하.",
+        "product_details_quote": "상세 보기 및 견적 요청"
     },
     "ja": {
         "topbar_quote": "見積もり依頼",
@@ -1411,6 +1417,7 @@
         "structure_3_title": "梱包・固定済み",
         "structure_3_desc": "事前にバンド掛けされ、フォークリフトでの取り扱いと輸出に対応。",
         "structure_4_title": "大量出荷対応",
-        "structure_4_desc": "大量供給能力 — フルコンテナロード（FCL）2〜7 日で出荷。"
+        "structure_4_desc": "大量供給能力 — フルコンテナロード（FCL）2〜7 日で出荷。",
+        "product_details_quote": "詳細と見積もりを見る"
     }
 }

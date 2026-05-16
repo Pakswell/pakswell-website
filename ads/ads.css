@@ -62,32 +62,39 @@ img {
 .brand {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   text-decoration: none;
   min-width: 0;
 }
 
-.brand img {
-  width: 42px;
-  height: 42px;
-  object-fit: contain;
+.brand-mark {
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  display: block;
 }
 
-.brand strong {
+.brand-copy {
+  display: block;
+  min-width: 0;
+}
+
+.brand-copy strong {
   display: block;
   color: var(--navy);
-  font-size: 25px;
-  letter-spacing: 0.04em;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
   line-height: 1;
 }
 
-.brand span {
+.brand-copy span {
   display: block;
-  margin-top: 3px;
+  margin-top: -2px;
   color: var(--muted);
   font-size: 10px;
   font-weight: 700;
-  letter-spacing: 0.16em;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
 }
 
@@ -685,12 +692,12 @@ h2 {
     height: 64px;
   }
 
-  .brand img {
+  .brand-mark {
     width: 36px;
     height: 36px;
   }
 
-  .brand strong {
+  .brand-copy strong {
     font-size: 21px;
   }
 

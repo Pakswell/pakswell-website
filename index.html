@@ -1010,9 +1010,9 @@
                 <li class="nav-dropdown">
                     <a href="#products" class="nav-dropdown-toggle" data-i18n="nav_products">Products<svg class="chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
                     <ul class="nav-dropdown-menu">
-                        <li><a href="ads/epal-euro-pallets" data-track="click_nav_product" data-product="epal-euro-pallets">EPAL Euro Pallets</a></li>
-                        <li><a href="ads/pallet-collars" data-track="click_nav_product" data-product="pallet-collars">Pallet Collars</a></li>
-                        <li><a href="ads/pallet-collar-hinges" data-track="click_nav_product" data-product="pallet-collar-hinges">Galvanized Hinges</a></li>
+                        <li><a href="ads/epal-euro-pallets" data-track="click_nav_product" data-product="epal-euro-pallets" data-i18n="product1_name">EPAL Euro Pallets</a></li>
+                        <li><a href="ads/pallet-collars" data-track="click_nav_product" data-product="pallet-collars" data-i18n="product2_name">Pallet Collars</a></li>
+                        <li><a href="ads/pallet-collar-hinges" data-track="click_nav_product" data-product="pallet-collar-hinges" data-i18n="product3_name">Galvanized Hinges</a></li>
                     </ul>
                 </li>
                 <li><a href="#compliance" data-i18n="nav_compliance">Compliance</a></li>
@@ -1511,6 +1511,29 @@
     let TRANSLATIONS = {};
     let currentLang = 'en';
 
+    function productPageHref(baseHref, lang) {
+        if (!baseHref) return baseHref;
+        var hash = '';
+        var hashIndex = baseHref.indexOf('#');
+        if (hashIndex !== -1) {
+            hash = baseHref.slice(hashIndex);
+            baseHref = baseHref.slice(0, hashIndex);
+        }
+        var cleanBase = baseHref.split('?')[0];
+        if (lang && lang !== 'en') {
+            return cleanBase + '?lang=' + encodeURIComponent(lang) + hash;
+        }
+        return cleanBase + hash;
+    }
+
+    function updateProductPageLinks(lang) {
+        document.querySelectorAll('a[href^="ads/"], a[href^="/ads/"], a[href*="pakswell.com/ads/"]').forEach(function(link) {
+            var baseHref = link.getAttribute('data-base-href') || link.getAttribute('href');
+            link.setAttribute('data-base-href', baseHref.split('?')[0]);
+            link.setAttribute('href', productPageHref(baseHref, lang));
+        });
+    }
+
     // Load translations from external JSON file
     function loadTranslations() {
         fetch('translations.json')
@@ -1526,10 +1549,13 @@
                 var validLangs = ['en','zh-CN','zh-TW','th','vi','ja','ko'];
                 if (initLang && validLangs.indexOf(initLang) !== -1 && initLang !== 'en') {
                     switchLang(initLang);
+                } else {
+                    updateProductPageLinks(currentLang);
                 }
             })
             .catch(function(err) {
                 console.warn('Could not load translations.json:', err);
+                updateProductPageLinks(currentLang);
             });
     }
 
@@ -1569,6 +1595,9 @@
 
         // Set html lang attribute
         document.documentElement.lang = lang;
+
+        // Keep product-page links in the same language as the current homepage.
+        updateProductPageLinks(lang);
 
         // Persist language preference
         try { localStorage.setItem('pw_lang', lang); } catch(e) {}

@@ -278,7 +278,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-bottom">
-                <span data-i18n="footer_copyright">&copy; 2026 Pakswell. All rights reserved.</span>
+                <span data-i18n="footer_copyright">&copy; 2018 Pakswell. All rights reserved.</span>
             </div>
         </div>
     </footer>
@@ -294,7 +294,7 @@
 
             document.documentElement.lang = lang === 'zh-CN' ? 'zh-Hans' : (lang === 'zh-TW' ? 'zh-Hant' : lang);
 
-            fetch('translations.json')
+            fetch('translations.json?v=20260603-footer-1')
                 .then(function(res) { return res.json(); })
                 .then(function(data) {
                     var t = data[lang];

@@ -1257,7 +1257,7 @@
                         <div style="font-size:14px; line-height:1.95; color:var(--text-light);">
                             <div><strong style="color:var(--primary); display:inline-block; min-width:84px;" data-i18n="cert_lbl_authority">Authority</strong> <span data-i18n="cert1_authority">China Customs</span></div>
                             <div><strong style="color:var(--primary); display:inline-block; min-width:84px;" data-i18n="cert_lbl_type">Type</strong> <span data-i18n="cert1_type">Heat Treatment (HT)</span></div>
-                            <div><strong style="color:var(--primary); display:inline-block; min-width:84px;" data-i18n="cert_lbl_valid">Valid</strong> <span data-i18n="cert1_valid">Nov 2023 — Nov 2026</span></div>
+                            <div><strong style="color:var(--primary); display:inline-block; min-width:84px;" data-i18n="cert_lbl_valid">Valid</strong> <span data-i18n="cert1_valid">Nov 2023 - Long-term</span></div>
                         </div>
                         <p style="font-size:12px; color:var(--text-light); margin-top:18px; font-style:italic; padding-top:14px; border-top:1px solid rgba(27,58,92,0.08);" data-i18n="cert_request">Original certificate available upon formal inquiry.</p>
                     </div>
@@ -1444,7 +1444,7 @@
                                 <option value="epal-pallet" data-i18n="form_product_epal">EPAL Euro Pallets</option>
                                 <option value="pallet-collar" data-i18n="form_product_collar">Pallet Collars</option>
                                 <option value="plywood-lids" data-i18n="form_product_lids">Plywood Lids</option>
-                                <option value="stacking-corner" data-i18n="form_product_corner">Plastic Stacking Corner (Yellow)</option>
+                                <option value="plastic-corner" data-i18n="form_product_corner">Plastic Corner</option>
                                 <option value="custom" data-i18n="form_product_custom">Customized Packaging</option>
                                 <option value="galvanized-hinges" data-i18n="form_product_hinges">Galvanized Hinges for Pallet Collar</option>
                             </select>
@@ -1501,7 +1501,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <span data-i18n="footer_copyright">&copy; 2026 Pakswell. All rights reserved.</span>
+                <span data-i18n="footer_copyright">&copy; 2018 Pakswell. All rights reserved.</span>
             </div>
         </div>
     </footer>
@@ -1536,7 +1536,7 @@
 
     // Load translations from external JSON file
     function loadTranslations() {
-        fetch('translations.json')
+        fetch('translations.json?v=20260603-footer-1')
             .then(function(res) { return res.json(); })
             .then(function(data) {
                 TRANSLATIONS = data;

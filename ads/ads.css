@@ -247,6 +247,41 @@ img {
   width: 100%;
 }
 
+.section-jump {
+  position: relative;
+  z-index: 2;
+  border-bottom: 1px solid var(--line);
+  background: #fff;
+}
+
+.section-jump-links {
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.section-jump-links a {
+  min-height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 7px 14px;
+  color: var(--navy);
+  background: var(--mist);
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.section-jump-links a:hover {
+  border-color: rgba(232, 168, 56, 0.62);
+  color: var(--ink);
+  background: #fff8e8;
+}
+
 .hero {
   min-height: 78vh;
   display: flex;
@@ -409,6 +444,10 @@ html[lang="ko"] h1 {
   position: relative;
   margin-top: -38px;
   z-index: 5;
+}
+
+.section-jump + .section {
+  padding-top: 74px;
 }
 
 .proof-grid {

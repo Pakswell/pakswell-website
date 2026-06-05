@@ -546,7 +546,7 @@
         fact3: "Standard and custom sizes",
         fact4: "Fold flat for return logistics",
         specsLabel: "Product fit",
-        specsTitle: "European standard wood packaging for fastener, casting, and automotive parts exports to the EU",
+        specsTitle: "packaging for fastener, casting, and automotive parts exports to EU",
         specsLead: "Foldable solid wood pallet collars are suitable for customers in fastener, casting, and automotive parts industries exporting to the EU. Standard sizes are stocked year-round; custom dimensions are available with plywood lids and plastic corners. Different board thicknesses and collar heights are available, including custom 6-hinge collars.",
         spec1Key: "Sizes",
         spec1Value: "1200 x 800 mm, 1200 x 1000 mm, 600 x 800 mm, plus custom dimensions on request.",

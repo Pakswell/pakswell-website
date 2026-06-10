@@ -293,6 +293,32 @@ img {
   overflow: hidden;
 }
 
+.market-hero {
+  min-height: min(680px, calc(100vh - 124px));
+}
+
+.market-hero .hero-content {
+  padding: 50px 0 38px;
+}
+
+.market-hero h1 {
+  font-size: clamp(34px, 4vw, 48px);
+  max-width: 780px;
+}
+
+.market-hero .hero-copy {
+  max-width: 700px;
+  font-size: clamp(16px, 1.55vw, 19px);
+}
+
+.market-hero .hero-actions {
+  margin-top: 26px;
+}
+
+.market-hero .hero-facts {
+  margin-top: 22px;
+}
+
 .hero::before {
   content: "";
   position: absolute;
@@ -656,6 +682,33 @@ h2 {
 
 .section-dark .card p {
   color: rgba(255, 255, 255, 0.76);
+}
+
+.faq-list {
+  display: grid;
+  gap: 14px;
+}
+
+.faq-item {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(15, 25, 35, 0.04);
+}
+
+.faq-item summary {
+  padding: 18px 20px;
+  color: var(--navy);
+  font-size: 17px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.faq-item p {
+  margin: 0;
+  padding: 0 20px 20px;
+  color: var(--muted);
+  font-size: 15px;
 }
 
 .process {

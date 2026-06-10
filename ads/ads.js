@@ -35,7 +35,7 @@
       productCollars: "Pallet Collars",
       productHinges: "Pallet Collar Hinges",
       mainSite: "Main site",
-      footerText: "© 2018 PAKSWELL. EPAL pallet and pallet collar manufacturer.",
+      footerText: "© 2026 PAKSWELL. EPAL pallet and pallet collar manufacturer.",
       mobileCall: "Call",
       mobileWhatsApp: "WhatsApp",
       mobileQuote: "Quote"
@@ -67,7 +67,7 @@
       productCollars: "กรอบพาเลทไม้",
       productHinges: "บานพับกรอบพาเลท",
       mainSite: "เว็บไซต์หลัก",
-      footerText: "© 2018 PAKSWELL ผู้ผลิตพาเลท EPAL และกรอบพาเลท",
+      footerText: "© 2026 PAKSWELL ผู้ผลิตพาเลท EPAL และกรอบพาเลท",
       mobileCall: "โทร",
       mobileWhatsApp: "WhatsApp",
       mobileQuote: "ขอราคา"
@@ -99,7 +99,7 @@
       productCollars: "木质围板箱",
       productHinges: "围板箱铰链",
       mainSite: "返回主页",
-      footerText: "© 2018 PAKSWELL. EPAL 托盘与木质围板箱制造商。",
+      footerText: "© 2026 PAKSWELL. EPAL 托盘与木质围板箱制造商。",
       mobileCall: "电话",
       mobileWhatsApp: "WhatsApp",
       mobileQuote: "报价"
@@ -131,7 +131,7 @@
       productCollars: "木質圍板箱",
       productHinges: "圍板箱鉸鏈",
       mainSite: "返回主站",
-      footerText: "© 2018 PAKSWELL. EPAL 棧板與木質圍板箱製造商。",
+      footerText: "© 2026 PAKSWELL. EPAL 棧板與木質圍板箱製造商。",
       mobileCall: "電話",
       mobileWhatsApp: "WhatsApp",
       mobileQuote: "報價"
@@ -163,7 +163,7 @@
       productCollars: "Pallet Collars gỗ",
       productHinges: "Bản lề pallet collar",
       mainSite: "Trang chính",
-      footerText: "© 2018 PAKSWELL. Nhà sản xuất pallet EPAL và pallet collar.",
+      footerText: "© 2026 PAKSWELL. Nhà sản xuất pallet EPAL và pallet collar.",
       mobileCall: "Gọi",
       mobileWhatsApp: "WhatsApp",
       mobileQuote: "Báo giá"
@@ -195,7 +195,7 @@
       productCollars: "목재 팔레트 칼라",
       productHinges: "팔레트 칼라 힌지",
       mainSite: "메인 사이트",
-      footerText: "© 2018 PAKSWELL. EPAL 팔레트 및 팔레트 칼라 제조사.",
+      footerText: "© 2026 PAKSWELL. EPAL 팔레트 및 팔레트 칼라 제조사.",
       mobileCall: "전화",
       mobileWhatsApp: "WhatsApp",
       mobileQuote: "견적"
@@ -227,7 +227,7 @@
       productCollars: "木製パレットカラー",
       productHinges: "パレットカラー用ヒンジ",
       mainSite: "メインサイト",
-      footerText: "© 2018 PAKSWELL. EPAL パレットとパレットカラーのメーカー。",
+      footerText: "© 2026 PAKSWELL. EPAL パレットとパレットカラーのメーカー。",
       mobileCall: "電話",
       mobileWhatsApp: "WhatsApp",
       mobileQuote: "見積"
@@ -237,46 +237,47 @@
   var PRODUCT_COPY = {
     "epal-euro-pallets": {
       en: {
-        metaTitle: "EPAL Euro Pallets from China | FCL Export Quote | PAKSWELL",
-        metaDescription: "EPAL Euro pallets from China for FCL export buyers. EPAL licensed, ISPM 15 heat-treated, standard sizes in stock, quote within 24 hours.",
-        ogTitle: "EPAL Euro Pallets from China | PAKSWELL",
-        ogDescription: "EPAL licensed pallets, ISPM 15 heat treatment, FCL export from China.",
-        eyebrow: "EPAL licensed production | ISPM 15 HT",
-        heroTitle: "EPAL Euro Pallets From China, Ready for FCL Export",
-        heroCopy: "Standard EPAL sizes in stock for export buyers who need compliant pallets, fast loading, and complete import documents for Southeast Asia, Japan, Korea, and Taiwan.",
+        metaTitle: "EPAL Pallet China Manufacturer & Supplier | PAKSWELL",
+        metaDescription: "PAKSWELL supplies EPAL pallets from China for FCL export buyers. EPAL 1 and EPAL 3 pallets, ISPM 15 heat treatment, export documents, quote within 24 hours.",
+        ogTitle: "EPAL Pallet China Manufacturer & Supplier | PAKSWELL",
+        ogDescription: "EPAL pallet supplier and manufacturer in China for FCL export, ISPM 15 heat treatment, and complete export documents.",
+        eyebrow: "EPAL pallet China supplier | ISPM 15 HT",
+        heroTitle: "EPAL Pallet Manufacturer and Supplier in China",
+        heroCopy: "PAKSWELL supplies EPAL 1 and EPAL 3 pallets from China for FCL export buyers who need EPAL licensed production, ISPM 15 heat treatment, fast loading, and complete documents for Southeast Asia, Japan, Korea, Taiwan, and other import markets.",
         heroQuote: "Request EPAL Pallet Quote",
-        fact1: "MOQ: 1 container",
-        fact2: "Quote within 24h",
-        fact3: "30K+ pallets/month",
-        fact4: "EPAL 1 / EPAL 3",
-        specsLabel: "Product fit",
-        specsTitle: "For buyers who need import-ready EPAL pallets",
-        specsLead: "EPAL-licensed Euro pallets manufactured in China, kept in standard sizes year-round and shipped FCL with full export documents. Most quotes go out within 24 hours once destination port, quantity, and required model are confirmed.",
-        spec1Key: "Sizes",
-        spec1Value: "1200 x 800 mm EPAL 1, 1200 x 1000 mm EPAL 3, plus other authorized models on inquiry.",
-        spec2Key: "Treatment",
-        spec2Value: "ISPM 15 heat treatment with phytosanitary certificate and full export documents on every shipment.",
-        spec3Key: "MOQ",
-        spec3Value: "1 x FCL. Mixed loading with pallet collars or accessories on request.",
+        fact1: "China supplier / producer",
+        fact2: "EPAL 1 / EPAL 3",
+        fact3: "ISPM 15 HT documents",
+        fact4: "MOQ: 1 container",
+        specsLabel: "EPAL pallet China supplier",
+        specsTitle: "EPAL 1 and EPAL 3 pallets for FCL export",
+        specsLead: "As a China EPAL pallet supplier and manufacturer, PAKSWELL focuses on export buyers who need standard EPAL Euro pallets, reliable container loading, and clear import documents before shipment.",
+        spec1Key: "Supplier role",
+        spec1Value: "China-based EPAL pallet supplier, manufacturer, and export partner for FCL orders.",
+        spec2Key: "EPAL models",
+        spec2Value: "1200 x 800 mm EPAL 1, 1200 x 1000 mm EPAL 3, plus other authorized EPAL models on inquiry.",
+        spec3Key: "Compliance",
+        spec3Value: "EPAL licensed production, ISPM 15 heat treatment, phytosanitary certificate, and export documents prepared for the destination market.",
         processLabel: "Buying process",
-        processTitle: "From RFQ to container loading",
-        step1Title: "Send requirements",
-        step1Copy: "Size, port, quantity, timeline.",
+        processTitle: "From supplier quote to container loading",
+        step1Title: "Send pallet requirements",
+        step1Copy: "EPAL model, size, quantity, destination port, and delivery timeline.",
         step2Title: "Confirm stock and price",
-        step2Copy: "Quote within 24 hours.",
-        step3Title: "Prepare docs",
-        step3Copy: "Compliance aligned with destination market.",
+        step2Copy: "We check available EPAL pallet supply in China and quote by FCL.",
+        step3Title: "Prepare export documents",
+        step3Copy: "ISPM 15, phytosanitary, packing, and commercial documents aligned with destination market.",
         step4Title: "Load and ship",
-        step4Copy: "Supervised container loading.",
+        step4Copy: "Supervised container loading with photos and shipping coordination.",
         quoteLabel: "Request a quote",
-        quoteTitle: "Get EPAL pallet pricing for your destination port",
-        quoteLead: "For the fastest quote, include size, quantity, destination port, and whether you need new or refurbished pallets.",
+        quoteTitle: "Get EPAL pallet China supplier pricing for your destination port",
+        quoteLead: "For the fastest quote, include EPAL model, size, quantity, destination port, and delivery timeline. PAKSWELL promotes new EPAL Euro pallets manufactured for export buyers.",
         emailCta: "Email Directly",
         emailSubject: "EPAL Euro Pallet Quote Request",
         formDestinationPlaceholder: "Bangkok, Ho Chi Minh, Busan...",
         formQuantityPlaceholder: "1 x 40'HC, 2 containers...",
-        formMessagePlaceholder: "Required size (EPAL 1 / EPAL 3 / mixed), timeline, new/refurbished, or anything else we should know.",
-        formSubmit: "Send EPAL Pallet RFQ"
+        formMessagePlaceholder: "Required size (EPAL 1 / EPAL 3 / mixed), timeline, documents, or anything else we should know.",
+        formSubmit: "Send EPAL Pallet RFQ",
+        footerText: "© 2026 PAKSWELL. EPAL pallet China supplier and pallet collar manufacturer."
       },
       th: {
         metaTitle: "พาเลท EPAL Euro จากจีน | ราคา FCL Export | PAKSWELL",
@@ -312,12 +313,12 @@
         step4Copy: "ควบคุมการโหลดตู้คอนเทนเนอร์",
         quoteLabel: "ขอใบเสนอราคา",
         quoteTitle: "รับราคาพาเลท EPAL สำหรับท่าเรือปลายทาง",
-        quoteLead: "เพื่อเสนอราคาเร็ว โปรดระบุขนาด จำนวน ท่าเรือปลายทาง และต้องการพาเลทใหม่หรือ refurbished",
+        quoteLead: "เพื่อเสนอราคาเร็ว โปรดระบุขนาด จำนวน ท่าเรือปลายทาง และกำหนดเวลา PAKSWELL โปรโมตพาเลท EPAL ใหม่สำหรับผู้ซื้อส่งออก",
         emailCta: "ส่งอีเมลโดยตรง",
         emailSubject: "EPAL Euro Pallet Quote Request",
         formDestinationPlaceholder: "Bangkok, Ho Chi Minh, Busan...",
         formQuantityPlaceholder: "1 x 40'HC, 2 ตู้...",
-        formMessagePlaceholder: "ขนาดที่ต้องการ (EPAL 1 / EPAL 3 / ผสม), กำหนดเวลา, ใหม่/refurbished หรือข้อกำหนดอื่น",
+        formMessagePlaceholder: "ขนาดที่ต้องการ (EPAL 1 / EPAL 3 / ผสม), กำหนดเวลา, เอกสาร หรือข้อกำหนดอื่น",
         formSubmit: "ส่ง RFQ พาเลท EPAL"
       },
       "zh-CN": {
@@ -354,12 +355,12 @@
         step4Copy: "监督集装箱装载。",
         quoteLabel: "申请报价",
         quoteTitle: "获取目的港 EPAL 托盘价格",
-        quoteLead: "为了更快报价，请提供尺寸、数量、目的港，以及是否需要新托盘或翻新托盘。",
+        quoteLead: "为了更快报价，请提供 EPAL 型号、尺寸、数量、目的港和交期。PAKSWELL 推广面向出口买家的全新 EPAL 欧标托盘。",
         emailCta: "直接发送邮件",
         emailSubject: "EPAL Euro Pallet Quote Request",
         formDestinationPlaceholder: "曼谷、胡志明、釜山...",
         formQuantityPlaceholder: "1 x 40'HC、2个集装箱...",
-        formMessagePlaceholder: "所需尺寸（EPAL 1 / EPAL 3 / 混装）、时间、新托盘/翻新托盘，或其他需求。",
+        formMessagePlaceholder: "所需尺寸（EPAL 1 / EPAL 3 / 混装）、时间、文件要求，或其他需求。",
         formSubmit: "发送 EPAL 托盘询价"
       },
       "zh-TW": {
@@ -396,12 +397,12 @@
         step4Copy: "監督貨櫃裝載。",
         quoteLabel: "申請報價",
         quoteTitle: "取得目的港 EPAL 棧板價格",
-        quoteLead: "為了更快報價，請提供尺寸、數量、目的港，以及是否需要新棧板或翻新棧板。",
+        quoteLead: "為了更快報價，請提供 EPAL 型號、尺寸、數量、目的港與交期。PAKSWELL 推廣面向出口買家的全新 EPAL 歐標棧板。",
         emailCta: "直接寄送郵件",
         emailSubject: "EPAL Euro Pallet Quote Request",
         formDestinationPlaceholder: "曼谷、胡志明、釜山...",
         formQuantityPlaceholder: "1 x 40'HC、2個貨櫃...",
-        formMessagePlaceholder: "所需尺寸（EPAL 1 / EPAL 3 / 混裝）、時間、新棧板/翻新棧板，或其他需求。",
+        formMessagePlaceholder: "所需尺寸（EPAL 1 / EPAL 3 / 混裝）、時間、文件需求，或其他需求。",
         formSubmit: "送出 EPAL 棧板詢價"
       },
       vi: {
@@ -438,12 +439,12 @@
         step4Copy: "Giám sát đóng container.",
         quoteLabel: "Yêu cầu báo giá",
         quoteTitle: "Nhận giá pallet EPAL cho cảng đến của bạn",
-        quoteLead: "Để báo giá nhanh, hãy gửi kích thước, số lượng, cảng đến và nhu cầu pallet mới hoặc refurbished.",
+        quoteLead: "Để báo giá nhanh, hãy gửi model EPAL, kích thước, số lượng, cảng đến và thời gian giao hàng. PAKSWELL quảng bá pallet EPAL mới cho người mua xuất khẩu.",
         emailCta: "Gửi email trực tiếp",
         emailSubject: "EPAL Euro Pallet Quote Request",
         formDestinationPlaceholder: "Bangkok, Ho Chi Minh, Busan...",
         formQuantityPlaceholder: "1 x 40'HC, 2 container...",
-        formMessagePlaceholder: "Kích thước cần dùng (EPAL 1 / EPAL 3 / hỗn hợp), thời gian, mới/refurbished hoặc yêu cầu khác.",
+        formMessagePlaceholder: "Kích thước cần dùng (EPAL 1 / EPAL 3 / hỗn hợp), thời gian, chứng từ hoặc yêu cầu khác.",
         formSubmit: "Gửi RFQ pallet EPAL"
       },
       ko: {
@@ -522,12 +523,12 @@
         step4Copy: "コンテナ積載を管理。",
         quoteLabel: "見積依頼",
         quoteTitle: "到着港向け EPAL パレット価格を取得",
-        quoteLead: "迅速な見積のため、サイズ、数量、到着港、新品または再生品の希望をお知らせください。",
+        quoteLead: "迅速な見積のため、EPALモデル、サイズ、数量、到着港、納期をお知らせください。PAKSWELL は輸出バイヤー向け新品 EPAL ユーロパレットを提案します。",
         emailCta: "直接メール",
         emailSubject: "EPAL Euro Pallet Quote Request",
         formDestinationPlaceholder: "Bangkok, Ho Chi Minh, Busan...",
         formQuantityPlaceholder: "1 x 40'HC、2コンテナ...",
-        formMessagePlaceholder: "必要サイズ（EPAL 1 / EPAL 3 / 混載）、納期、新品/再生品、その他要件。",
+        formMessagePlaceholder: "必要サイズ（EPAL 1 / EPAL 3 / 混載）、納期、必要書類、その他要件。",
         formSubmit: "EPAL パレット RFQ を送信"
       }
     },
@@ -1385,7 +1386,11 @@
     });
   });
 
-  applyAdsLanguage(getInitialLang(), { updateUrl: false });
+  if (document.body.dataset.adsLanguage !== "off") {
+    applyAdsLanguage(getInitialLang(), { updateUrl: false });
+  } else {
+    updateFormLanguage(document.documentElement.lang || "en");
+  }
 
   document.querySelectorAll("[data-track]").forEach(function (el) {
     el.addEventListener("click", function () {

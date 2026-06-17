@@ -4,6 +4,7 @@ This folder contains product-specific and market-specific Google Ads landing pag
 
 - `epal-euro-pallets.html`
 - `pallet-collars.html`
+- `us-pallet-collars.html`
 - `pallet-collar-hinges.html`
 - `japan.html`
 - `korea.html`
@@ -26,6 +27,7 @@ Upload the full `ads/` folder to the website root so the pages resolve as:
 
 - `https://www.pakswell.com/ads/epal-euro-pallets.html`
 - `https://www.pakswell.com/ads/pallet-collars.html`
+- `https://www.pakswell.com/ads/us-pallet-collars.html`
 - `https://www.pakswell.com/ads/pallet-collar-hinges.html`
 - `https://www.pakswell.com/ads/japan.html`
 - `https://www.pakswell.com/ads/korea.html`

@@ -10,12 +10,26 @@
         gtag('js', new Date());
         gtag('config', 'AW-18091479514');
 
+        var enhancedConversionStorageKey = 'pakswell_ec_user_data';
+        var enhancedUserData = null;
+        try {
+            enhancedUserData = JSON.parse(window.sessionStorage.getItem(enhancedConversionStorageKey) || 'null');
+        } catch (e) {
+            enhancedUserData = null;
+        }
+        if (enhancedUserData && typeof enhancedUserData === 'object') {
+            gtag('set', 'user_data', enhancedUserData);
+        }
+
         // Fire the Google Ads "Submit Lead Form" conversion on this page only.
         gtag('event', 'conversion', {
             'send_to': 'AW-18091479514/5nFFCKKxnZwcENqj2LJD',
             'value': 1.0,
             'currency': 'USD'
         });
+        try {
+            window.sessionStorage.removeItem(enhancedConversionStorageKey);
+        } catch (e) {}
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank You | PAKSWELL</title>

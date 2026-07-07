@@ -49,7 +49,11 @@ The shared script tracks button and form events with `gtag("event", ...)`. Whats
 
 - `AW-18091479514/YtFFCPfIq6scENqj2LJD`
 
-Form submissions redirect to `/thank-you.html`, where the existing lead-form conversion label fires:
+Form submissions store enhanced conversion user data in session storage before redirecting to `/thank-you`, where the existing lead-form conversion label fires:
+
+- `AW-18091479514/5nFFCKKxnZwcENqj2LJD`
+
+Phone and email clicks currently fire the same lead conversion label until separate Google Ads conversion actions are created:
 
 - `AW-18091479514/5nFFCKKxnZwcENqj2LJD`
 
@@ -57,6 +61,6 @@ Form submissions redirect to `/thank-you.html`, where the existing lead-form con
 
 The lead forms post to the same public Web3Forms endpoint used by the current website and redirect to:
 
-- `https://www.pakswell.com/thank-you.html`
+- `https://www.pakswell.com/thank-you`
 
 Before production launch, send one test inquiry from each page and confirm the email subject clearly identifies the product.

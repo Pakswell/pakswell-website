@@ -1,5 +1,8 @@
 (function () {
   var WHATSAPP_CONVERSION = "AW-18091479514/YtFFCPfIq6scENqj2LJD";
+  var LEAD_FORM_CONVERSION = "AW-18091479514/5nFFCKKxnZwcENqj2LJD";
+  var CONTACT_CLICK_CONVERSION = LEAD_FORM_CONVERSION;
+  var ENHANCED_CONVERSION_STORAGE_KEY = "pakswell_ec_user_data";
   var LANG_ORDER = ["en", "th", "zh-CN", "zh-TW", "vi", "ko", "ja"];
   var PRODUCT_PATHS = {
     "epal-euro-pallets": "epal-euro-pallets",
@@ -535,17 +538,17 @@
     "pallet-collars": {
       en: {
         metaTitle: "Solid Wood Pallet Collars from China | Foldable Export Packaging | PAKSWELL",
-        metaDescription: "Foldable solid wood pallet collars from China. Stackable, reusable, standard and custom sizes, FCL export, quote within 24 hours.",
-        ogTitle: "Solid Wood Pallet Collars from China | PAKSWELL",
-        ogDescription: "Foldable solid wood pallet collars for export packaging and reusable storage.",
-        eyebrow: "Foldable | Stackable | Reusable",
-        heroTitle: "European Standard Wooden Pallet Collar",
-        heroCopy: "European standard pallet collar boxes are easy to assemble and foldable, helping save transport space and cost. They are standard wooden packaging for exports to Europe and meet EU PPWR and EUDR requirements.",
+        metaDescription: "China manufacturer of foldable solid wood pallet collars for FCL export buyers. MOQ 1 container, standard and custom sizes, quote within 24 hours.",
+        ogTitle: "Wooden Pallet Collars from China for FCL Export | PAKSWELL",
+        ogDescription: "Foldable solid wood pallet collars for importers and industrial export packaging buyers. MOQ 1 container.",
+        eyebrow: "China manufacturer | MOQ 1 container | FCL export",
+        heroTitle: "Wooden Pallet Collars from China for FCL Export",
+        heroCopy: "PAKSWELL manufactures foldable European standard wooden pallet collar boxes for importers, distributors, and industrial packaging buyers. MOQ starts from 1 container; standard and custom sizes are available for export packaging to Europe and other import markets.",
         heroQuote: "Request Pallet Collar Quote",
         fact1: "100K+ collars/month",
         fact2: "MOQ: 1 container",
-        fact3: "Standard and custom sizes",
-        fact4: "Fold flat for return logistics",
+        fact3: "China factory supply",
+        fact4: "FCL export packaging",
         specsLabel: "Product fit",
         specsTitle: "packaging for fastener, casting, and automotive parts exports to EU",
         specsLead: "Foldable solid wood pallet collars are suitable for customers in fastener, casting, and automotive parts industries exporting to the EU. Standard sizes are stocked year-round; custom dimensions are available with plywood lids and plastic corners. Different board thicknesses and collar heights are available, including custom 6-hinge collars.",
@@ -567,7 +570,7 @@
         step4Copy: "Folded, strapped, documented, FCL-loaded.",
         quoteLabel: "Request a quote",
         quoteTitle: "Get pallet collar pricing for your packaging project",
-        quoteLead: "For the fastest quote, include pallet footprint, collar height, layers per set, quantity, destination port, and whether you need lids or plastic corners.",
+        quoteLead: "For the fastest quote, include pallet footprint, collar height, layers per set, destination port, and container quantity. MOQ is 1 FCL; retail or one-piece orders are not our focus.",
         emailCta: "Email Directly",
         emailSubject: "Pallet Collar Quote Request",
         formDestinationPlaceholder: "Laem Chabang, Cat Lai, Busan...",
@@ -1131,6 +1134,43 @@
     window.gtag("event", name, params || {});
   }
 
+  function fireConversion(sendTo, params) {
+    if (typeof window.gtag !== "function" || !sendTo) return;
+    var payload = Object.assign({
+      send_to: sendTo,
+      value: 1.0,
+      currency: "USD"
+    }, params || {});
+    window.gtag("event", "conversion", payload);
+  }
+
+  function isContactClick(eventName) {
+    return eventName === "click_email" ||
+      eventName === "click_topbar_email" ||
+      eventName === "click_phone" ||
+      eventName === "click_topbar_phone";
+  }
+
+  function saveLeadFormUserData(form) {
+    try {
+      var formData = new FormData(form);
+      var email = String(formData.get("email") || "").trim().toLowerCase();
+      var phone = String(formData.get("phone") || "").trim();
+      var fullName = String(formData.get("name") || "").trim();
+      var nameParts = fullName.split(/\s+/).filter(Boolean);
+      var userData = {};
+
+      if (email) userData.email = email;
+      if (phone) userData.phone_number = phone;
+      if (nameParts.length) userData.first_name = nameParts[0];
+      if (nameParts.length > 1) userData.last_name = nameParts.slice(1).join(" ");
+
+      if (Object.keys(userData).length) {
+        window.sessionStorage.setItem(ENHANCED_CONVERSION_STORAGE_KEY, JSON.stringify(userData));
+      }
+    } catch (e) {}
+  }
+
   function isValidLang(lang) {
     return LANG_ORDER.indexOf(lang) !== -1;
   }
@@ -1400,13 +1440,16 @@
         page_path: window.location.pathname
       });
       if (eventName && eventName.indexOf("click_whatsapp") === 0 && typeof window.gtag === "function") {
-        window.gtag("event", "conversion", { send_to: WHATSAPP_CONVERSION });
+        fireConversion(WHATSAPP_CONVERSION);
+      } else if (isContactClick(eventName)) {
+        fireConversion(CONTACT_CLICK_CONVERSION, { event_category: "lead_contact_click" });
       }
     });
   });
 
   document.querySelectorAll("form[data-lead-form]").forEach(function (form) {
     form.addEventListener("submit", function () {
+      saveLeadFormUserData(form);
       track("lead_form_submit", {
         product: form.getAttribute("data-product") || document.body.dataset.product || "unknown",
         page_path: window.location.pathname

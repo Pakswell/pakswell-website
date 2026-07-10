@@ -45,8 +45,8 @@
     },
     {
       kicker: "EPAL",
-      title: "EPAL license confirmation",
-      text: "EPAL production license information is available for formal new EPAL pallet inquiries and can be shared through the sales follow-up."
+      title: "Order-specific EPAL verification",
+      text: "For formal new EPAL pallet inquiries, the production facility and applicable licence details are matched to the order and confirmed during sales follow-up."
     }
   ];
 

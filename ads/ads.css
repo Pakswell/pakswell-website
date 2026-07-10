@@ -342,6 +342,88 @@ img {
   padding: 92px 0 86px;
 }
 
+.hero-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(320px, 0.72fr);
+  align-items: center;
+  gap: clamp(34px, 6vw, 88px);
+}
+
+.hero-grid .hero-content {
+  width: 100%;
+}
+
+.hero-product-card {
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+  color: var(--ink);
+}
+
+.hero-product-image {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #eef2f4;
+}
+
+.hero-product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-product-badge {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  padding: 7px 10px;
+  border-radius: 4px;
+  color: #fff;
+  background: rgba(27, 58, 92, 0.92);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero-product-body {
+  padding: 18px 20px 20px;
+}
+
+.hero-product-body strong {
+  display: block;
+  color: var(--navy);
+  font-size: 17px;
+}
+
+.hero-product-body p {
+  margin: 5px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.hero-product-points {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.hero-product-points span {
+  padding: 8px 9px;
+  border-radius: 4px;
+  color: var(--navy);
+  background: var(--mist);
+  font-size: 11px;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
 .eyebrow {
   display: inline-flex;
   align-items: center;
@@ -924,6 +1006,11 @@ h2 {
   .quote-panel {
     grid-template-columns: 1fr;
   }
+
+  .hero-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.62fr);
+    gap: 28px;
+  }
 }
 
 @media (max-width: 700px) {
@@ -983,7 +1070,17 @@ h2 {
   }
 
   .hero-content {
-    padding: 74px 0 76px;
+    padding: 68px 0 30px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding-bottom: 54px;
+  }
+
+  .hero-product-card {
+    width: min(460px, 100%);
   }
 
   h1 {

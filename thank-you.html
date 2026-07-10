@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script src="/consent.js?v=20260710-1"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18091479514"></script>
     <script>
@@ -11,22 +12,36 @@
         gtag('config', 'AW-18091479514');
 
         var enhancedConversionStorageKey = 'pakswell_ec_user_data';
+        var params = new URLSearchParams(window.location.search);
+        var leadId = String(params.get('lead_id') || '');
+        var product = String(params.get('product') || 'unknown').slice(0, 100);
+        var validLeadId = /^pw-[a-z0-9-]{10,}$/i.test(leadId);
         var enhancedUserData = null;
         try {
             enhancedUserData = JSON.parse(window.sessionStorage.getItem(enhancedConversionStorageKey) || 'null');
         } catch (e) {
             enhancedUserData = null;
         }
-        if (enhancedUserData && typeof enhancedUserData === 'object') {
+        if (enhancedUserData && typeof enhancedUserData === 'object' && window.PakswellConsent && window.PakswellConsent.allowsUserData()) {
             gtag('set', 'user_data', enhancedUserData);
         }
 
-        // Fire the Google Ads "Submit Lead Form" conversion on this page only.
-        gtag('event', 'conversion', {
-            'send_to': 'AW-18091479514/5nFFCKKxnZwcENqj2LJD',
-            'value': 1.0,
-            'currency': 'USD'
-        });
+        // Count only a real form redirect carrying a unique lead ID. The
+        // transaction ID and local guard prevent refreshes from duplicating it.
+        var alreadyCounted = false;
+        if (validLeadId) {
+            try { alreadyCounted = window.localStorage.getItem('pakswell_counted_' + leadId) === '1'; } catch (e) {}
+        }
+        if (validLeadId && !alreadyCounted) {
+            gtag('event', 'conversion', {
+                'send_to': 'AW-18091479514/5nFFCKKxnZwcENqj2LJD',
+                'value': 1.0,
+                'currency': 'USD',
+                'transaction_id': leadId,
+                'product': product
+            });
+            try { window.localStorage.setItem('pakswell_counted_' + leadId, '1'); } catch (e) {}
+        }
         try {
             window.sessionStorage.removeItem(enhancedConversionStorageKey);
         } catch (e) {}

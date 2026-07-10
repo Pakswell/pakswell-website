@@ -1,8 +1,5 @@
 (function () {
   var WHATSAPP_CONVERSION = "AW-18091479514/YtFFCPfIq6scENqj2LJD";
-  var LEAD_FORM_CONVERSION = "AW-18091479514/5nFFCKKxnZwcENqj2LJD";
-  var CONTACT_CLICK_CONVERSION = LEAD_FORM_CONVERSION;
-  var ENHANCED_CONVERSION_STORAGE_KEY = "pakswell_ec_user_data";
   var LANG_ORDER = ["en", "th", "zh-CN", "zh-TW", "vi", "ko", "ja"];
   var PRODUCT_PATHS = {
     "epal-euro-pallets": "epal-euro-pallets",
@@ -1144,35 +1141,24 @@
     window.gtag("event", "conversion", payload);
   }
 
-  function isContactClick(eventName) {
-    return eventName === "click_email" ||
-      eventName === "click_topbar_email" ||
-      eventName === "click_phone" ||
-      eventName === "click_topbar_phone";
-  }
-
-  function saveLeadFormUserData(form) {
-    try {
-      var formData = new FormData(form);
-      var email = String(formData.get("email") || "").trim().toLowerCase();
-      var phone = String(formData.get("phone") || "").trim();
-      var fullName = String(formData.get("name") || "").trim();
-      var nameParts = fullName.split(/\s+/).filter(Boolean);
-      var userData = {};
-
-      if (email) userData.email = email;
-      if (phone) userData.phone_number = phone;
-      if (nameParts.length) userData.first_name = nameParts[0];
-      if (nameParts.length > 1) userData.last_name = nameParts.slice(1).join(" ");
-
-      if (Object.keys(userData).length) {
-        window.sessionStorage.setItem(ENHANCED_CONVERSION_STORAGE_KEY, JSON.stringify(userData));
-      }
-    } catch (e) {}
-  }
-
   function isValidLang(lang) {
     return LANG_ORDER.indexOf(lang) !== -1;
+  }
+
+  function browserLang() {
+    var languages = [];
+    try { languages = (navigator.languages || [navigator.language || ""]).filter(Boolean); } catch (e) {}
+    for (var i = 0; i < languages.length; i += 1) {
+      var lang = String(languages[i]).toLowerCase();
+      if (lang.indexOf("zh-tw") === 0 || lang.indexOf("zh-hk") === 0 || lang.indexOf("zh-mo") === 0) return "zh-TW";
+      if (lang.indexOf("zh") === 0) return "zh-CN";
+      if (lang.indexOf("th") === 0) return "th";
+      if (lang.indexOf("vi") === 0) return "vi";
+      if (lang.indexOf("ko") === 0) return "ko";
+      if (lang.indexOf("ja") === 0) return "ja";
+      if (lang.indexOf("en") === 0) return "en";
+    }
+    return "en";
   }
 
   function getProductKey() {
@@ -1402,7 +1388,7 @@
     try { savedLang = localStorage.getItem("pw_lang"); } catch (e) {}
     if (isValidLang(savedLang)) return savedLang;
 
-    return "en";
+    return browserLang();
   }
 
   window.switchAdsLang = function (lang) {
@@ -1441,17 +1427,35 @@
       });
       if (eventName && eventName.indexOf("click_whatsapp") === 0 && typeof window.gtag === "function") {
         fireConversion(WHATSAPP_CONVERSION);
-      } else if (isContactClick(eventName)) {
-        fireConversion(CONTACT_CLICK_CONVERSION, { event_category: "lead_contact_click" });
       }
     });
   });
 
   document.querySelectorAll("form[data-lead-form]").forEach(function (form) {
-    form.addEventListener("submit", function () {
-      saveLeadFormUserData(form);
-      track("lead_form_submit", {
-        product: form.getAttribute("data-product") || document.body.dataset.product || "unknown",
+    form.dataset.loadedAt = String(Date.now());
+    form.addEventListener("submit", function (event) {
+      var product = form.getAttribute("data-product") || document.body.dataset.product || "unknown";
+      var elapsed = Date.now() - Number(form.dataset.loadedAt || 0);
+      var botcheck = form.querySelector('input[name="botcheck"]');
+      if (elapsed < 2500 || (botcheck && botcheck.checked)) {
+        event.preventDefault();
+        return;
+      }
+
+      try {
+        var lastSubmit = Number(window.localStorage.getItem("pw_last_submit") || 0);
+        if (lastSubmit && Date.now() - lastSubmit < 30000) {
+          event.preventDefault();
+          return;
+        }
+        window.localStorage.setItem("pw_last_submit", String(Date.now()));
+      } catch (e) {}
+
+      if (window.PakswellAttribution) {
+        window.PakswellAttribution.prepareLead(form, product);
+      }
+      track("lead_form_submit_attempt", {
+        product: product,
         page_path: window.location.pathname
       });
     });

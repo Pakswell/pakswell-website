@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script src="/consent.js?v=20260710-1"></script>
+    <script src="/attribution.js?v=20260710-1"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18091479514"></script>
     <script>
@@ -859,39 +861,6 @@
         .mobile-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
         .mobile-toggle span { display: block; width: 24px; height: 2px; background: var(--dark); margin: 5px 0; transition: 0.3s; }
 
-        /* ===== COOKIE BANNER ===== */
-        .cookie-banner {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: var(--dark);
-            color: rgba(255,255,255,0.85);
-            padding: 16px 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-            font-size: 14px;
-            z-index: 9999;
-            box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
-        }
-        .cookie-banner.hidden { display: none; }
-        .cookie-banner a { color: var(--accent); text-decoration: underline; }
-        .cookie-btn {
-            background: var(--accent);
-            color: #fff;
-            border: none;
-            padding: 8px 20px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 13px;
-            font-family: inherit;
-            white-space: nowrap;
-        }
-        .cookie-btn:hover { background: var(--accent-hover); }
-
         /* ===== PRODUCT GALLERY ===== */
         .gallery-section { background: linear-gradient(135deg, #0F1923 0%, #1B3A5C 100%); padding: 80px 0; }
         .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 40px; }
@@ -1511,6 +1480,22 @@
     let TRANSLATIONS = {};
     let currentLang = 'en';
 
+    function browserLanguage() {
+        var languages = [];
+        try { languages = (navigator.languages || [navigator.language || '']).filter(Boolean); } catch(e) {}
+        for (var i = 0; i < languages.length; i += 1) {
+            var lang = String(languages[i]).toLowerCase();
+            if (lang.indexOf('zh-tw') === 0 || lang.indexOf('zh-hk') === 0 || lang.indexOf('zh-mo') === 0) return 'zh-TW';
+            if (lang.indexOf('zh') === 0) return 'zh-CN';
+            if (lang.indexOf('th') === 0) return 'th';
+            if (lang.indexOf('vi') === 0) return 'vi';
+            if (lang.indexOf('ko') === 0) return 'ko';
+            if (lang.indexOf('ja') === 0) return 'ja';
+            if (lang.indexOf('en') === 0) return 'en';
+        }
+        return 'en';
+    }
+
     function productPageHref(baseHref, lang) {
         if (!baseHref) return baseHref;
         var hash = '';
@@ -1540,12 +1525,13 @@
             .then(function(res) { return res.json(); })
             .then(function(data) {
                 TRANSLATIONS = data;
-                // Detect language: URL ?lang= takes priority, then saved preference
+                // Detect language: URL ?lang= takes priority, then saved preference,
+                // then the visitor's browser language.
                 var urlLang = null;
                 try { urlLang = new URLSearchParams(window.location.search).get('lang'); } catch(e) {}
                 var savedLang = null;
                 try { savedLang = localStorage.getItem('pw_lang'); } catch(e) {}
-                var initLang = urlLang || savedLang;
+                var initLang = urlLang || savedLang || browserLanguage();
                 var validLangs = ['en','zh-CN','zh-TW','th','vi','ja','ko'];
                 if (initLang && validLangs.indexOf(initLang) !== -1 && initLang !== 'en') {
                     switchLang(initLang);
@@ -1644,6 +1630,7 @@
         } catch (err) {}
 
         var form = this;
+        var leadContext = window.PakswellAttribution ? window.PakswellAttribution.prepareLead(form, 'homepage') : null;
         var btn = form.querySelector('.btn-submit');
         var result = document.getElementById('form-result');
         var formMsgs = {
@@ -1668,7 +1655,12 @@
                 if (data.success) {
                     form.reset();
                     var _lang = (typeof currentLang === 'string' && currentLang) ? currentLang : 'en';
-                    window.location.href = 'thank-you.html?lang=' + encodeURIComponent(_lang);
+                    var _leadId = leadContext && leadContext.leadId ? leadContext.leadId : '';
+                    var _thankYou = new URL('thank-you.html', window.location.href);
+                    _thankYou.searchParams.set('lang', _lang);
+                    _thankYou.searchParams.set('product', 'homepage');
+                    if (_leadId) _thankYou.searchParams.set('lead_id', _leadId);
+                    window.location.href = _thankYou.toString();
                     return;
                 }
                 result.style.display = 'block';
@@ -1719,23 +1711,7 @@
     // Init
     loadTranslations();
 
-    // Cookie consent banner
-    (function() {
-        if (localStorage.getItem('cookieConsent')) return;
-        var banner = document.getElementById('cookie-banner');
-        if (banner) banner.classList.remove('hidden');
-    })();
-    function acceptCookies() {
-        localStorage.setItem('cookieConsent', 'accepted');
-        document.getElementById('cookie-banner').classList.add('hidden');
-    }
     </script>
-
-    <!-- Cookie Consent Banner -->
-    <div class="cookie-banner hidden" id="cookie-banner">
-        <span>We use cookies for analytics to improve your experience. <a href="privacy">Privacy Policy</a></span>
-        <button class="cookie-btn" onclick="acceptCookies()">Accept</button>
-    </div>
 
     <!-- WhatsApp Floating Button -->
     <style>

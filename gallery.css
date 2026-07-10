@@ -60,7 +60,7 @@ nav a:hover, nav a[aria-current="page"] { color: var(--gold); }
 .gallery-card:hover { transform: translateY(-3px); }
 .gallery-card.hidden { display: none; }
 .gallery-open { position: relative; width: 100%; padding: 0; display: block; border: 0; background: #e7ecf0; cursor: zoom-in; overflow: hidden; }
-.gallery-open img { width: 100%; aspect-ratio: 4 / 5; display: block; object-fit: cover; object-position: center 45%; transition: transform .35s ease; }
+.gallery-open img { width: 100%; aspect-ratio: 4 / 3; display: block; object-fit: cover; object-position: center; transition: transform .35s ease; }
 .gallery-open:hover img { transform: scale(1.025); }
 .zoom-label { position: absolute; left: 12px; top: 12px; min-width: 30px; height: 30px; display: grid; place-items: center; border-radius: 50%; background: rgba(15,25,35,.76); color: #fff; font-size: 11px; font-weight: 800; }
 .gallery-card figcaption { min-height: 82px; padding: 14px 15px; display: grid; align-content: center; gap: 5px; }
@@ -114,7 +114,7 @@ footer { background: var(--ink); color: rgba(255,255,255,.62); }
   nav { display: none; }
   .language-control { margin-left: auto; }
   .gallery-grid { grid-template-columns: 1fr; }
-  .gallery-open img { aspect-ratio: 4 / 5; }
+  .gallery-open img { aspect-ratio: 4 / 3; }
 }
 @media (prefers-reduced-motion: reduce) {
   * { scroll-behavior: auto !important; transition: none !important; }

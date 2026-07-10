@@ -876,6 +876,10 @@
         .gallery-item:hover .gallery-caption { transform: translateY(0); }
         .gallery-item.gallery-wide { grid-column: span 2; }
         .gallery-item.gallery-tall { grid-row: span 2; aspect-ratio: auto; }
+        .gallery-preview-grid .gallery-featured { grid-column: 1 / -1; aspect-ratio: 16/5; }
+        .gallery-preview-grid .gallery-featured img { object-position: center; }
+        .gallery-view-all { display: inline-flex; align-items: center; gap: 8px; margin-top: 28px; padding: 12px 20px; border: 1px solid var(--accent); border-radius: 4px; color: var(--accent); text-decoration: none; font-weight: 700; transition: 0.25s ease; }
+        .gallery-view-all:hover { background: var(--accent); color: var(--dark); }
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 1024px) {
@@ -924,6 +928,7 @@
             #structure > .container > div:last-child { grid-template-columns: repeat(2, 1fr) !important; }
             .gallery-item.gallery-wide { grid-column: span 1; }
             .gallery-item.gallery-tall { grid-row: span 1; }
+            .gallery-preview-grid .gallery-featured { grid-column: 1 / -1; aspect-ratio: 16/9; }
             #about .container > div:last-child { grid-template-columns: 1fr !important; }
         }
     </style>
@@ -984,6 +989,7 @@
                         <li><a href="ads/pallet-collar-hinges" data-track="click_nav_product" data-product="pallet-collar-hinges" data-i18n="product3_name">Galvanized Hinges</a></li>
                     </ul>
                 </li>
+                <li><a href="gallery" data-i18n="nav_gallery">Gallery</a></li>
                 <li><a href="#compliance" data-i18n="nav_compliance">Compliance</a></li>
                 <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
                 <li><a href="#contact" class="nav-cta" data-i18n="nav_cta">Get a Quote</a></li>
@@ -1108,30 +1114,35 @@
     </section>
 
     <!-- PRODUCT GALLERY -->
-    <div class="gallery-section">
+    <div class="gallery-section" id="gallery-preview">
         <div class="container" style="text-align:center;">
             <div class="section-label" style="color:var(--accent);" data-i18n="banner_title">Production & Shipping</div>
-            <h2 style="color:#fff; font-size:32px; font-weight:800; text-transform:uppercase; margin-bottom:8px;" data-i18n="gallery_title">From Factory to Container</h2>
-            <p style="color:rgba(255,255,255,0.6);" data-i18n="banner_desc">6 manufacturing bases and warehouses across China. Own heat treatment facility. Container loading supervision.</p>
+            <h2 style="color:#fff; font-size:32px; font-weight:800; text-transform:uppercase; margin-bottom:8px;" data-i18n="gallery_title">Production & Recent Shipments</h2>
+            <p style="color:rgba(255,255,255,0.6);" data-i18n="banner_desc">Selected references from production, warehouse handling, and recent container loading.</p>
 
-            <div class="gallery-grid" style="grid-template-columns: repeat(2, 1fr);">
+            <div class="gallery-grid gallery-preview-grid" style="grid-template-columns: repeat(2, 1fr);">
+                <a class="gallery-item gallery-featured" href="gallery" aria-label="View recent container loading gallery">
+                    <img src="images/gallery/shipping-featured.webp" alt="Pallet collar bundles aligned inside a shipping container" loading="lazy" width="1080" height="342">
+                    <div class="gallery-caption" data-i18n="gallery_cap_recent">Recent container loading</div>
+                </a>
                 <div class="gallery-item">
                     <img src="images/production-line.jpg" alt="Automated production line at Pakswell factory" loading="lazy" width="580" height="435">
                     <div class="gallery-caption" data-i18n="gallery_cap_ht">Automated production line</div>
                 </div>
+                <a class="gallery-item" href="gallery?category=collars" aria-label="View pallet collar shipment gallery">
+                    <img src="images/gallery/shipment-18.webp" alt="Pallet collar bundles ready for container loading" loading="lazy" width="788" height="1400">
+                    <div class="gallery-caption" data-i18n="gallery_cap_collars">Pallet collars ready for dispatch</div>
+                </a>
+                <a class="gallery-item" href="gallery?category=pallets" aria-label="View pallet shipment gallery">
+                    <img src="images/gallery/shipment-07.webp" alt="Wooden pallets arranged for container loading" loading="lazy" width="788" height="1400">
+                    <div class="gallery-caption" data-i18n="gallery_cap_pallets">Pallet shipment loading</div>
+                </a>
                 <div class="gallery-item">
-                    <img src="images/team-assembly.jpg" alt="Workers assembling pallet collar with safety equipment" loading="lazy" width="580" height="435">
-                    <div class="gallery-caption" data-i18n="gallery_cap_cl1">Easy to load and unload</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/epal-quality-detail.jpg" alt="EPAL certified pallet collar metal hinge close-up" loading="lazy" width="580" height="435">
-                    <div class="gallery-caption" data-i18n="gallery_cap_cl2">EPAL-certified quality detail</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="images/packaging-application.jpg" alt="Workers placing plywood lid on pallet collar packed with cartons" loading="lazy" width="580" height="435">
-                    <div class="gallery-caption" data-i18n="gallery_cap_cl3">Real packaging application</div>
+                    <img src="images/hero-warehouse.jpg" alt="Pallet and pallet collar inventory in warehouse" loading="lazy" width="580" height="435">
+                    <div class="gallery-caption" data-i18n="gallery_cap_warehouse">Warehouse handling</div>
                 </div>
             </div>
+            <a class="gallery-view-all" href="gallery"><span data-i18n="gallery_view_all">View Full Shipping Gallery</span><span aria-hidden="true">→</span></a>
         </div>
     </div>
 
@@ -1456,6 +1467,7 @@
                     <h4 data-i18n="footer_company">Company</h4>
                     <ul>
                         <li><a href="#about" data-i18n="about_label">About Us</a></li>
+                        <li><a href="gallery" data-i18n="nav_gallery">Gallery</a></li>
                         <li><a href="#compliance" data-i18n="nav_compliance">Compliance</a></li>
                         <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
                         <li><a href="privacy">Privacy Policy</a></li>

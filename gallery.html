@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <script src="/consent.js?v=20260710-1"></script>
+  <script src="/consent.js?v=20260712-language-2"></script>
   <script src="/attribution.js?v=20260710-1"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18091479514"></script>
   <script>
@@ -38,7 +38,7 @@
     <div class="shell header-inner">
       <a class="brand" href="/" aria-label="PAKSWELL homepage">
         <img src="/logo-pakswell-mark.svg" alt="" width="48" height="48">
-        <span><strong>PAKSWELL</strong><small>Packaging Solutions</small></span>
+        <span><strong>PAKSWELL</strong><small data-i18n="brand_tagline">Packaging Solutions</small></span>
       </a>
       <nav aria-label="Primary navigation">
         <a href="/" data-i18n="nav_home">Home</a>
@@ -47,7 +47,7 @@
         <a href="/#contact" data-i18n="nav_contact">Contact</a>
       </nav>
       <label class="language-control">
-        <span class="sr-only">Language</span>
+        <span class="sr-only" data-i18n="language_label">Language</span>
         <select id="gallery-lang" aria-label="Language">
           <option value="en">EN</option>
           <option value="zh-CN">简中</option>
@@ -75,8 +75,8 @@
       <div class="shell proof-grid">
         <div><strong>20</strong><span data-i18n="stat_selected">selected references</span></div>
         <div><strong>2026</strong><span data-i18n="stat_period">January–June</span></div>
-        <div><strong>3 Stages</strong><span data-i18n="stat_fcl">production · export · domestic</span></div>
-        <div><strong>Private</strong><span data-i18n="stat_privacy">client details protected</span></div>
+        <div><strong data-i18n="stat_stages">3 Stages</strong><span data-i18n="stat_fcl">production · export · domestic</span></div>
+        <div><strong data-i18n="stat_private">Private</strong><span data-i18n="stat_privacy">client details protected</span></div>
       </div>
     </section>
 
@@ -197,7 +197,7 @@
   </main>
 
   <footer>
-    <div class="shell footer-inner"><span>© 2026 PAKSWELL</span><a href="/privacy">Privacy Policy</a></div>
+    <div class="shell footer-inner"><span>© 2026 PAKSWELL</span><a href="/privacy" data-i18n="privacy_link">Privacy Policy</a></div>
   </footer>
 
   <dialog class="lightbox" id="gallery-lightbox" aria-label="Shipment photo">
@@ -205,6 +205,6 @@
     <img src="" alt="">
     <div class="lightbox-copy"><strong></strong><span></span></div>
   </dialog>
-  <script src="/gallery.js?v=20260710-1"></script>
+  <script src="/gallery.js?v=20260712-language-2"></script>
 </body>
 </html>

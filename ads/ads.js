@@ -1168,7 +1168,7 @@
   function getCopy(lang) {
     var product = getProductKey();
     var productCopy = PRODUCT_COPY[product] || PRODUCT_COPY["epal-euro-pallets"];
-    return Object.assign({}, COMMON.en, COMMON[lang] || {}, productCopy.en || {}, productCopy[lang] || {});
+    return Object.assign({}, COMMON.en, productCopy.en || {}, COMMON[lang] || {}, productCopy[lang] || {});
   }
 
   function setText(selector, value) {

@@ -694,7 +694,7 @@
         .verification-item > span { color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .12em; }
         .verification-item strong { display: block; margin-top: 12px; color: var(--primary); font-size: 15px; }
         .verification-item p { margin: 8px 0 0; color: var(--text-light); font-size: 13px; line-height: 1.6; }
-        .verification-link { display: inline-flex; margin-top: 16px; color: var(--primary); font-size: 13px; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+        .verification-note { margin: 16px 0 0; color: var(--text-light); font-size: 13px; font-weight: 600; line-height: 1.7; }
 
         /* ===== PHOTO BANNER ===== */
         .photo-banner {
@@ -1193,7 +1193,7 @@
                 <p data-i18n="comp_note" style="max-width:780px; margin:34px auto 0; padding:18px 22px; border:1px solid rgba(27,58,92,0.12); border-radius:8px; background:#fff; color:var(--text-light); font-size:13px; line-height:1.75;">
                     Product markings, treatment certificates, licence details, and origin documents depend on the producing facility, product model, destination, and shipment. The applicable evidence is confirmed with the formal quotation before purchase order approval.
                 </p>
-                <a class="verification-link" href="https://www.epal-pallets.org/eu-en/licensee-search/" target="_blank" rel="noopener" data-i18n="comp_verify_link">Verify the selected producer through the official EPAL licensee search →</a>
+                <p class="verification-note" data-i18n="comp_verify_note">The formal quotation identifies the producing facility for the order and the applicable licence details for buyer verification.</p>
             </div>
         </div>
     </section>
@@ -1471,7 +1471,7 @@
 
     // Load translations from external JSON file
     function loadTranslations() {
-        fetch('translations.json?v=20260712-refinement-1')
+        fetch('translations.json?v=20260712-verification-1')
             .then(function(res) { return res.json(); })
             .then(function(data) {
                 TRANSLATIONS = data;

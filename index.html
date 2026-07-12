@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <script src="/consent.js?v=20260710-1"></script>
+    <script src="/consent.js?v=20260712-language-2"></script>
     <script src="/attribution.js?v=20260710-1"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18091479514"></script>
@@ -1066,7 +1066,7 @@
                 <!-- Pallet Collar -->
                 <div class="product-card">
                     <div class="product-image">
-                        <div class="product-badge">STACKABLE</div>
+                        <div class="product-badge" data-i18n="product_badge_stackable">Stackable</div>
                         <img src="images/collar-3tier-warehouse.jpg" alt="Three-tier pallet collar stack on EPAL pallet in warehouse" loading="lazy" width="600" height="320">
                     </div>
                     <div class="product-content">
@@ -1082,7 +1082,7 @@
                 <!-- Galvanized Steel Hinges -->
                 <div class="product-card">
                     <div class="product-image" style="background:#f3f5f8;">
-                        <div class="product-badge">1.5M+ / MONTH</div>
+                        <div class="product-badge" data-i18n="product_badge_output">1.5M+ / month</div>
                         <img src="images/hinge-cgi-front.jpg" alt="Galvanized steel pallet collar hinge with rivets, in-house production" loading="lazy" width="600" height="320">
                     </div>
                     <div class="product-content">
@@ -1208,7 +1208,7 @@
                     </div>
                 </div>
 
-                <p style="max-width:780px; margin:34px auto 0; padding:18px 22px; border:1px solid rgba(27,58,92,0.12); border-radius:8px; background:#fff; color:var(--text-light); font-size:13px; line-height:1.75;">
+                <p data-i18n="comp_note" style="max-width:780px; margin:34px auto 0; padding:18px 22px; border:1px solid rgba(27,58,92,0.12); border-radius:8px; background:#fff; color:var(--text-light); font-size:13px; line-height:1.75;">
                     Product markings, treatment certificates, licence details, and origin documents depend on the producing facility, product model, destination, and shipment. The applicable evidence is confirmed with the formal quotation before purchase order approval.
                 </p>
             </div>
@@ -1385,7 +1385,7 @@
                         </div>
                         <button type="submit" class="btn-submit" data-i18n="form_submit">Send Inquiry to Our Specialist</button>
                         <div id="form-result" style="margin-top:12px; text-align:center; font-size:14px; display:none;"></div>
-                        <p style="margin-top:12px; font-size:11px; color:#888; text-align:center; line-height:1.5;">
+                        <p data-i18n-html="recaptcha_note" style="margin-top:12px; font-size:11px; color:#888; text-align:center; line-height:1.5;">
                             This site is protected by reCAPTCHA and the Google
                             <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style="color:#888; text-decoration:underline;">Privacy Policy</a> and
                             <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" style="color:#888; text-decoration:underline;">Terms of Service</a> apply.
@@ -1420,7 +1420,7 @@
                         <li><a href="gallery" data-i18n="nav_gallery">Gallery</a></li>
                         <li><a href="#compliance" data-i18n="nav_compliance">Compliance</a></li>
                         <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
-                        <li><a href="privacy">Privacy Policy</a></li>
+                        <li><a href="privacy" data-language-link data-i18n="privacy_policy">Privacy Policy</a></li>
                     </ul>
                 </div>
                 <div>
@@ -1479,11 +1479,16 @@
             link.setAttribute('data-base-href', baseHref.split('?')[0]);
             link.setAttribute('href', productPageHref(baseHref, lang));
         });
+        document.querySelectorAll('a[data-language-link]').forEach(function(link) {
+            var baseHref = link.getAttribute('data-base-href') || link.getAttribute('href');
+            link.setAttribute('data-base-href', baseHref.split('?')[0]);
+            link.setAttribute('href', productPageHref(baseHref, lang));
+        });
     }
 
     // Load translations from external JSON file
     function loadTranslations() {
-        fetch('translations.json?v=20260603-footer-1')
+        fetch('translations.json?v=20260712-language-2')
             .then(function(res) { return res.json(); })
             .then(function(data) {
                 TRANSLATIONS = data;
@@ -1549,6 +1554,7 @@
 
         // Persist language preference
         try { localStorage.setItem('pw_lang', lang); } catch(e) {}
+        if (window.PakswellConsent) window.PakswellConsent.refreshLanguage();
     }
 
     // Close dropdown when clicking outside

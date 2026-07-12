@@ -350,7 +350,7 @@
             letter-spacing: -0.5px;
             line-break: strict;
         }
-        .hero h1 span { color: var(--accent); }
+        .hero h1 span { color: inherit; }
         /* CJK line-break safety: prevent forbidden line-starts (e.g. Japanese long-sound ー) */
         :lang(ja) .hero h1, :lang(ko) .hero h1, :lang(zh) .hero h1,
         html[lang="ja"] .hero h1, html[lang="ko"] .hero h1,
@@ -406,13 +406,13 @@
         }
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             border: 1px solid var(--border);
-            border-radius: 8px;
+            border-radius: 4px;
             overflow: hidden;
             margin-top: -50px;
             background: var(--white);
-            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            box-shadow: 0 8px 28px rgba(0,0,0,0.06);
         }
         .stat-item {
             padding: 40px 24px;
@@ -686,6 +686,15 @@
         .badge-item:hover { border-color: var(--primary); transform: translateY(-2px); }
         .badge-item svg { width: 48px; height: 48px; color: var(--primary); }
         .badge-item span { font-size: 12px; font-weight: 700; color: var(--primary); letter-spacing: 1px; }
+        .verification-panel { margin-top: 36px; text-align: left; }
+        .verification-grid { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--border); background: var(--white); }
+        .verification-item { min-height: 168px; padding: 24px; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .verification-item:nth-child(3n) { border-right: 0; }
+        .verification-item:nth-last-child(-n+3) { border-bottom: 0; }
+        .verification-item > span { color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .12em; }
+        .verification-item strong { display: block; margin-top: 12px; color: var(--primary); font-size: 15px; }
+        .verification-item p { margin: 8px 0 0; color: var(--text-light); font-size: 13px; line-height: 1.6; }
+        .verification-link { display: inline-flex; margin-top: 16px; color: var(--primary); font-size: 13px; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
 
         /* ===== PHOTO BANNER ===== */
         .photo-banner {
@@ -870,8 +879,7 @@
         /* ===== RESPONSIVE ===== */
         @media (max-width: 1024px) {
             .hero h1 { font-size: 36px; }
-            .stats-grid { grid-template-columns: repeat(2, 1fr); }
-            .stat-item:nth-child(2n) { border-right: none; }
+            .stats-grid { grid-template-columns: repeat(3, 1fr); }
             .products-grid { grid-template-columns: repeat(2, 1fr); gap: 28px; }
             .advantages-grid { grid-template-columns: repeat(2, 1fr); }
             .markets-grid { grid-template-columns: repeat(3, 1fr); }
@@ -906,6 +914,11 @@
             .advantages-grid { grid-template-columns: 1fr; }
             .markets-grid { grid-template-columns: repeat(2, 1fr); }
             .compliance-content { grid-template-columns: 1fr; }
+            .verification-grid { grid-template-columns: repeat(2, 1fr); }
+            .verification-item:nth-child(3n) { border-right: 1px solid var(--border); }
+            .verification-item:nth-child(2n) { border-right: 0; }
+            .verification-item:nth-last-child(-n+3) { border-bottom: 1px solid var(--border); }
+            .verification-item:nth-last-child(-n+2) { border-bottom: 0; }
             .contact-grid { grid-template-columns: 1fr; }
             .footer-grid { grid-template-columns: 1fr; }
             .form-row { grid-template-columns: 1fr; }
@@ -916,6 +929,11 @@
             .gallery-item.gallery-tall { grid-row: span 1; }
             .gallery-preview-grid .gallery-featured { grid-column: 1 / -1; aspect-ratio: 16/9; }
             #about .container > div:last-child { grid-template-columns: 1fr !important; }
+        }
+        @media (max-width: 480px) {
+            .verification-grid { grid-template-columns: 1fr; }
+            .verification-item { border-right: 0 !important; border-bottom: 1px solid var(--border) !important; }
+            .verification-item:last-child { border-bottom: 0 !important; }
         }
     </style>
 </head>
@@ -975,7 +993,7 @@
                         <li><a href="ads/pallet-collar-hinges" data-track="click_nav_product" data-product="pallet-collar-hinges" data-i18n="product3_name">Galvanized Hinges</a></li>
                     </ul>
                 </li>
-                <li><a href="gallery" data-i18n="nav_gallery">Gallery</a></li>
+                <li><a href="gallery" data-i18n="nav_gallery">Operations</a></li>
                 <li><a href="#compliance" data-i18n="nav_compliance">Compliance</a></li>
                 <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
                 <li><a href="#contact" class="nav-cta" data-i18n="nav_cta">Get a Quote</a></li>
@@ -992,9 +1010,9 @@
         <div class="hero-overlay"></div>
         <div class="container">
             <div class="hero-content">
-                <div class="hero-badge" data-i18n="hero_badge">Wooden Packaging Manufacturer</div>
-                <h1><span style="color:var(--accent)" data-i18n="hero_title_accent">EPAL Pallet Supply & Pallet Collar</span><br><span data-i18n="hero_title_2">Manufacturing</span></h1>
-                <p data-i18n="hero_desc">EPAL 1 and EPAL 3 supply plus foldable pallet collars and hinges for FCL buyers. Producing facility, treatment plan, loading route, and documents are confirmed with every formal quotation.</p>
+                <div class="hero-badge" data-i18n="hero_badge">Industrial Packaging for FCL Buyers</div>
+                <h1><span data-i18n="hero_title_accent">EPAL Pallet Supply & Pallet Collar</span><br><span data-i18n="hero_title_2">Manufacturing</span></h1>
+                <p data-i18n="hero_desc">PAKSWELL manufactures pallet collars and hinges, and coordinates order-matched EPAL pallet production through selected licensed facilities in China.</p>
                 <div class="hero-buttons">
                     <a href="#contact" class="btn-primary">
                         <span data-i18n="hero_btn_consult">Get a Quote</span>
@@ -1015,26 +1033,8 @@
                     <div class="stat-number" style="font-size:15px; font-weight:700; color:var(--primary);" data-i18n="val1_title">Years Experience</div>
                     <div class="stat-label" data-i18n="val1_desc">Wooden packaging specialist since 2015</div>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-bignum">30K+</div>
-                    <div class="stat-number" style="font-size:15px; font-weight:700; color:var(--primary);" data-i18n="val2_title">EPAL Pallets per Month</div>
-                    <div class="stat-label" data-i18n="val2_desc">Standard & custom sizes in stock</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-bignum">100K+</div>
-                    <div class="stat-number" style="font-size:15px; font-weight:700; color:var(--primary);" data-i18n="val5_title">Pallet Collars per Month</div>
-                    <div class="stat-label" data-i18n="val5_desc">Solid wood, foldable & stackable</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-bignum">1.5M+</div>
-                    <div class="stat-number" style="font-size:15px; font-weight:700; color:var(--primary);" data-i18n="val4_title">Hinges per Month</div>
-                    <div class="stat-label" data-i18n="val4_desc">In-house galvanized hinge line</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-bignum">20+</div>
-                    <div class="stat-number" style="font-size:15px; font-weight:700; color:var(--primary);" data-i18n="val6_title">Export Countries</div>
-                    <div class="stat-label" data-i18n="val6_desc">Export to more than 20 countries</div>
-                </div>
+                <div class="stat-item"><div class="stat-bignum">600</div><div class="stat-number" style="font-size:15px; font-weight:700; color:var(--primary);" data-i18n="proof_epal_title">EPAL 1 Pallets / 40HQ</div><div class="stat-label" data-i18n="proof_epal_desc">1200 × 800 mm reference load</div></div>
+                <div class="stat-item"><div class="stat-bignum">2,714</div><div class="stat-number" style="font-size:15px; font-weight:700; color:var(--primary);" data-i18n="proof_collar_title">Pallet Collar Sets / 40HQ</div><div class="stat-label" data-i18n="proof_collar_desc">1200 × 800 mm reference load</div></div>
             </div>
         </div>
     </div>
@@ -1102,12 +1102,12 @@
     <!-- PRODUCT GALLERY -->
     <div class="gallery-section" id="gallery-preview">
         <div class="container" style="text-align:center;">
-            <div class="section-label" style="color:var(--accent);" data-i18n="banner_title">Production & Shipping</div>
-            <h2 style="color:#fff; font-size:32px; font-weight:800; text-transform:uppercase; margin-bottom:8px;" data-i18n="gallery_title">Production & Recent Shipments</h2>
+            <div class="section-label" style="color:var(--accent);" data-i18n="banner_title">Production &amp; Shipment References</div>
+            <h2 style="color:#fff; font-size:32px; font-weight:800; text-transform:uppercase; margin-bottom:8px;" data-i18n="gallery_title">Production & Shipment References</h2>
             <p style="color:rgba(255,255,255,0.6);" data-i18n="banner_desc">Selected references from production, warehouse handling, and recent container loading.</p>
 
             <div class="gallery-grid gallery-preview-grid" style="grid-template-columns: repeat(2, 1fr);">
-                <a class="gallery-item gallery-featured" href="gallery" aria-label="View recent container loading gallery">
+                <a class="gallery-item gallery-featured" href="gallery#export-title" aria-label="View recent container loading references">
                     <img src="images/gallery/shipping-featured.webp" alt="Pallet collar bundles aligned inside a shipping container" loading="lazy" width="1600" height="600">
                     <div class="gallery-caption" data-i18n="gallery_cap_recent">Recent container loading</div>
                 </a>
@@ -1115,15 +1115,15 @@
                     <img src="images/production-line.jpg" alt="Automated production line at Pakswell factory" loading="lazy" width="580" height="435">
                     <div class="gallery-caption" data-i18n="gallery_cap_ht">Automated production line</div>
                 </div>
-                <a class="gallery-item" href="gallery?category=collars" aria-label="View pallet collar shipment gallery">
+                <a class="gallery-item" href="gallery#export-title" aria-label="View pallet collar shipment references">
                     <img src="images/gallery/shipment-13.webp" alt="Pallet collar bundles ready for container loading" loading="lazy" width="1200" height="900">
                     <div class="gallery-caption" data-i18n="gallery_cap_collars">Pallet collars ready for dispatch</div>
                 </a>
-                <a class="gallery-item" href="gallery?category=pallets" aria-label="View pallet shipment gallery">
+                <a class="gallery-item" href="gallery#export-title" aria-label="View pallet shipment references">
                     <img src="images/gallery/shipment-07.webp" alt="Wooden pallets arranged for container loading" loading="lazy" width="1200" height="900">
                     <div class="gallery-caption" data-i18n="gallery_cap_pallets">Pallet shipment loading</div>
                 </a>
-                <a class="gallery-item" href="gallery?category=domestic" aria-label="View domestic delivery gallery">
+                <a class="gallery-item" href="gallery#domestic-title" aria-label="View domestic delivery references">
                     <img src="images/gallery/domestic-03.webp" alt="Pallet collar bundles secured for domestic truck delivery" loading="lazy" width="1200" height="900">
                     <div class="gallery-caption" data-i18n="gallery_cap_domestic">Domestic delivery</div>
                 </a>
@@ -1181,36 +1181,19 @@
                 <div class="section-label" style="text-align:center;" data-i18n="comp_label">Quality & Compliance</div>
                 <h3 data-i18n="comp_title">Order-Specific Compliance &amp; Document Support</h3>
                 <p style="color:var(--text-light); margin-bottom:24px; max-width:680px; margin-left:auto; margin-right:auto;" data-i18n="comp_desc">Treatment, marking, producer licence details, certificates, and shipping documents are confirmed against the selected facility, route, destination, and product mix before order approval.</p>
-                <div class="compliance-badges" style="justify-content:center;">
-                    <div class="badge-item">
-                        <svg viewBox="0 0 48 48" fill="none"><rect x="4" y="4" width="40" height="40" rx="8" stroke="currentColor" stroke-width="2"/><text x="24" y="22" text-anchor="middle" fill="currentColor" font-size="8" font-weight="700">ISPM</text><text x="24" y="32" text-anchor="middle" fill="currentColor" font-size="10" font-weight="800">15</text></svg>
-                        <span>ISPM 15</span>
-                    </div>
-                    <div class="badge-item">
-                        <svg viewBox="0 0 48 48" fill="none"><rect x="4" y="4" width="40" height="40" rx="8" stroke="currentColor" stroke-width="2"/><text x="24" y="28" text-anchor="middle" fill="currentColor" font-size="9" font-weight="700">EPAL</text></svg>
-                        <span>EPAL</span>
-                    </div>
-                    <div class="badge-item">
-                        <svg viewBox="0 0 48 48" fill="none"><rect x="4" y="4" width="40" height="40" rx="8" stroke="currentColor" stroke-width="2"/><text x="24" y="22" text-anchor="middle" fill="currentColor" font-size="5" font-weight="700">HEAT</text><text x="24" y="32" text-anchor="middle" fill="currentColor" font-size="5" font-weight="700">TREAT</text></svg>
-                        <span data-i18n="badge_ht">Heat Treatment</span>
-                    </div>
-                    <div class="badge-item">
-                        <svg viewBox="0 0 48 48" fill="none"><rect x="4" y="4" width="40" height="40" rx="8" stroke="currentColor" stroke-width="2"/><text x="24" y="28" text-anchor="middle" fill="currentColor" font-size="6" font-weight="700">PHYTO</text></svg>
-                        <span data-i18n="badge_phyto">Phytosanitary</span>
-                    </div>
-                    <div class="badge-item">
-                        <svg viewBox="0 0 48 48" fill="none"><rect x="4" y="4" width="40" height="40" rx="8" stroke="currentColor" stroke-width="2"/><text x="24" y="28" text-anchor="middle" fill="currentColor" font-size="7" font-weight="700">COO</text></svg>
-                        <span data-i18n="badge_coo">Certificate of Origin</span>
-                    </div>
-                    <div class="badge-item">
-                        <svg viewBox="0 0 48 48" fill="none"><rect x="4" y="4" width="40" height="40" rx="8" stroke="currentColor" stroke-width="2"/><text x="24" y="22" text-anchor="middle" fill="currentColor" font-size="5" font-weight="700">IMP</text><text x="24" y="32" text-anchor="middle" fill="currentColor" font-size="5" font-weight="700">EXP</text></svg>
-                        <span data-i18n="badge_ie">Import & Export</span>
-                    </div>
-                </div>
+                <div class="verification-panel"><div class="verification-grid">
+                    <div class="verification-item"><span>01</span><strong data-i18n="verify1_title">Confirmed specification</strong><p data-i18n="verify1_desc">Model, dimensions, quantity, and optional accessories.</p></div>
+                    <div class="verification-item"><span>02</span><strong data-i18n="verify2_title">Producing facility</strong><p data-i18n="verify2_desc">Facility and applicable licence details identified in the quotation.</p></div>
+                    <div class="verification-item"><span>03</span><strong data-i18n="verify3_title">Treatment & documents</strong><p data-i18n="verify3_desc">Scope checked against the route, destination, and product.</p></div>
+                    <div class="verification-item"><span>04</span><strong data-i18n="verify4_title">Loading plan</strong><p data-i18n="verify4_desc">Port, container type, reference quantity, and mixed-load review.</p></div>
+                    <div class="verification-item"><span>05</span><strong data-i18n="verify5_title">Trade terms</strong><p data-i18n="verify5_desc">EXW, FOB, CIF, DAP, or DDP confirmed before approval.</p></div>
+                    <div class="verification-item"><span>06</span><strong data-i18n="verify6_title">Photo record</strong><p data-i18n="verify6_desc">Production or loading photo scope agreed for the order.</p></div>
+                </div></div>
 
                 <p data-i18n="comp_note" style="max-width:780px; margin:34px auto 0; padding:18px 22px; border:1px solid rgba(27,58,92,0.12); border-radius:8px; background:#fff; color:var(--text-light); font-size:13px; line-height:1.75;">
                     Product markings, treatment certificates, licence details, and origin documents depend on the producing facility, product model, destination, and shipment. The applicable evidence is confirmed with the formal quotation before purchase order approval.
                 </p>
+                <a class="verification-link" href="https://www.epal-pallets.org/eu-en/licensee-search/" target="_blank" rel="noopener" data-i18n="comp_verify_link">Verify the selected producer through the official EPAL licensee search →</a>
             </div>
         </div>
     </section>
@@ -1316,7 +1299,7 @@
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 22V4a2 2 0 012-2h8a2 2 0 012 2v18"/><path d="M2 22h20"/><path d="M10 6h4M10 10h4M10 14h4M10 18h4"/></svg>
                         </div>
                         <div>
-                            <h4 data-i18n="contact_headquarters">Headquarters</h4>
+                            <h4 data-i18n="contact_headquarters">Shanghai Sales &amp; Coordination Office</h4>
                             <p data-i18n="contact_headquarters_val">Yangpu Riverside Smart Plaza, No. 1366 Yangshupu Road, Yangpu, Shanghai, China 200082</p>
                             <p style="margin-top:6px;font-size:0.92em;"><a href="https://www.google.com/maps/search/?api=1&amp;query=No.+1366+Yangshupu+Road,+Yangpu+District,+Shanghai" target="_blank" rel="noopener" data-i18n="contact_headquarters_map">View on Google Maps →</a></p>
                         </div>
@@ -1402,7 +1385,7 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <div class="logo-text" data-i18n="footer_brand">PAKSWELL</div>
-                    <p data-i18n="footer_desc">EPAL pallet & pallet collar manufacturer. Exporting to Korea, Japan, Malaysia, Vietnam, Thailand, the Philippines, Taiwan and beyond.</p>
+                    <p data-i18n="footer_desc">EPAL pallet supply, pallet collar manufacturing, and FCL export coordination from China.</p>
                 </div>
                 <div>
                     <h4 data-i18n="footer_products">Products</h4>
@@ -1417,7 +1400,7 @@
                     <h4 data-i18n="footer_company">Company</h4>
                     <ul>
                         <li><a href="#about" data-i18n="about_label">About Us</a></li>
-                        <li><a href="gallery" data-i18n="nav_gallery">Gallery</a></li>
+                        <li><a href="gallery" data-i18n="nav_gallery">Operations</a></li>
                         <li><a href="#compliance" data-i18n="nav_compliance">Compliance</a></li>
                         <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
                         <li><a href="privacy" data-language-link data-i18n="privacy_policy">Privacy Policy</a></li>
@@ -1488,7 +1471,7 @@
 
     // Load translations from external JSON file
     function loadTranslations() {
-        fetch('translations.json?v=20260712-language-2')
+        fetch('translations.json?v=20260712-refinement-1')
             .then(function(res) { return res.json(); })
             .then(function(data) {
                 TRANSLATIONS = data;
@@ -1703,47 +1686,6 @@
         </svg>
     </a>
 
-
-    <!-- Count-up animation for stat numbers -->
-    <script>
-    (function() {
-        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-        if (!('IntersectionObserver' in window)) return;
-
-        function animate(el, target, duration) {
-            var suffix = (target.match(/[^\d.]+$/) || [''])[0];
-            var num = parseFloat(target);
-            var hasDecimal = target.indexOf('.') !== -1;
-            var startTime = performance.now();
-
-            function tick(now) {
-                var p = Math.min((now - startTime) / duration, 1);
-                var eased = 1 - Math.pow(1 - p, 3); // ease-out cubic
-                var current = num * eased;
-                el.textContent = (hasDecimal ? current.toFixed(1) : Math.floor(current)) + suffix;
-                if (p < 1) requestAnimationFrame(tick);
-                else el.textContent = target;
-            }
-            requestAnimationFrame(tick);
-        }
-
-        var observer = new IntersectionObserver(function(entries) {
-            entries.forEach(function(entry) {
-                if (entry.isIntersecting) {
-                    var el = entry.target;
-                    var target = el.dataset.original || el.textContent.trim();
-                    el.dataset.original = target;
-                    animate(el, target, 1500);
-                    observer.unobserve(el);
-                }
-            });
-        }, { threshold: 0.5 });
-
-        document.querySelectorAll('.stat-bignum').forEach(function(el) {
-            observer.observe(el);
-        });
-    })();
-    </script>
 
 </body>
 </html>

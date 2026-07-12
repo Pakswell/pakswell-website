@@ -3,189 +3,81 @@
 
   var COPY = {
     en: {
-      topbar: "FCL export packaging from China", brand_tagline: "Packaging Solutions", language_label: "Language", nav_home: "Home", nav_products: "Products", nav_gallery: "Gallery", nav_contact: "Contact",
-      eyebrow: "Production & Shipping Gallery", hero_title: "Production, Export Loading & Domestic Delivery", hero_desc: "A curated record of production, warehouse inventory, export container loading, and domestic delivery work. Client names and commercial details remain confidential.", hero_cta: "View recent shipments",
-      stat_selected: "selected references", stat_period: "January–June", stat_stages: "3 Stages", stat_fcl: "production · export · domestic", stat_private: "Private", stat_privacy: "client details protected",
-      section_label: "Selected operational references", section_title: "From preparation to secured loading", section_desc: "Use the filters to review relevant products. Photos are selected for clarity, orderly handling, and confidentiality.",
-      filter_all: "All", filter_operations: "Production & Warehouse", filter_pallets: "Pallets", filter_collars: "Pallet Collars", filter_mixed: "Mixed Loads", filter_domestic: "Domestic Delivery",
-      caption_warehouse: "Warehouse inventory ready for dispatch", caption_production: "Automated production line", meta_warehouse: "Warehouse reference", meta_production: "Production reference",
-      caption_pallets: "Pallet shipment secured for transport", caption_collars: "Pallet collars prepared for loading", caption_mixed: "Mixed products planned for one shipment", caption_domestic: "Domestic truck delivery prepared",
-      privacy_title: "Client confidentiality by design", privacy_desc: "This gallery documents operational capability without publishing client names, shipment documents, destinations, pricing, or partnership details.",
-      cta_label: "Planning an FCL shipment?", cta_title: "Share your product mix and destination", cta_desc: "We will confirm specifications, loading options, trade terms, and lead time by email.", cta_button: "Request a quote", privacy_link: "Privacy Policy", lightbox_label: "Shipment photo", lightbox_close: "Close"
+      page_title: "Production & Shipment References | PAKSWELL", topbar: "FCL export packaging from China", brand_tagline: "Packaging Solutions", language_label: "Language", nav_home: "Home", nav_products: "Products", nav_gallery: "Operations", nav_contact: "Contact",
+      eyebrow: "Production & Shipment References", hero_title: "Real Operations. Orderly Loading.", hero_desc: "Selected production, warehouse, export loading, and domestic dispatch records. Client identities and commercial details remain confidential.", hero_cta: "View operational references",
+      section_label: "Selected operational references", section_title: "From preparation to secured dispatch", section_desc: "Ten clear references selected for product visibility, orderly handling, and client confidentiality.",
+      group_operations: "Production & Warehouse", group_operations_desc: "Production equipment and organized inventory before order allocation.", group_export: "Export Container Loading", group_export_desc: "Pallet collars, EPAL pallets, and mixed loads positioned and secured for FCL shipment.", group_domestic: "Domestic Dispatch", group_domestic_desc: "Clean, secured truck loads for domestic delivery and onward logistics.",
+      cap_warehouse: "Pallet collar inventory · warehouse ready", cap_production: "Automated processing · board production", cap_collar_fcl: "1200 × 800 mm pallet collars · FCL loading", cap_collar_rows: "Folded collar bundles · aligned container rows", cap_epal_strapped: "EPAL pallets · cross-strapped before dispatch", cap_epal_braced: "EPAL pallets · internal transport bracing", cap_mixed: "Pallets and collars · mixed-load planning", cap_collar_secured: "Pallet collar bundles · secured for export", cap_domestic_collars: "Pallet collar bundles · domestic truck dispatch", cap_domestic_pallets: "Wooden pallets · secured domestic delivery",
+      detail_warehouse: "Warehouse reference", detail_production: "Production reference", detail_jan: "January 2026", detail_feb: "February 2026", detail_mar: "March 2026", detail_apr: "April 2026", detail_may: "May 2026", detail_jun: "June 2026", detail_domestic: "Domestic delivery",
+      privacy_title: "Client confidentiality by design", privacy_desc: "These references show operating capability without publishing client names, shipment documents, destinations, prices, or partnership details.", cta_label: "Need order-matched evidence?", cta_title: "Request recent references for your product mix", cta_desc: "We will confirm specifications, loading options, trade terms, lead time, and the photo plan for your order.", cta_button: "Request a loading plan", privacy_link: "Privacy Policy", lightbox_label: "Shipment reference", lightbox_close: "Close"
     },
     "zh-CN": {
-      topbar: "中国出运的整柜出口包装", brand_tagline: "包装解决方案", language_label: "语言", nav_home: "首页", nav_products: "产品", nav_gallery: "图库", nav_contact: "联系我们",
-      eyebrow: "生产与发货图库", hero_title: "生产、出口装柜与国内发货", hero_desc: "精选展示生产线、仓储库存、出口装柜及国内发货作业。客户名称与商业信息始终保密。", hero_cta: "查看近期发货",
-      stat_selected: "精选实景", stat_period: "1月至6月", stat_stages: "3个阶段", stat_fcl: "生产 · 出口 · 国内", stat_private: "保密", stat_privacy: "客户信息受保护",
-      section_label: "精选作业实景", section_title: "从备货到安全装柜", section_desc: "可按产品筛选查看。所有照片均兼顾清晰度、现场整洁和客户隐私。",
-      filter_all: "全部", filter_operations: "生产与仓储", filter_pallets: "托盘", filter_collars: "托盘围板", filter_mixed: "混装", filter_domestic: "国内发货",
-      caption_warehouse: "仓储库存整齐待发", caption_production: "自动化生产线", meta_warehouse: "仓储实拍", meta_production: "生产实拍",
-      caption_pallets: "托盘货物加固待运", caption_collars: "托盘围板备货装柜", caption_mixed: "多种产品同柜装载", caption_domestic: "国内卡车发货备运",
-      privacy_title: "客户隐私优先", privacy_desc: "本图库仅展示作业能力，不公开客户名称、运输单据、目的地、价格或合作信息。",
-      cta_label: "计划整柜采购？", cta_title: "告诉我们产品组合与目的地", cta_desc: "我们将通过邮件确认规格、装载方式、贸易条款和交期。", cta_button: "获取报价", privacy_link: "隐私政策", lightbox_label: "发货照片", lightbox_close: "关闭"
+      page_title: "生产与出货实景 | PAKSWELL", topbar: "中国出运的整柜出口包装", brand_tagline: "包装解决方案", language_label: "语言", nav_home: "首页", nav_products: "产品", nav_gallery: "生产与出货", nav_contact: "联系我们",
+      eyebrow: "生产与出货实景", hero_title: "真实作业，规范装载", hero_desc: "精选生产、仓储、出口装柜和国内发货记录。客户身份与商业信息始终保密。", hero_cta: "查看作业实景",
+      section_label: "精选作业记录", section_title: "从备货到安全发运", section_desc: "精选十张清晰实景，重点展示产品、规范操作和客户隐私保护。",
+      group_operations: "生产与仓储", group_operations_desc: "订单匹配前的生产设备及整齐仓储库存。", group_export: "出口集装箱装载", group_export_desc: "围板、EPAL托盘及混装产品按整柜运输要求摆放和加固。", group_domestic: "国内发货", group_domestic_desc: "适用于国内运输及后续物流的整齐加固装车。",
+      cap_warehouse: "托盘围板库存 · 仓储待发", cap_production: "自动化加工 · 板材生产", cap_collar_fcl: "1200 × 800 mm围板 · 整柜装载", cap_collar_rows: "折叠围板捆 · 集装箱内整齐排列", cap_epal_strapped: "EPAL托盘 · 发运前交叉加固", cap_epal_braced: "EPAL托盘 · 集装箱内部加固", cap_mixed: "托盘与围板 · 混装方案", cap_collar_secured: "托盘围板捆 · 出口加固", cap_domestic_collars: "托盘围板捆 · 国内卡车发运", cap_domestic_pallets: "木托盘 · 国内运输加固",
+      detail_warehouse: "仓储实拍", detail_production: "生产实拍", detail_jan: "2026年1月", detail_feb: "2026年2月", detail_mar: "2026年3月", detail_apr: "2026年4月", detail_may: "2026年5月", detail_jun: "2026年6月", detail_domestic: "国内发货",
+      privacy_title: "客户信息保密", privacy_desc: "这些实景仅用于展示作业能力，不公开客户名称、运输单据、目的地、价格或合作细节。", cta_label: "需要匹配订单的实景资料？", cta_title: "索取与你的产品组合相关的近期记录", cta_desc: "我们会确认规格、装载方式、贸易条款、交期以及订单照片方案。", cta_button: "获取装载方案", privacy_link: "隐私政策", lightbox_label: "发货实景", lightbox_close: "关闭"
     },
     "zh-TW": {
-      topbar: "中國出運的整櫃出口包裝", brand_tagline: "包裝解決方案", language_label: "語言", nav_home: "首頁", nav_products: "產品", nav_gallery: "圖庫", nav_contact: "聯絡我們",
-      eyebrow: "生產與出貨圖庫", hero_title: "生產、出口裝櫃與國內出貨", hero_desc: "精選展示生產線、倉儲庫存、出口裝櫃及國內出貨作業。客戶名稱與商業資訊始終保密。", hero_cta: "查看近期出貨",
-      stat_selected: "精選實景", stat_period: "1月至6月", stat_stages: "3個階段", stat_fcl: "生產 · 出口 · 國內", stat_private: "保密", stat_privacy: "客戶資訊受保護",
-      section_label: "精選作業實景", section_title: "從備貨到安全裝櫃", section_desc: "可依產品篩選查看。所有照片均兼顧清晰度、現場整潔與客戶隱私。",
-      filter_all: "全部", filter_operations: "生產與倉儲", filter_pallets: "棧板", filter_collars: "棧板圍板", filter_mixed: "混裝", filter_domestic: "國內出貨",
-      caption_warehouse: "倉儲庫存整齊待發", caption_production: "自動化生產線", meta_warehouse: "倉儲實拍", meta_production: "生產實拍",
-      caption_pallets: "棧板貨物加固待運", caption_collars: "棧板圍板備貨裝櫃", caption_mixed: "多種產品同櫃裝載", caption_domestic: "國內卡車出貨備運",
-      privacy_title: "客戶隱私優先", privacy_desc: "本圖庫僅展示作業能力，不公開客戶名稱、運輸文件、目的地、價格或合作資訊。",
-      cta_label: "規劃整櫃採購？", cta_title: "告訴我們產品組合與目的地", cta_desc: "我們將透過郵件確認規格、裝載方式、貿易條款與交期。", cta_button: "取得報價", privacy_link: "隱私政策", lightbox_label: "出貨照片", lightbox_close: "關閉"
+      page_title: "生產與出貨實景 | PAKSWELL", topbar: "中國出運的整櫃出口包裝", brand_tagline: "包裝解決方案", language_label: "語言", nav_home: "首頁", nav_products: "產品", nav_gallery: "生產與出貨", nav_contact: "聯絡我們",
+      eyebrow: "生產與出貨實景", hero_title: "真實作業，規範裝載", hero_desc: "精選生產、倉儲、出口裝櫃與國內出貨記錄。客戶身分與商業資訊始終保密。", hero_cta: "查看作業實景",
+      section_label: "精選作業記錄", section_title: "從備貨到安全出運", section_desc: "精選十張清晰實景，重點呈現產品、規範操作與客戶隱私保護。",
+      group_operations: "生產與倉儲", group_operations_desc: "訂單匹配前的生產設備與整齊倉儲庫存。", group_export: "出口貨櫃裝載", group_export_desc: "圍板、EPAL棧板與混裝產品依整櫃運輸要求擺放及加固。", group_domestic: "國內出貨", group_domestic_desc: "適用於國內運輸及後續物流的整齊加固裝車。",
+      cap_warehouse: "棧板圍板庫存 · 倉儲待發", cap_production: "自動化加工 · 板材生產", cap_collar_fcl: "1200 × 800 mm圍板 · 整櫃裝載", cap_collar_rows: "折疊圍板捆 · 貨櫃內整齊排列", cap_epal_strapped: "EPAL棧板 · 出運前交叉加固", cap_epal_braced: "EPAL棧板 · 貨櫃內部加固", cap_mixed: "棧板與圍板 · 混裝方案", cap_collar_secured: "棧板圍板捆 · 出口加固", cap_domestic_collars: "棧板圍板捆 · 國內卡車出運", cap_domestic_pallets: "木棧板 · 國內運輸加固",
+      detail_warehouse: "倉儲實拍", detail_production: "生產實拍", detail_jan: "2026年1月", detail_feb: "2026年2月", detail_mar: "2026年3月", detail_apr: "2026年4月", detail_may: "2026年5月", detail_jun: "2026年6月", detail_domestic: "國內出貨",
+      privacy_title: "客戶資訊保密", privacy_desc: "這些實景僅用於展示作業能力，不公開客戶名稱、運輸文件、目的地、價格或合作細節。", cta_label: "需要匹配訂單的實景資料？", cta_title: "索取與你的產品組合相關的近期記錄", cta_desc: "我們會確認規格、裝載方式、貿易條款、交期及訂單照片方案。", cta_button: "取得裝載方案", privacy_link: "隱私政策", lightbox_label: "出貨實景", lightbox_close: "關閉"
     },
     th: {
-      topbar: "บรรจุภัณฑ์ส่งออกแบบเต็มตู้จากจีน", brand_tagline: "โซลูชันบรรจุภัณฑ์", language_label: "ภาษา", nav_home: "หน้าแรก", nav_products: "สินค้า", nav_gallery: "แกลเลอรี", nav_contact: "ติดต่อ",
-      eyebrow: "แกลเลอรีการผลิตและจัดส่ง", hero_title: "การผลิต การบรรจุตู้ส่งออก และจัดส่งในประเทศ", hero_desc: "ภาพคัดสรรของสายการผลิต สินค้าในคลัง การบรรจุตู้ส่งออก และการจัดส่งในประเทศ โดยปกปิดข้อมูลลูกค้าและการค้า", hero_cta: "ดูการจัดส่งล่าสุด",
-      stat_selected: "ภาพคัดสรร", stat_period: "มกราคม–มิถุนายน", stat_stages: "3 ขั้นตอน", stat_fcl: "การผลิต · ส่งออก · ในประเทศ", stat_private: "เป็นความลับ", stat_privacy: "ปกป้องข้อมูลลูกค้า",
-      section_label: "ภาพการปฏิบัติงานที่คัดสรร", section_title: "จากการเตรียมสินค้าถึงการยึดตู้", section_desc: "กรองตามสินค้าได้ ภาพถูกเลือกจากความชัดเจน ความเป็นระเบียบ และการรักษาความลับ",
-      filter_all: "ทั้งหมด", filter_operations: "การผลิตและคลัง", filter_pallets: "พาเลท", filter_collars: "ขอบพาเลท", filter_mixed: "สินค้ารวม", filter_domestic: "จัดส่งในประเทศ",
-      caption_warehouse: "สินค้าคงคลังพร้อมจัดส่ง", caption_production: "สายการผลิตอัตโนมัติ", meta_warehouse: "ภาพคลังสินค้า", meta_production: "ภาพการผลิต",
-      caption_pallets: "พาเลทยึดแน่นพร้อมขนส่ง", caption_collars: "ขอบพาเลทพร้อมบรรจุตู้", caption_mixed: "วางแผนสินค้าหลายชนิดในตู้เดียว", caption_domestic: "เตรียมส่งด้วยรถบรรทุกในประเทศ",
-      privacy_title: "รักษาความลับของลูกค้า", privacy_desc: "แกลเลอรีนี้แสดงความสามารถในการดำเนินงานโดยไม่เปิดเผยชื่อลูกค้า เอกสาร ปลายทาง ราคา หรือรายละเอียดความร่วมมือ",
-      cta_label: "กำลังวางแผนสินค้าเต็มตู้?", cta_title: "แจ้งรายการสินค้าและปลายทาง", cta_desc: "เราจะยืนยันสเปก แผนการบรรจุ เงื่อนไขการค้า และระยะเวลาทางอีเมล", cta_button: "ขอใบเสนอราคา", privacy_link: "นโยบายความเป็นส่วนตัว", lightbox_label: "ภาพการจัดส่ง", lightbox_close: "ปิด"
+      page_title: "ข้อมูลการผลิตและจัดส่ง | PAKSWELL", topbar: "บรรจุภัณฑ์ส่งออกแบบเต็มตู้จากจีน", brand_tagline: "โซลูชันบรรจุภัณฑ์", language_label: "ภาษา", nav_home: "หน้าแรก", nav_products: "สินค้า", nav_gallery: "การผลิตและจัดส่ง", nav_contact: "ติดต่อ",
+      eyebrow: "ข้อมูลการผลิตและจัดส่ง", hero_title: "การทำงานจริง การจัดวางเป็นระเบียบ", hero_desc: "ภาพคัดสรรจากการผลิต คลังสินค้า การโหลดตู้ส่งออก และการจัดส่งในประเทศ โดยรักษาข้อมูลลูกค้าเป็นความลับ", hero_cta: "ดูภาพการทำงาน",
+      section_label: "ภาพการทำงานที่คัดสรร", section_title: "จากการเตรียมสินค้าถึงการจัดส่งอย่างปลอดภัย", section_desc: "สิบภาพที่คัดสรรเพื่อแสดงสินค้า การจัดการที่เป็นระเบียบ และการรักษาความลับของลูกค้า",
+      group_operations: "การผลิตและคลังสินค้า", group_operations_desc: "อุปกรณ์การผลิตและสินค้าคงคลังที่จัดเป็นระเบียบก่อนจัดสรรคำสั่งซื้อ", group_export: "การโหลดตู้ส่งออก", group_export_desc: "กรอบพาเลท พาเลท EPAL และสินค้าผสมถูกจัดวางและยึดสำหรับการส่ง FCL", group_domestic: "การจัดส่งในประเทศ", group_domestic_desc: "สินค้าบนรถบรรทุกที่จัดวางและยึดอย่างเรียบร้อยสำหรับการขนส่งต่อ",
+      cap_warehouse: "สต็อกกรอบพาเลท · พร้อมส่งจากคลัง", cap_production: "กระบวนการอัตโนมัติ · ผลิตแผ่นไม้", cap_collar_fcl: "กรอบพาเลท 1200 × 800 มม. · โหลด FCL", cap_collar_rows: "มัดกรอบพับ · เรียงเป็นแถวในตู้", cap_epal_strapped: "พาเลท EPAL · รัดไขว้ก่อนส่ง", cap_epal_braced: "พาเลท EPAL · ยึดภายในตู้", cap_mixed: "พาเลทและกรอบ · แผนโหลดผสม", cap_collar_secured: "มัดกรอบพาเลท · ยึดสำหรับส่งออก", cap_domestic_collars: "มัดกรอบพาเลท · รถบรรทุกในประเทศ", cap_domestic_pallets: "พาเลทไม้ · ยึดสำหรับส่งในประเทศ",
+      detail_warehouse: "ภาพคลังสินค้า", detail_production: "ภาพการผลิต", detail_jan: "มกราคม 2026", detail_feb: "กุมภาพันธ์ 2026", detail_mar: "มีนาคม 2026", detail_apr: "เมษายน 2026", detail_may: "พฤษภาคม 2026", detail_jun: "มิถุนายน 2026", detail_domestic: "จัดส่งในประเทศ",
+      privacy_title: "รักษาความลับของลูกค้า", privacy_desc: "ภาพเหล่านี้แสดงความสามารถในการทำงานโดยไม่เปิดเผยชื่อลูกค้า เอกสาร ปลายทาง ราคา หรือรายละเอียดความร่วมมือ", cta_label: "ต้องการหลักฐานที่ตรงกับคำสั่งซื้อ?", cta_title: "ขอภาพล่าสุดสำหรับรายการสินค้าของคุณ", cta_desc: "เราจะยืนยันสเปก วิธีโหลด เงื่อนไขการค้า ระยะเวลา และแผนภาพถ่ายของคำสั่งซื้อ", cta_button: "ขอแผนการโหลด", privacy_link: "นโยบายความเป็นส่วนตัว", lightbox_label: "ภาพการจัดส่ง", lightbox_close: "ปิด"
     },
     vi: {
-      topbar: "Bao bì xuất khẩu nguyên container từ Trung Quốc", brand_tagline: "Giải pháp đóng gói", language_label: "Ngôn ngữ", nav_home: "Trang chủ", nav_products: "Sản phẩm", nav_gallery: "Thư viện", nav_contact: "Liên hệ",
-      eyebrow: "Thư viện sản xuất & vận chuyển", hero_title: "Sản xuất, đóng container xuất khẩu & giao nội địa", hero_desc: "Hình ảnh tuyển chọn về dây chuyền sản xuất, tồn kho, đóng container xuất khẩu và giao hàng nội địa. Thông tin khách hàng luôn được bảo mật.", hero_cta: "Xem các lô hàng gần đây",
-      stat_selected: "hình ảnh tuyển chọn", stat_period: "Tháng 1–Tháng 6", stat_stages: "3 giai đoạn", stat_fcl: "sản xuất · xuất khẩu · nội địa", stat_private: "Bảo mật", stat_privacy: "bảo vệ thông tin khách hàng",
-      section_label: "Hình ảnh vận hành tuyển chọn", section_title: "Từ chuẩn bị đến chằng buộc an toàn", section_desc: "Lọc theo sản phẩm. Hình ảnh được chọn vì độ rõ nét, thao tác gọn gàng và tính bảo mật.",
-      filter_all: "Tất cả", filter_operations: "Sản xuất & kho", filter_pallets: "Pallet", filter_collars: "Khung pallet", filter_mixed: "Hàng ghép", filter_domestic: "Giao nội địa",
-      caption_warehouse: "Hàng tồn kho sẵn sàng xuất", caption_production: "Dây chuyền sản xuất tự động", meta_warehouse: "Hình ảnh kho", meta_production: "Hình ảnh sản xuất",
-      caption_pallets: "Pallet được chằng buộc sẵn sàng vận chuyển", caption_collars: "Khung pallet chuẩn bị đóng container", caption_mixed: "Nhiều sản phẩm trong một lô hàng", caption_domestic: "Chuẩn bị giao bằng xe tải nội địa",
-      privacy_title: "Bảo mật thông tin khách hàng", privacy_desc: "Thư viện thể hiện năng lực vận hành mà không công bố tên khách hàng, chứng từ, điểm đến, giá hoặc chi tiết hợp tác.",
-      cta_label: "Đang lên kế hoạch hàng FCL?", cta_title: "Gửi danh mục sản phẩm và điểm đến", cta_desc: "Chúng tôi sẽ xác nhận quy cách, phương án đóng hàng, điều kiện thương mại và thời gian qua email.", cta_button: "Yêu cầu báo giá", privacy_link: "Chính sách bảo mật", lightbox_label: "Ảnh lô hàng", lightbox_close: "Đóng"
+      page_title: "Hình ảnh sản xuất và giao hàng | PAKSWELL", topbar: "Bao bì xuất khẩu nguyên container từ Trung Quốc", brand_tagline: "Giải pháp đóng gói", language_label: "Ngôn ngữ", nav_home: "Trang chủ", nav_products: "Sản phẩm", nav_gallery: "Sản xuất & giao hàng", nav_contact: "Liên hệ",
+      eyebrow: "Hình ảnh sản xuất và giao hàng", hero_title: "Vận hành thực tế. Xếp hàng trật tự.", hero_desc: "Hình ảnh tuyển chọn về sản xuất, kho, đóng container xuất khẩu và giao nội địa. Thông tin khách hàng luôn được bảo mật.", hero_cta: "Xem hình ảnh vận hành",
+      section_label: "Hình ảnh vận hành tuyển chọn", section_title: "Từ chuẩn bị đến giao hàng an toàn", section_desc: "Mười hình ảnh rõ ràng được chọn để thể hiện sản phẩm, thao tác gọn gàng và bảo mật khách hàng.",
+      group_operations: "Sản xuất & kho", group_operations_desc: "Thiết bị sản xuất và tồn kho được sắp xếp trước khi phân bổ đơn hàng.", group_export: "Đóng container xuất khẩu", group_export_desc: "Pallet collar, pallet EPAL và hàng ghép được bố trí, cố định cho lô FCL.", group_domestic: "Giao hàng nội địa", group_domestic_desc: "Hàng xe tải sạch, được cố định cho giao nội địa và vận chuyển tiếp.",
+      cap_warehouse: "Tồn kho pallet collar · sẵn sàng xuất", cap_production: "Gia công tự động · sản xuất ván", cap_collar_fcl: "Pallet collar 1200 × 800 mm · đóng FCL", cap_collar_rows: "Bó collar gấp · xếp đều trong container", cap_epal_strapped: "Pallet EPAL · chằng chéo trước khi giao", cap_epal_braced: "Pallet EPAL · gia cố trong container", cap_mixed: "Pallet và collar · kế hoạch hàng ghép", cap_collar_secured: "Bó pallet collar · cố định để xuất khẩu", cap_domestic_collars: "Bó pallet collar · giao bằng xe tải nội địa", cap_domestic_pallets: "Pallet gỗ · cố định giao nội địa",
+      detail_warehouse: "Hình ảnh kho", detail_production: "Hình ảnh sản xuất", detail_jan: "Tháng 1 2026", detail_feb: "Tháng 2 2026", detail_mar: "Tháng 3 2026", detail_apr: "Tháng 4 2026", detail_may: "Tháng 5 2026", detail_jun: "Tháng 6 2026", detail_domestic: "Giao nội địa",
+      privacy_title: "Bảo mật thông tin khách hàng", privacy_desc: "Hình ảnh thể hiện năng lực vận hành mà không công bố tên khách hàng, chứng từ, điểm đến, giá hoặc chi tiết hợp tác.", cta_label: "Cần bằng chứng theo đơn hàng?", cta_title: "Yêu cầu hình ảnh gần đây cho danh mục sản phẩm", cta_desc: "Chúng tôi sẽ xác nhận quy cách, cách xếp hàng, điều kiện thương mại, thời gian và kế hoạch ảnh cho đơn hàng.", cta_button: "Yêu cầu kế hoạch xếp hàng", privacy_link: "Chính sách bảo mật", lightbox_label: "Hình ảnh lô hàng", lightbox_close: "Đóng"
     },
     ko: {
-      topbar: "중국발 FCL 수출 포장", brand_tagline: "포장 솔루션", language_label: "언어", nav_home: "홈", nav_products: "제품", nav_gallery: "갤러리", nav_contact: "문의",
-      eyebrow: "생산 및 출하 갤러리", hero_title: "생산, 수출 컨테이너 적재 및 국내 배송", hero_desc: "생산 라인, 창고 재고, 수출 컨테이너 및 국내 배송 작업을 선별해 소개합니다. 고객 및 상업 정보는 비공개로 유지됩니다.", hero_cta: "최근 출하 보기",
-      stat_selected: "선별된 현장 사진", stat_period: "1월–6월", stat_stages: "3단계", stat_fcl: "생산 · 수출 · 국내", stat_private: "비공개", stat_privacy: "고객 정보 보호",
-      section_label: "선별된 운영 현장", section_title: "준비부터 안전한 적재까지", section_desc: "제품별로 필터링할 수 있습니다. 선명도, 정돈된 작업, 기밀성을 기준으로 사진을 선정했습니다.",
-      filter_all: "전체", filter_operations: "생산 및 창고", filter_pallets: "팔레트", filter_collars: "팔레트 칼라", filter_mixed: "혼합 적재", filter_domestic: "국내 배송",
-      caption_warehouse: "출하 준비된 창고 재고", caption_production: "자동화 생산 라인", meta_warehouse: "창고 현장", meta_production: "생산 현장",
-      caption_pallets: "운송을 위해 고정된 팔레트", caption_collars: "컨테이너 적재 준비된 팔레트 칼라", caption_mixed: "한 번의 출하로 구성된 혼합 제품", caption_domestic: "국내 트럭 배송 준비",
-      privacy_title: "고객 기밀 보호", privacy_desc: "고객명, 운송 서류, 목적지, 가격 또는 협력 세부 정보를 공개하지 않고 운영 역량만 보여드립니다.",
-      cta_label: "FCL 출하를 계획 중이신가요?", cta_title: "제품 구성과 목적지를 알려주세요", cta_desc: "사양, 적재 옵션, 거래 조건 및 납기를 이메일로 확인해 드립니다.", cta_button: "견적 요청", privacy_link: "개인정보 처리방침", lightbox_label: "출하 사진", lightbox_close: "닫기"
+      page_title: "생산 및 출하 현장 | PAKSWELL", topbar: "중국발 FCL 수출 포장", brand_tagline: "포장 솔루션", language_label: "언어", nav_home: "홈", nav_products: "제품", nav_gallery: "생산 및 출하", nav_contact: "문의",
+      eyebrow: "생산 및 출하 현장", hero_title: "실제 운영. 정돈된 적재.", hero_desc: "생산, 창고, 수출 컨테이너 적재 및 국내 배송 현장을 선별했습니다. 고객 및 거래 정보는 비공개로 유지됩니다.", hero_cta: "운영 현장 보기",
+      section_label: "선별된 운영 현장", section_title: "준비부터 안전한 출하까지", section_desc: "제품 가시성, 정돈된 취급, 고객 기밀을 기준으로 선별한 10개 현장입니다.",
+      group_operations: "생산 및 창고", group_operations_desc: "주문 배정 전 생산 설비와 정돈된 창고 재고입니다.", group_export: "수출 컨테이너 적재", group_export_desc: "팔레트 칼라, EPAL 팔레트 및 혼적 제품을 FCL 출하에 맞게 배치하고 고정합니다.", group_domestic: "국내 출하", group_domestic_desc: "국내 배송과 후속 물류를 위해 정돈하고 고정한 트럭 적재입니다.",
+      cap_warehouse: "팔레트 칼라 재고 · 출하 대기", cap_production: "자동화 가공 · 보드 생산", cap_collar_fcl: "1200 × 800 mm 팔레트 칼라 · FCL 적재", cap_collar_rows: "접힌 칼라 묶음 · 컨테이너 정렬", cap_epal_strapped: "EPAL 팔레트 · 출하 전 교차 고정", cap_epal_braced: "EPAL 팔레트 · 컨테이너 내부 고정", cap_mixed: "팔레트와 칼라 · 혼적 계획", cap_collar_secured: "팔레트 칼라 묶음 · 수출 고정", cap_domestic_collars: "팔레트 칼라 묶음 · 국내 트럭 출하", cap_domestic_pallets: "목재 팔레트 · 국내 운송 고정",
+      detail_warehouse: "창고 현장", detail_production: "생산 현장", detail_jan: "2026년 1월", detail_feb: "2026년 2월", detail_mar: "2026년 3월", detail_apr: "2026년 4월", detail_may: "2026년 5월", detail_jun: "2026년 6월", detail_domestic: "국내 배송",
+      privacy_title: "고객 기밀 보호", privacy_desc: "고객명, 운송 서류, 목적지, 가격 또는 협력 정보를 공개하지 않고 운영 역량만 보여드립니다.", cta_label: "주문에 맞는 현장 자료가 필요하신가요?", cta_title: "제품 구성에 맞는 최근 자료 요청", cta_desc: "사양, 적재 방식, 거래 조건, 납기 및 주문 사진 계획을 확인합니다.", cta_button: "적재 계획 요청", privacy_link: "개인정보 처리방침", lightbox_label: "출하 현장", lightbox_close: "닫기"
     },
     ja: {
-      topbar: "中国発FCL輸出梱包", brand_tagline: "梱包ソリューション", language_label: "言語", nav_home: "ホーム", nav_products: "製品", nav_gallery: "ギャラリー", nav_contact: "お問い合わせ",
-      eyebrow: "生産・出荷ギャラリー", hero_title: "生産・輸出コンテナ積載・国内配送", hero_desc: "生産ライン、倉庫在庫、輸出コンテナ、国内配送作業の厳選記録です。顧客名と商取引情報は非公開です。", hero_cta: "最近の出荷を見る",
-      stat_selected: "厳選事例", stat_period: "1月–6月", stat_stages: "3段階", stat_fcl: "生産 · 輸出 · 国内", stat_private: "非公開", stat_privacy: "顧客情報を保護",
-      section_label: "厳選した作業事例", section_title: "準備から安全な積載まで", section_desc: "製品別に絞り込めます。鮮明さ、整然とした作業、機密性を基準に選定しています。",
-      filter_all: "すべて", filter_operations: "生産・倉庫", filter_pallets: "パレット", filter_collars: "パレットカラー", filter_mixed: "混載", filter_domestic: "国内配送",
-      caption_warehouse: "出荷準備済み倉庫在庫", caption_production: "自動化生産ライン", meta_warehouse: "倉庫実景", meta_production: "生産実景",
-      caption_pallets: "輸送用に固定されたパレット", caption_collars: "コンテナ積載準備済みパレットカラー", caption_mixed: "複数製品を一つの出荷に集約", caption_domestic: "国内トラック配送準備",
-      privacy_title: "顧客情報の保護", privacy_desc: "顧客名、出荷書類、仕向地、価格、取引内容を公開せず、オペレーション能力のみを紹介します。",
-      cta_label: "FCL出荷をご計画ですか？", cta_title: "製品構成と仕向地をお知らせください", cta_desc: "仕様、積載方法、取引条件、納期をメールで確認します。", cta_button: "見積もりを依頼", privacy_link: "プライバシーポリシー", lightbox_label: "出荷写真", lightbox_close: "閉じる"
+      page_title: "生産・出荷実績 | PAKSWELL", topbar: "中国発FCL輸出梱包", brand_tagline: "梱包ソリューション", language_label: "言語", nav_home: "ホーム", nav_products: "製品", nav_gallery: "生産・出荷", nav_contact: "お問い合わせ",
+      eyebrow: "生産・出荷実績", hero_title: "実作業。整然とした積載。", hero_desc: "生産、倉庫、輸出コンテナ積載、国内配送の記録を厳選。顧客情報と取引内容は非公開です。", hero_cta: "作業実績を見る",
+      section_label: "厳選した作業実績", section_title: "準備から安全な出荷まで", section_desc: "製品の見やすさ、整然とした取り扱い、顧客情報保護を基準に選んだ10件です。",
+      group_operations: "生産・倉庫", group_operations_desc: "受注割当前の生産設備と整理された倉庫在庫です。", group_export: "輸出コンテナ積載", group_export_desc: "パレットカラー、EPALパレット、混載品をFCL出荷向けに配置・固定します。", group_domestic: "国内出荷", group_domestic_desc: "国内配送と後続物流向けに整然と固定されたトラック積載です。",
+      cap_warehouse: "パレットカラー在庫 · 出荷待ち", cap_production: "自動加工 · 板材生産", cap_collar_fcl: "1200 × 800 mmパレットカラー · FCL積載", cap_collar_rows: "折り畳みカラー束 · コンテナ整列", cap_epal_strapped: "EPALパレット · 出荷前クロス固定", cap_epal_braced: "EPALパレット · コンテナ内部固定", cap_mixed: "パレットとカラー · 混載計画", cap_collar_secured: "パレットカラー束 · 輸出用固定", cap_domestic_collars: "パレットカラー束 · 国内トラック出荷", cap_domestic_pallets: "木製パレット · 国内輸送固定",
+      detail_warehouse: "倉庫実景", detail_production: "生産実景", detail_jan: "2026年1月", detail_feb: "2026年2月", detail_mar: "2026年3月", detail_apr: "2026年4月", detail_may: "2026年5月", detail_jun: "2026年6月", detail_domestic: "国内配送",
+      privacy_title: "顧客情報の保護", privacy_desc: "顧客名、出荷書類、仕向地、価格、取引内容を公開せず、運用能力のみを紹介します。", cta_label: "注文に合った実績が必要ですか？", cta_title: "製品構成に合う最近の実績を依頼", cta_desc: "仕様、積載方法、取引条件、納期、注文写真計画を確認します。", cta_button: "積載計画を依頼", privacy_link: "プライバシーポリシー", lightbox_label: "出荷実績", lightbox_close: "閉じる"
     }
   };
 
   var VALID_LANGS = Object.keys(COPY);
-  var currentLang = "en";
-
-  function browserLang() {
-    var langs = navigator.languages || [navigator.language || ""];
-    for (var i = 0; i < langs.length; i += 1) {
-      var lang = String(langs[i]).toLowerCase();
-      if (/^zh-(tw|hk|mo)/.test(lang)) return "zh-TW";
-      if (/^zh/.test(lang)) return "zh-CN";
-      if (/^th/.test(lang)) return "th";
-      if (/^vi/.test(lang)) return "vi";
-      if (/^ko/.test(lang)) return "ko";
-      if (/^ja/.test(lang)) return "ja";
-    }
-    return "en";
-  }
-
-  function initialLang() {
-    var query = new URLSearchParams(window.location.search).get("lang");
-    var saved = null;
-    try { saved = window.localStorage.getItem("pw_lang"); } catch (e) {}
-    if (VALID_LANGS.indexOf(query) !== -1) return query;
-    if (VALID_LANGS.indexOf(saved) !== -1) return saved;
-    return browserLang();
-  }
-
-  function monthLabel(value, lang) {
-    if (COPY[lang][value]) return COPY[lang][value];
-    var parts = value.split("-");
-    var date = new Date(Number(parts[0]), Number(parts[1]) - 1, 1);
-    try { return new Intl.DateTimeFormat(lang, { month: "long", year: "numeric" }).format(date); }
-    catch (e) { return value; }
-  }
-
+  function browserLang() { var values=navigator.languages||[navigator.language||""]; for(var i=0;i<values.length;i+=1){var lang=String(values[i]).toLowerCase();if(/^zh-(tw|hk|mo)/.test(lang))return "zh-TW";if(/^zh/.test(lang))return "zh-CN";if(/^th/.test(lang))return "th";if(/^vi/.test(lang))return "vi";if(/^ko/.test(lang))return "ko";if(/^ja/.test(lang))return "ja";}return "en"; }
+  function initialLang() { var query=new URLSearchParams(window.location.search).get("lang");var saved=null;try{saved=window.localStorage.getItem("pw_lang");}catch(e){}if(VALID_LANGS.indexOf(query)!==-1)return query;if(VALID_LANGS.indexOf(saved)!==-1)return saved;return browserLang(); }
   function applyLang(lang) {
-    if (VALID_LANGS.indexOf(lang) === -1) lang = "en";
-    currentLang = lang;
-    document.documentElement.lang = lang;
-    document.querySelectorAll("[data-i18n]").forEach(function (el) {
-      var value = COPY[lang][el.getAttribute("data-i18n")];
-      if (value) el.textContent = value;
-    });
-    document.querySelectorAll(".gallery-card").forEach(function (card) {
-      var key = card.getAttribute("data-caption-key");
-      var caption = card.querySelector(".caption-text");
-      var time = card.querySelector("time");
-      var image = card.querySelector("img");
-      if (caption && COPY[lang][key]) caption.textContent = COPY[lang][key];
-      if (image && COPY[lang][key]) image.alt = COPY[lang][key];
-      if (time) time.textContent = monthLabel(card.getAttribute("data-month"), lang);
-    });
-    var languageSelect = document.getElementById("gallery-lang");
-    languageSelect.value = lang;
-    languageSelect.setAttribute("aria-label", COPY[lang].language_label);
-    var privacyLink = document.querySelector("footer a[href^='/privacy']");
-    if (privacyLink) privacyLink.href = lang === "en" ? "/privacy" : "/privacy?lang=" + encodeURIComponent(lang);
-    var dialog = document.getElementById("gallery-lightbox");
-    if (dialog) dialog.setAttribute("aria-label", COPY[lang].lightbox_label);
-    var close = document.querySelector(".lightbox-close");
-    if (close) close.setAttribute("aria-label", COPY[lang].lightbox_close);
-    try { window.localStorage.setItem("pw_lang", lang); } catch (e) {}
-    if (window.PakswellConsent) window.PakswellConsent.refreshLanguage();
+    if(VALID_LANGS.indexOf(lang)===-1)lang="en";var t=COPY[lang];document.documentElement.lang=lang;document.title=t.page_title;
+    document.querySelectorAll("[data-i18n]").forEach(function(el){var value=t[el.getAttribute("data-i18n")];if(value)el.textContent=value;});
+    document.querySelectorAll(".gallery-card").forEach(function(card){var caption=t[card.getAttribute("data-caption-key")];var detail=t[card.getAttribute("data-detail-key")];var captionEl=card.querySelector(".caption-text");var detailEl=card.querySelector(".caption-detail");var img=card.querySelector("img");if(captionEl&&caption)captionEl.textContent=caption;if(detailEl&&detail)detailEl.textContent=detail;if(img&&caption)img.alt=caption;});
+    var select=document.getElementById("gallery-lang");select.value=lang;select.setAttribute("aria-label",t.language_label);var privacy=document.querySelector("footer a[href^='/privacy']");if(privacy)privacy.href=lang==="en"?"/privacy":"/privacy?lang="+encodeURIComponent(lang);var dialog=document.getElementById("gallery-lightbox");if(dialog)dialog.setAttribute("aria-label",t.lightbox_label);var close=document.querySelector(".lightbox-close");if(close)close.setAttribute("aria-label",t.lightbox_close);try{window.localStorage.setItem("pw_lang",lang);}catch(e){}if(window.PakswellConsent)window.PakswellConsent.refreshLanguage();
   }
 
-  document.querySelectorAll(".filter-button").forEach(function (button) {
-    button.addEventListener("click", function () {
-      var filter = button.getAttribute("data-filter");
-      document.querySelectorAll(".filter-button").forEach(function (item) {
-        var active = item === button;
-        item.classList.toggle("active", active);
-        item.setAttribute("aria-pressed", String(active));
-      });
-      document.querySelectorAll(".gallery-card").forEach(function (card) {
-        card.classList.toggle("hidden", filter !== "all" && card.getAttribute("data-category") !== filter);
-      });
-      if (typeof window.gtag === "function") window.gtag("event", "gallery_filter", { gallery_category: filter });
-    });
-  });
-
-  var dialog = document.getElementById("gallery-lightbox");
-  var dialogImage = dialog.querySelector("img");
-  var dialogTitle = dialog.querySelector("strong");
-  var dialogDate = dialog.querySelector(".lightbox-copy span");
-
-  document.querySelectorAll(".gallery-open").forEach(function (button) {
-    button.addEventListener("click", function () {
-      var card = button.closest(".gallery-card");
-      var image = button.querySelector("img");
-      dialogImage.src = image.src;
-      dialogImage.alt = image.alt;
-      dialogTitle.textContent = card.querySelector(".caption-text").textContent;
-      dialogDate.textContent = card.querySelector("time").textContent;
-      dialog.showModal();
-      if (typeof window.gtag === "function") window.gtag("event", "gallery_photo_open", { gallery_category: card.getAttribute("data-category") });
-    });
-  });
-
-  dialog.querySelector(".lightbox-close").addEventListener("click", function () { dialog.close(); });
-  dialog.addEventListener("click", function (event) { if (event.target === dialog) dialog.close(); });
-  document.getElementById("gallery-lang").addEventListener("change", function (event) { applyLang(event.target.value); });
-
-  applyLang(initialLang());
-  var initialCategory = new URLSearchParams(window.location.search).get("category");
-  if (["operations", "pallets", "collars", "mixed", "domestic"].indexOf(initialCategory) !== -1) {
-    var initialFilter = document.querySelector('.filter-button[data-filter="' + initialCategory + '"]');
-    if (initialFilter) initialFilter.click();
-  }
+  var dialog=document.getElementById("gallery-lightbox");var dialogImage=dialog.querySelector("img");var dialogTitle=dialog.querySelector("strong");var dialogDetail=dialog.querySelector(".lightbox-copy span");
+  document.querySelectorAll(".gallery-open").forEach(function(button){button.addEventListener("click",function(){var card=button.closest(".gallery-card");var img=button.querySelector("img");dialogImage.src=img.src;dialogImage.alt=img.alt;dialogTitle.textContent=card.querySelector(".caption-text").textContent;dialogDetail.textContent=card.querySelector(".caption-detail").textContent;dialog.showModal();if(typeof window.gtag==="function")window.gtag("event","gallery_photo_open",{gallery_reference:card.getAttribute("data-caption-key")});});});
+  dialog.querySelector(".lightbox-close").addEventListener("click",function(){dialog.close();});dialog.addEventListener("click",function(event){if(event.target===dialog)dialog.close();});document.getElementById("gallery-lang").addEventListener("change",function(event){applyLang(event.target.value);});applyLang(initialLang());
 })();

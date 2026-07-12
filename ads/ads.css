@@ -694,8 +694,7 @@ h2 {
   border-bottom: 0;
 }
 
-.official-verify { margin: 16px 0 0; }
-.official-verify a { color: var(--navy); font-size: 13px; font-weight: 800; text-underline-offset: 3px; }
+.official-verify { margin: 16px 0 0; color: var(--muted); font-size: 13px; font-weight: 700; line-height: 1.65; }
 
 .spec-key,
 .spec-value {

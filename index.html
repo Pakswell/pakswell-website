@@ -686,6 +686,83 @@
         .badge-item:hover { border-color: var(--primary); transform: translateY(-2px); }
         .badge-item svg { width: 48px; height: 48px; color: var(--primary); }
         .badge-item span { font-size: 12px; font-weight: 700; color: var(--primary); letter-spacing: 1px; }
+        .fsc-trust-card {
+            position: relative;
+            display: grid;
+            grid-template-columns: 118px minmax(0, 1fr);
+            gap: 28px;
+            align-items: center;
+            max-width: 860px;
+            margin: 32px auto 0;
+            padding: 24px 32px;
+            overflow: hidden;
+            text-align: left;
+            background: linear-gradient(135deg, #ffffff 0%, #f2f8f4 100%);
+            border: 1px solid rgba(40, 92, 77, 0.24);
+            border-radius: 18px;
+            box-shadow: 0 16px 38px rgba(15, 25, 35, 0.08);
+        }
+        .fsc-trust-card::after {
+            content: "";
+            position: absolute;
+            right: -56px;
+            bottom: -92px;
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            background: rgba(40, 92, 77, 0.055);
+        }
+        .fsc-trust-mark,
+        .fsc-trust-copy { position: relative; z-index: 1; }
+        .fsc-trust-mark {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+        .fsc-trust-logo {
+            display: block;
+            width: 92px;
+            height: auto;
+        }
+        .fsc-trust-code {
+            color: #285c4d;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: .07em;
+            white-space: nowrap;
+        }
+        .fsc-trust-kicker {
+            display: block;
+            margin-bottom: 7px;
+            color: #285c4d;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+        }
+        .fsc-trust-title {
+            margin: 0;
+            color: var(--primary);
+            font-size: clamp(20px, 2.5vw, 27px);
+            line-height: 1.2;
+        }
+        .fsc-trust-desc {
+            max-width: 610px;
+            margin: 10px 0 0;
+            color: var(--text-light);
+            font-size: 14px;
+            line-height: 1.7;
+        }
+        .fsc-trust-link {
+            display: inline-block;
+            margin-top: 9px;
+            color: #285c4d;
+            font-size: 12px;
+            font-weight: 800;
+            text-decoration: none;
+        }
+        .fsc-trust-link:hover { text-decoration: underline; }
         .verification-panel { margin-top: 36px; text-align: left; }
         .verification-grid { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--border); background: var(--white); }
         .verification-item { min-height: 168px; padding: 24px; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
@@ -914,6 +991,8 @@
             .advantages-grid { grid-template-columns: 1fr; }
             .markets-grid { grid-template-columns: repeat(2, 1fr); }
             .compliance-content { grid-template-columns: 1fr; }
+            .fsc-trust-card { grid-template-columns: 100px minmax(0, 1fr); gap: 22px; padding: 22px; }
+            .fsc-trust-logo { width: 82px; }
             .verification-grid { grid-template-columns: repeat(2, 1fr); }
             .verification-item:nth-child(3n) { border-right: 1px solid var(--border); }
             .verification-item:nth-child(2n) { border-right: 0; }
@@ -931,6 +1010,12 @@
             #about .container > div:last-child { grid-template-columns: 1fr !important; }
         }
         @media (max-width: 480px) {
+            .fsc-trust-card { grid-template-columns: 86px minmax(0, 1fr); gap: 14px; padding: 18px; border-radius: 14px; }
+            .fsc-trust-logo { width: 70px; }
+            .fsc-trust-code { font-size: 9px; letter-spacing: .02em; }
+            .fsc-trust-kicker { font-size: 9px; letter-spacing: .1em; }
+            .fsc-trust-title { font-size: 18px; }
+            .fsc-trust-desc { font-size: 12px; line-height: 1.6; }
             .verification-grid { grid-template-columns: 1fr; }
             .verification-item { border-right: 0 !important; border-bottom: 1px solid var(--border) !important; }
             .verification-item:last-child { border-bottom: 0 !important; }
@@ -1181,6 +1266,18 @@
                 <div class="section-label" style="text-align:center;" data-i18n="comp_label">Quality & Compliance</div>
                 <h3 data-i18n="comp_title">PPWR, Quality &amp; Document Support</h3>
                 <p style="color:var(--text-light); margin-bottom:24px; max-width:680px; margin-left:auto; margin-right:auto;" data-i18n="comp_desc">For EU-bound orders, PPWR documentation is confirmed by product and supplied specification. The current EPAL EU Declaration of Conformity is available for EPAL 1 pallets; pallet-collar files include product and material data, reuse and repair information, and applicable test evidence. Treatment, marking, licence and shipping documents remain order-specific.</p>
+                <aside class="fsc-trust-card" aria-labelledby="fsc-trust-title">
+                    <div class="fsc-trust-mark">
+                        <img class="fsc-trust-logo" src="images/fsc-logo-green-white.svg" alt="FSC logo" width="360" height="400">
+                        <span class="fsc-trust-code">FSC™ C231921</span>
+                    </div>
+                    <div class="fsc-trust-copy">
+                        <span class="fsc-trust-kicker" data-i18n="fsc_kicker">Responsible forest sourcing</span>
+                        <h4 class="fsc-trust-title" id="fsc-trust-title" data-i18n="fsc_title">Ask about our FSC™-certified materials</h4>
+                        <p class="fsc-trust-desc" data-i18n="fsc_desc">FSC-certified material options and the applicable FSC claim are confirmed for eligible wood-packaging orders before production.</p>
+                        <a class="fsc-trust-link" href="https://fsc.org" target="_blank" rel="noopener noreferrer">fsc.org ↗</a>
+                    </div>
+                </aside>
                 <div class="verification-panel"><div class="verification-grid">
                     <div class="verification-item"><span>01</span><strong data-i18n="verify1_title">Confirmed specification</strong><p data-i18n="verify1_desc">Model, dimensions, quantity, and optional accessories.</p></div>
                     <div class="verification-item"><span>02</span><strong data-i18n="verify2_title">Producing facility</strong><p data-i18n="verify2_desc">Facility and applicable licence details identified in the quotation.</p></div>
@@ -1471,7 +1568,7 @@
 
     // Load translations from external JSON file
     function loadTranslations() {
-        fetch('translations.json?v=20260716-manufacturer-1')
+        fetch('translations.json?v=20260903-fsc-1')
             .then(function(res) { return res.json(); })
             .then(function(data) {
                 TRANSLATIONS = data;

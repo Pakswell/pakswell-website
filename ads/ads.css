@@ -834,6 +834,104 @@ h2 {
   font-size: 14px;
 }
 
+.fsc-trust-section {
+  padding: 44px 0;
+  background: linear-gradient(180deg, #f7faf8 0%, #eef5f1 100%);
+  border-top: 1px solid rgba(40, 92, 77, 0.1);
+}
+
+.fsc-trust-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 108px minmax(0, 1fr);
+  gap: 28px;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 22px 30px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(40, 92, 77, 0.22);
+  border-radius: 16px;
+  box-shadow: 0 14px 34px rgba(15, 25, 35, 0.08);
+}
+
+.fsc-trust-card::after {
+  content: "";
+  position: absolute;
+  right: -64px;
+  bottom: -108px;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: rgba(40, 92, 77, 0.055);
+}
+
+.fsc-trust-mark,
+.fsc-trust-copy {
+  position: relative;
+  z-index: 1;
+}
+
+.fsc-trust-mark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+}
+
+.fsc-trust-logo {
+  display: block;
+  width: 84px;
+  height: auto;
+}
+
+.fsc-trust-code {
+  color: #285c4d;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
+.fsc-trust-kicker {
+  display: block;
+  margin-bottom: 6px;
+  color: #285c4d;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.fsc-trust-title {
+  margin: 0;
+  color: var(--navy);
+  font-size: clamp(20px, 3vw, 26px);
+  line-height: 1.2;
+}
+
+.fsc-trust-desc {
+  max-width: 650px;
+  margin: 9px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.fsc-trust-link {
+  display: inline-block;
+  margin-top: 8px;
+  color: #285c4d;
+  font-size: 12px;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.fsc-trust-link:hover {
+  text-decoration: underline;
+}
+
 .quote-panel {
   display: grid;
   grid-template-columns: minmax(0, 0.8fr) minmax(360px, 1fr);
@@ -1022,6 +1120,40 @@ h2 {
 
   .container {
     width: min(100% - 28px, 1180px);
+  }
+
+  .fsc-trust-section {
+    padding: 32px 0;
+  }
+
+  .fsc-trust-card {
+    grid-template-columns: 86px minmax(0, 1fr);
+    gap: 14px;
+    padding: 18px;
+    border-radius: 13px;
+  }
+
+  .fsc-trust-logo {
+    width: 68px;
+  }
+
+  .fsc-trust-code {
+    font-size: 9px;
+    letter-spacing: 0.01em;
+  }
+
+  .fsc-trust-kicker {
+    font-size: 9px;
+    letter-spacing: 0.09em;
+  }
+
+  .fsc-trust-title {
+    font-size: 18px;
+  }
+
+  .fsc-trust-desc {
+    font-size: 12px;
+    line-height: 1.55;
   }
 
   .nav {

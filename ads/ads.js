@@ -35,6 +35,9 @@
       productCollars: "Pallet Collars",
       productHinges: "Pallet Collar Hinges",
       mainSite: "Main site",
+      fscKicker: "Responsible forest sourcing",
+      fscTitle: "Ask about our FSC™-certified materials",
+      fscDesc: "FSC-certified material options and the applicable FSC claim are confirmed for eligible wood-packaging orders before production.",
       footerText: "© 2026 PAKSWELL. EPAL pallet and pallet collar manufacturer.",
       mobileCall: "Call",
       mobileWhatsApp: "WhatsApp",
@@ -67,6 +70,9 @@
       productCollars: "กรอบพาเลทไม้",
       productHinges: "บานพับกรอบพาเลท",
       mainSite: "เว็บไซต์หลัก",
+      fscKicker: "การจัดหาวัตถุดิบจากป่าอย่างรับผิดชอบ",
+      fscTitle: "สอบถามวัสดุที่ได้รับการรับรอง FSC™ ของเรา",
+      fscDesc: "ตัวเลือกวัสดุที่ได้รับการรับรอง FSC และข้อความอ้างอิง FSC ที่เกี่ยวข้องจะยืนยันก่อนการผลิตสำหรับคำสั่งซื้อบรรจุภัณฑ์ไม้ที่เข้าเกณฑ์",
       footerText: "© 2026 PAKSWELL ผู้ผลิตพาเลท EPAL และกรอบพาเลท",
       mobileCall: "โทร",
       mobileWhatsApp: "WhatsApp",
@@ -99,6 +105,9 @@
       productCollars: "木质围板箱",
       productHinges: "围板箱铰链",
       mainSite: "返回主页",
+      fscKicker: "负责任的森林资源采购",
+      fscTitle: "欢迎咨询我们的 FSC™ 认证材料",
+      fscDesc: "对于符合条件的木质包装订单，我们会在生产前确认 FSC 认证材料选项及适用的 FSC 声明。",
       footerText: "© 2026 PAKSWELL. EPAL 托盘与木质围板箱制造商。",
       mobileCall: "电话",
       mobileWhatsApp: "WhatsApp",
@@ -131,6 +140,9 @@
       productCollars: "木質圍板箱",
       productHinges: "圍板箱鉸鏈",
       mainSite: "返回主站",
+      fscKicker: "負責任的森林資源採購",
+      fscTitle: "歡迎洽詢我們的 FSC™ 認證材料",
+      fscDesc: "對於符合條件的木質包裝訂單，我們會在生產前確認 FSC 認證材料選項及適用的 FSC 聲明。",
       footerText: "© 2026 PAKSWELL. EPAL 棧板與木質圍板箱製造商。",
       mobileCall: "電話",
       mobileWhatsApp: "WhatsApp",
@@ -163,6 +175,9 @@
       productCollars: "Pallet Collars gỗ",
       productHinges: "Bản lề pallet collar",
       mainSite: "Trang chính",
+      fscKicker: "Nguồn cung lâm sản có trách nhiệm",
+      fscTitle: "Hãy hỏi về vật liệu được chứng nhận FSC™ của chúng tôi",
+      fscDesc: "Các lựa chọn vật liệu được chứng nhận FSC và tuyên bố FSC áp dụng được xác nhận trước khi sản xuất cho các đơn hàng bao bì gỗ đủ điều kiện.",
       footerText: "© 2026 PAKSWELL. Nhà sản xuất pallet EPAL và pallet collar.",
       mobileCall: "Gọi",
       mobileWhatsApp: "WhatsApp",
@@ -195,6 +210,9 @@
       productCollars: "목재 팔레트 칼라",
       productHinges: "팔레트 칼라 힌지",
       mainSite: "메인 사이트",
+      fscKicker: "책임 있는 산림 자원 조달",
+      fscTitle: "FSC™ 인증 소재 옵션을 문의하세요",
+      fscDesc: "적격 목재 포장 주문에 대해 FSC 인증 소재 옵션과 적용 가능한 FSC 표시를 생산 전에 확인합니다.",
       footerText: "© 2026 PAKSWELL. EPAL 팔레트 및 팔레트 칼라 제조사.",
       mobileCall: "전화",
       mobileWhatsApp: "WhatsApp",
@@ -227,6 +245,9 @@
       productCollars: "木製パレットカラー",
       productHinges: "パレットカラー用ヒンジ",
       mainSite: "メインサイト",
+      fscKicker: "責任ある森林資源の調達",
+      fscTitle: "FSC™認証材についてお問い合わせください",
+      fscDesc: "対象となる木製梱包のご注文では、FSC認証材の選択肢と適用するFSC表示を生産前に確認します。",
       footerText: "© 2026 PAKSWELL. EPAL パレットとパレットカラーのメーカー。",
       mobileCall: "電話",
       mobileWhatsApp: "WhatsApp",
@@ -1319,6 +1340,10 @@
     setText(".hero-facts span:nth-child(2)", t.fact2);
     setText(".hero-facts span:nth-child(3)", t.fact3);
     setText(".hero-facts span:nth-child(4)", t.fact4);
+
+    setText(".fsc-trust-kicker", t.fscKicker);
+    setText(".fsc-trust-title", t.fscTitle);
+    setText(".fsc-trust-desc", t.fscDesc);
 
     setText("#specs .label", t.specsLabel);
     setText("#specs h2", t.specsTitle);

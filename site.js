@@ -5,6 +5,13 @@ if(form){
  const $=id=>document.getElementById(id),params=new URLSearchParams(location.search),status=$('quote-status'),send=$('send-enquiry');let prepared='',busy=false,lastAccepted='',reference='';
  const product=form.elements.product;
  if([...product.options].some(o=>o.value===params.get('product')))product.value=params.get('product');
+ // Whitelisted product options carry through without submitting anything.
+ const hingeFinishes={zinc:'Natural galvanized steel',black:'Black',grey:'Grey',ivory:'Ivory white',mint:'Mint green'};
+ if(product.value==='Hinges & accessories'&&hingeFinishes[params.get('finish')]&&['1.0','1.2','1.5','2.0'].includes(params.get('thickness'))){
+  form.elements.size.value='Pallet collar hinge / '+params.get('thickness')+' mm steel';
+  form.elements.message.value='Finish: '+hingeFinishes[params.get('finish')]+'\nNominal steel thickness: '+params.get('thickness')+' mm\nPlease confirm final dimensions, finish and availability.';
+  form.querySelector('.form-options')?.setAttribute('open','');
+ }
  const requests={documents:'Please share the relevant certification and heat-treatment credentials for supplier qualification.',ppwr:'Please share the product-specific PPWR declaration of conformity and applicable SGS test reports.','export-documents':'Please advise on the phytosanitary, origin and heat-treatment documentation applicable to my product and destination.'};
  if(requests[params.get('request')]){form.elements.purpose.value='documents';form.elements.message.value=requests[params.get('request')];product.value=product.value||'Combined order / not sure yet';}
  function mode(){const docs=form.elements.purpose.value==='documents';$('form-title').textContent=docs?'Request documents':'Request a quote';$('form-intro').textContent=docs?'Tell us which product and documents you would like to review.':'A few details are enough to start.';$('quantity-field').hidden=docs;form.elements.quantity.required=!docs;form.elements.quantity.disabled=docs;form.elements.destination.required=!docs;form.querySelector('label[for="destination"]').innerHTML=docs?'Destination <span class="small">(optional)</span>':'Destination *';send.textContent=docs?'Request documents ↗':'Send enquiry ↗';}

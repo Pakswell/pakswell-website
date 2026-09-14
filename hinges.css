@@ -1,0 +1,72 @@
+/* Hinge product page: shared brand tokens, scoped interactive controls. */
+.nav-links{gap:24px}
+.home-hinges{display:grid;grid-template-columns:240px 1fr;gap:36px;margin-top:32px;padding:28px;background:var(--muted);align-items:center}
+.home-hinges-photo{display:block;aspect-ratio:4/3;overflow:hidden}
+.home-hinges .eyebrow{margin-bottom:12px}
+.home-hinges h3{font:36px/1.08 var(--serif);letter-spacing:-.035em}
+.home-hinges p{max-width:650px;margin:14px 0 18px}
+.hinge-intro{display:grid;grid-template-columns:1.5fr 1fr;gap:70px;padding:26px 0 45px;align-items:center}
+.hinge-intro h1{font-size:clamp(42px,4.4vw,66px)}
+.hinge-intro h1 em{color:#6c7c4e;font-weight:400}
+.hinge-intro>div>p{margin-top:22px}
+.hinge-capacity{border-left:1px solid var(--line);padding:18px 0 18px 44px}
+.hinge-capacity strong{font:clamp(42px,4.5vw,64px)/1.1 var(--serif);letter-spacing:-.045em;display:block}
+.hinge-capacity .capacity-unit{display:block;font-size:16px;margin-top:8px}
+.hinge-capacity p{font-size:14px;max-width:350px}
+.hinge-config{padding-top:50px}
+.hinge-config .section-head{margin-bottom:30px}
+.hinge-config .section-head h2{font-size:clamp(34px,3.2vw,44px)}
+.hinge-config .workspace{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:36px}
+.hinge-config .viewer{background:#e8eae3;border:1px solid var(--line);display:flex;flex-direction:column;min-width:0;align-self:start}
+.hinge-config .viewer-top,.hinge-config .viewer-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 20px;font-size:12px;color:var(--body)}
+.hinge-config .viewer-top{letter-spacing:.04em}
+.hinge-config .viewer-bottom{border-top:1px solid var(--line);flex-wrap:wrap}
+.hinge-config #stage{height:520px;position:relative;min-width:0}
+.hinge-config #canvas{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:none;cursor:grab}
+.hinge-config #canvas.dragging{cursor:grabbing}
+.hinge-config #canvas:focus-visible{outline:3px solid #a06e1d;outline-offset:-4px}
+.hinge-config #load-state{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:#e8eae3;padding:30px;text-align:center}
+.hinge-config #load-state[hidden]{display:none}
+.hinge-config button{font:inherit;cursor:pointer;color:var(--ink);background:transparent;border:1px solid #bfc8bd;min-height:44px;padding:9px 12px}
+.hinge-config button:hover{background:#ffffff88}
+.hinge-config .view-actions{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.hinge-config .view-actions button{font-size:12px;padding:8px 10px}
+.hinge-config .view-actions output{min-width:38px;text-align:center;font-variant-numeric:tabular-nums}
+.hinge-config #zoom-in,.hinge-config #zoom-out{font-size:20px;min-width:44px;padding:4px 8px}
+.hinge-config aside{min-width:0}
+.hinge-config aside .eyebrow{margin-bottom:14px}
+.hinge-config aside h3{font:34px/1.1 var(--serif);letter-spacing:-.035em}
+.hinge-config .description{font-size:14px;margin:16px 0 22px}
+.hinge-config fieldset{padding:18px 0 22px;margin:0;border:0;border-top:1px solid var(--line);min-width:0}
+.hinge-config legend{float:left;width:100%;padding:0;margin-bottom:14px;font-size:13px;color:var(--body)}
+.hinge-config legend span{font-size:15px;font-weight:600;margin-left:12px;color:var(--ink)}
+.hinge-config .swatches{display:flex;gap:10px;clear:both}
+.hinge-config .swatch{width:48px;height:48px;min-height:48px;padding:5px;border-radius:50%;border:2px solid transparent;flex-shrink:0}
+.hinge-config .swatch i{display:block;width:34px;height:34px;border-radius:50%;background:var(--colour);box-shadow:inset 0 0 0 1px #0002}
+.hinge-config .swatch:first-child i{background:linear-gradient(125deg,#8b9291,#d6dad7 40%,#8f9693 61%,#c5cac6)}
+.hinge-config .swatch[aria-pressed=true]{border-color:var(--ink)}
+.hinge-config .selected-finish{margin-top:14px;font-size:15px}
+.hinge-config .selected-finish strong,.hinge-config .selected-finish span{display:block}
+.hinge-config .selected-finish span{font-size:12px;color:var(--body);margin-top:4px}
+.hinge-config .thickness{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px;clear:both}
+.hinge-config .thickness button{font-size:14px;padding:10px 2px}
+.hinge-config .thickness button[aria-pressed=true]{background:var(--ink);color:white;border-color:var(--ink)}
+.hinge-config .note{font-size:12px;line-height:1.5;margin-top:10px;padding:0;background:transparent;border:0}
+.hinge-config .selection{padding:18px 0;border-top:1px solid var(--line)}
+.hinge-config .selection>span{font-size:11px;letter-spacing:.12em;color:var(--body)}
+.hinge-config .selection p{font-size:14px;margin-top:6px}
+.hinge-config .quote{display:block;background:var(--ink);color:white;padding:16px;text-align:center;font-size:14px}
+.hinge-config .quote:hover{background:#365a4d}
+.hinge-config details{border-top:1px solid var(--line);margin-top:22px;padding-top:16px;font-size:12px}
+.hinge-config summary{font-size:13px;cursor:pointer}
+.hinge-config details p{margin-top:12px}
+.hinge-visual-note,.hinge-nojs{font-size:12px;margin-top:18px;max-width:780px}
+.hinge-production{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center}
+.hinge-production figure img{height:auto;aspect-ratio:4/3;object-fit:cover}
+.hinge-production p{margin-top:22px}
+.hinge-production .text-link,.hinge-page .split .text-link{margin-top:24px}
+@media(min-width:821px) and (max-width:1120px){.nav{gap:15px}.nav-links{gap:15px;font-size:13px}.nav-links .button{gap:15px;padding:13px}.brand-name{font-size:21px}.brand img{width:34px}.brand{gap:8px}}
+@media(max-width:1000px){.hinge-intro{gap:35px}.hinge-capacity{padding-left:28px}.hinge-config .workspace{grid-template-columns:minmax(0,1fr) 300px;gap:25px}.hinge-production{gap:36px}}
+@media(max-width:820px){.hinge-intro{grid-template-columns:1fr;gap:30px}.hinge-intro h1{font-size:52px}.hinge-capacity{border-left:0;border-top:1px solid var(--line);padding:25px 0 0}.hinge-capacity strong{font-size:45px}.hinge-capacity p{max-width:560px}.hinge-config .workspace{grid-template-columns:1fr;gap:28px}.hinge-config #stage{height:440px}.hinge-config aside{width:100%;max-width:540px}.hinge-production{grid-template-columns:1fr}.hinge-production>div{order:-1}.home-hinges{grid-template-columns:190px 1fr;gap:25px}.home-hinges h3{font-size:30px}}
+@media(max-width:540px){.hinge-intro{padding:15px 0 28px;gap:25px}.hinge-intro h1{font-size:42px}.hinge-intro .eyebrow{font-size:10px;letter-spacing:.12em;margin-bottom:16px}.hinge-intro>div>p{font-size:15px;margin-top:17px}.hinge-intro .actions{margin-top:23px;gap:18px}.hinge-capacity .eyebrow{margin-bottom:10px}.hinge-capacity strong{font-size:40px}.hinge-capacity .capacity-unit{font-size:14px}.hinge-capacity p{font-size:13px}.hinge-config{padding-top:36px}.hinge-config #stage{height:370px}.hinge-config .viewer-top,.hinge-config .viewer-bottom{padding:12px}.hinge-config .viewer-top{font-size:10px;gap:8px}.hinge-config .view-actions{gap:5px}.hinge-config .view-actions button{padding:7px 8px}.hinge-config .swatches{gap:12px}.home-hinges{grid-template-columns:1fr;padding:20px;gap:22px}.home-hinges-photo{aspect-ratio:16/9}.home-hinges h3{font-size:34px}.home-hinges p{font-size:14px}.hinge-visual-note{font-size:11px}.hinge-page .anchor-bar{gap:20px}.hinge-config aside h3{font-size:32px}}
+@media(max-width:540px){.hinge-intro .actions .button{padding:13px 15px;gap:15px;font-size:13px}.hinge-intro .actions .text-link{font-size:13px;gap:12px}.hinge-capacity{display:grid;grid-template-columns:auto 1fr;gap:6px 22px;align-items:center}.hinge-capacity .eyebrow{grid-column:1/-1;margin:0}.hinge-intro .hinge-capacity p{display:none}.hinge-capacity strong{font-size:35px}.hinge-capacity .capacity-unit{margin:0;font-size:13px}.hinge-config .section-head .eyebrow{margin-bottom:12px}.hinge-config .section-head h2{font-size:32px}.hinge-config .section-head p{font-size:14px}.hinge-config .section-head{gap:15px;margin-bottom:22px}}

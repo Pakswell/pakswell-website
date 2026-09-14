@@ -40,13 +40,15 @@ export function rib(x,z){
  r.push((2.1-.45*step)*smooth(-formedDistance/4.6));
  return 3.2*(1-r.reduce((product,h)=>product*(1-h/3.2),1))+.85*step;
 }
-export function createHinge(thickness,material,Delaunay){
+export function createHinge(thickness,material,Delaunay,{detail=.6,secondLeaf=false,tongueRelief=0}={}){
  const group=new T.Group(),rad=2.2+thickness/2,bendRadius=Math.max(2,thickness*1.5),bendLength=bendRadius*Math.PI/2,wallLength=22.6-bendRadius;
  const gap=W+bendLength+16.6-bendRadius,rolled=W+bendLength+wallLength+rad*Math.PI*1.76;
  // One developed sheet outline; no independent flange or tube surfaces.
  const startR=8,endR=9;
- const polygon=[[startR,0],[rolled,0],[rolled,30],[gap,30],[gap,60],[rolled,60],[rolled,92],[gap,92],[gap,122],[rolled,122],[rolled,154],[gap,154],[gap,180]];
- for(let i=1;i<=24;i++){const t=i/24;polygon.push([W+(gap-W)*(1-t)**2,180+15*t]);}
+ const polygon=secondLeaf
+  ?[[startR,0],[gap,0],[gap,30.2],[rolled,30.2],[rolled,60],[gap,60],[gap,92.2],[rolled,92.2],[rolled,122],[gap,122],[gap,154.2],[rolled,154.2],[rolled,184],[gap,184]]
+  :[[startR,0],[rolled,0],[rolled,30],[gap,30],[gap,60],[rolled,60],[rolled,92],[gap,92],[gap,122],[rolled,122],[rolled,154],[gap,154],[gap,180]];
+ for(let i=1;i<=24;i++){const t=i/24;polygon.push([W+(gap-W)*(1-t)**2,(secondLeaf?184:180)+(secondLeaf?11:15)*t]);}
  polygon.push([W,L-endR]);
  for(let i=1;i<=24;i++){const a=i*Math.PI/48;polygon.push([W-endR+endR*Math.cos(a),L-endR+endR*Math.sin(a)]);}
  polygon.push([endR,L]);
@@ -57,12 +59,15 @@ export function createHinge(thickness,material,Delaunay){
  let points=[];const keys=new Set();function add(u,z){const k=u.toFixed(6)+','+z.toFixed(6);if(!keys.has(k)){keys.add(k);points.push([u,z]);}}
  for(let i=0;i<polygon.length;i++){const a=polygon[i],b=polygon[(i+1)%polygon.length],steps=Math.max(1,Math.ceil(Math.hypot(a[0]-b[0],a[1]-b[1])/.5));for(let j=0;j<steps;j++)add(a[0]+(b[0]-a[0])*j/steps,a[1]+(b[1]-a[1])*j/steps);}
  for(const [hx,hz]of holes)for(let i=0;i<64;i++){const a=i*Math.PI/32;add(hx+2.8*Math.cos(a),hz+2.8*Math.sin(a));}
- for(let z=.31;z<L;z+=.6)for(let u=.31;u<rolled;u+=.6)if(inside(u,z)&&holes.every(([x,y])=>Math.hypot(u-x,z-y)>3))add(u,z);
+ for(let z=.31;z<L;z+=detail)for(let u=.31;u<rolled;u+=detail)if(inside(u,z)&&holes.every(([x,y])=>Math.hypot(u-x,z-y)>3))add(u,z);
  for(const u of [W,W+bendLength,W+bendLength+wallLength])for(let z=.27;z<195;z+=.5)if(inside(u,z))add(u,z);
  function surface(u,z){
   // Ribs project OUTSIDE the L-fold (negative Y), as the supplied outer-face photo.
-  if(u<=W)return [u-W/2,-rib(u,z),z-L/2];
-  const s=u-W,stamp=rib(W,z);
+  // Assembly clearance is a continuous transverse joggle, not a resized foot.
+  // It is fixed in the geometry before animation; standalone samples stay unchanged.
+  const relief=tongueRelief*smooth((z-184)/11);
+  if(u<=W)return [u-W/2,-rib(u,z)-relief,z-L/2];
+  const s=u-W,stamp=rib(W,z)+relief;
   if(s<=bendLength){const a=s/bendRadius;return [W/2+(bendRadius+stamp)*Math.sin(a),-stamp+bendRadius*(1-Math.cos(a)),z-L/2];}
   if(s<=bendLength+wallLength){const t=(s-bendLength)/wallLength,ease=t*t*(3-2*t);return [W/2+bendRadius+stamp*(1-ease),bendRadius-stamp+(wallLength+stamp)*t,z-L/2];}
   const a=Math.PI-(s-bendLength-wallLength)/rad;return [W/2+bendRadius+rad+rad*Math.cos(a),22.6+rad*Math.sin(a),z-L/2];

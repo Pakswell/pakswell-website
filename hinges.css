@@ -70,3 +70,21 @@
 @media(max-width:820px){.hinge-intro{grid-template-columns:1fr;gap:30px}.hinge-intro h1{font-size:52px}.hinge-capacity{border-left:0;border-top:1px solid var(--line);padding:25px 0 0}.hinge-capacity strong{font-size:45px}.hinge-capacity p{max-width:560px}.hinge-config .workspace{grid-template-columns:1fr;gap:28px}.hinge-config #stage{height:440px}.hinge-config aside{width:100%;max-width:540px}.hinge-production{grid-template-columns:1fr}.hinge-production>div{order:-1}.home-hinges{grid-template-columns:190px 1fr;gap:25px}.home-hinges h3{font-size:30px}}
 @media(max-width:540px){.hinge-intro{padding:15px 0 28px;gap:25px}.hinge-intro h1{font-size:42px}.hinge-intro .eyebrow{font-size:10px;letter-spacing:.12em;margin-bottom:16px}.hinge-intro>div>p{font-size:15px;margin-top:17px}.hinge-intro .actions{margin-top:23px;gap:18px}.hinge-capacity .eyebrow{margin-bottom:10px}.hinge-capacity strong{font-size:40px}.hinge-capacity .capacity-unit{font-size:14px}.hinge-capacity p{font-size:13px}.hinge-config{padding-top:36px}.hinge-config #stage{height:370px}.hinge-config .viewer-top,.hinge-config .viewer-bottom{padding:12px}.hinge-config .viewer-top{font-size:10px;gap:8px}.hinge-config .view-actions{gap:5px}.hinge-config .view-actions button{padding:7px 8px}.hinge-config .swatches{gap:12px}.home-hinges{grid-template-columns:1fr;padding:20px;gap:22px}.home-hinges-photo{aspect-ratio:16/9}.home-hinges h3{font-size:34px}.home-hinges p{font-size:14px}.hinge-visual-note{font-size:11px}.hinge-page .anchor-bar{gap:20px}.hinge-config aside h3{font-size:32px}}
 @media(max-width:540px){.hinge-intro .actions .button{padding:13px 15px;gap:15px;font-size:13px}.hinge-intro .actions .text-link{font-size:13px;gap:12px}.hinge-capacity{display:grid;grid-template-columns:auto 1fr;gap:6px 22px;align-items:center}.hinge-capacity .eyebrow{grid-column:1/-1;margin:0}.hinge-intro .hinge-capacity p{display:none}.hinge-capacity strong{font-size:35px}.hinge-capacity .capacity-unit{margin:0;font-size:13px}.hinge-config .section-head .eyebrow{margin-bottom:12px}.hinge-config .section-head h2{font-size:32px}.hinge-config .section-head p{font-size:14px}.hinge-config .section-head{gap:15px;margin-bottom:22px}}
+
+/* The product configurator keeps functional controls, but drops card-like chrome on phones. */
+@media(max-width:540px){
+  .home-hinges{padding:0;background:transparent;gap:19px;margin-top:38px}
+  .home-hinges-photo{border-radius:9px}
+  .home-hinges .eyebrow{margin-bottom:10px}
+  .home-hinges h3{font-size:32px}
+  .home-hinges p{margin:11px 0 15px}
+  .hinge-intro .actions .button{min-height:42px;padding:5px 0;border:0;border-bottom:1px solid currentColor;border-radius:0;background:transparent;color:var(--ink);font-size:14px}
+  .hinge-config .viewer{overflow:hidden;border:0;border-radius:10px}
+  .hinge-config .viewer-bottom{background:rgba(245,244,239,.36)}
+  .hinge-config button{border:0;border-radius:999px;background:rgba(255,255,255,.58)}
+  .hinge-config .view-actions button{min-width:44px}
+  .hinge-config .thickness{gap:0;border-bottom:1px solid var(--line)}
+  .hinge-config .thickness button{border-radius:0;border-bottom:2px solid transparent;background:transparent}
+  .hinge-config .thickness button[aria-pressed=true]{border-color:var(--ink);background:transparent;color:var(--ink);font-weight:700}
+  .hinge-config .quote{border-radius:999px}
+}

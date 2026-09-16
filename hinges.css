@@ -107,3 +107,7 @@
   .hinge-config .mobile-finish-inline aside>h3,
   .hinge-config .mobile-finish-inline aside>.description{display:none}
 }
+@media(max-width:360px){
+  .hinge-config .mobile-finish-inline .swatch{width:44px;height:44px;min-height:44px}
+  .hinge-config .mobile-finish-inline .swatch i{width:30px;height:30px}
+}

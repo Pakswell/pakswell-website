@@ -1,4 +1,30 @@
 /* Shared, restrained action styling. Keep page content and destinations intact. */
+.footer .footer-office {
+  margin-top: 26px;
+  max-width: 290px;
+}
+.footer .footer-office-label {
+  display: block;
+  margin-bottom: 9px;
+  color: #d6dfd4;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.footer .footer-office address {
+  margin: 0;
+  color: #b5c1b7;
+  font-size: 13px;
+  font-style: normal;
+  line-height: 1.8;
+  overflow-wrap: break-word;
+}
+.footer p.footer-shipping {
+  margin-top: 15px;
+  font-size: 12px;
+  line-height: 1.6;
+}
 body .button {
   justify-content: center;
   gap: 0;

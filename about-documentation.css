@@ -1,0 +1,37 @@
+/* Separate supplier credentials from shipment-specific document support. */
+#standards .about-standards { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 48px; }
+#standards .about-standards p { max-width: 580px; }
+.about-export {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 48px;
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px solid var(--line);
+}
+.about-export .eyebrow { margin-bottom: 16px; }
+.about-export h3 { font: 32px/1.2 var(--serif); letter-spacing: -.025em; }
+.about-export-intro p { max-width: 440px; margin-top: 16px; font-size: 16px; }
+.about-export-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 28px;
+  align-content: center;
+}
+.about-export-list li { padding-left: 15px; position: relative; font-size: 15px; line-height: 1.6; }
+.about-export-list li::before { content: ''; position: absolute; left: 0; top: .67em; width: 4px; height: 4px; border-radius: 50%; background: #778b50; }
+.about-export-foot { grid-column: 1 / -1; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.about-export-foot p { max-width: 690px; font-size: 13px; line-height: 1.7; }
+.about-export-foot .text-link { flex-shrink: 0; }
+@media(max-width:820px){
+  #standards .about-standards { grid-template-columns: 1fr; gap: 30px; }
+  .about-export { grid-template-columns: 1fr; gap: 22px; margin-top: 30px; padding-top: 26px; }
+  .about-export-foot { align-items: flex-start; flex-direction: column; gap: 12px; }
+}
+@media(max-width:540px){
+  .about-export h3 { font-size: 28px; }
+  .about-export-list { grid-template-columns: 1fr; gap: 10px; }
+}

@@ -9,7 +9,7 @@ const productPage=!!document.querySelector('[data-product-page]');
 if(document.querySelector('.preview'))document.querySelector('.preview').textContent='LOCAL MATERIAL STUDY · SHAPE REVISION 0911-F · NOT PUBLISHED';
 function selection(){const f=finishes.find(f=>f[0]===finish);$('#finish-name').textContent=f[1];$('#finish-description').textContent=f[3];$('#summary').textContent=`${f[1]} / ${thickness.toFixed(1)} mm`;$('#quote').href='mailto:mark.lee@pakswell.com?subject='+encodeURIComponent('Pallet collar hinge enquiry - '+f[1]+' / '+thickness.toFixed(1)+' mm')+'&body='+encodeURIComponent(`Please quote pallet collar hinges.\n\nFinish: ${f[1]}\nNominal steel thickness: ${thickness.toFixed(1)} mm\nQuantity: \nDestination: \n\nPlease confirm final dimensions, finish and availability.\n`);document.querySelectorAll('[data-finish]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.finish===finish)));document.querySelectorAll('[data-thickness]').forEach(b=>b.setAttribute('aria-pressed',String(+b.dataset.thickness===thickness)));}
 const studioSelection=selection;
-selection=function(){studioSelection();if(productPage){const params=new URLSearchParams({product:'Hinges & accessories',finish,thickness:thickness.toFixed(1)});$('#quote').href='/contact.html?'+params;document.querySelectorAll('.mobile-cta a[href^="/contact"],.header a.button[href^="/contact"]').forEach(a=>a.href=$('#quote').href);}};
+selection=function(){studioSelection();if(productPage){const params=new URLSearchParams({product:'Hinges & accessories',finish,thickness:thickness.toFixed(1)});$('#quote').href='/contact.html?'+params;document.querySelectorAll('a[href^="/contact"]').forEach(a=>{const target=new URL(a.href,location.href);for(const [key,value] of params)target.searchParams.set(key,value);a.href=target.pathname+'?'+target.searchParams;});}};
 for(const [key,name,colour]of finishes){const b=document.createElement('button');b.className='swatch';b.dataset.finish=key;b.setAttribute('aria-label',name);b.title=name;b.style.setProperty('--colour',colour);b.innerHTML='<i aria-hidden="true"></i>';b.onclick=()=>{finish=key;selection();if(material)applyMaterial();};$('#finishes').append(b);}for(const t of [1,1.2,1.5,2]){const b=document.createElement('button');b.dataset.thickness=t;b.textContent=t.toFixed(1)+' mm';b.onclick=()=>{thickness=t;selection();if(scene)rebuild();};$('#thicknesses').append(b);}selection();
 // Deterministic multiscale zinc mottling. Subtle enough to read as surface finish,
 // not a printed pattern; powder coating receives a different fine microtexture.
@@ -19,6 +19,16 @@ function applyMaterial(){const z=finish==='zinc';const calibrated={zinc:'#a9ada9
 function rebuild(){if(model){pivot.remove(model);model.traverse(m=>m.geometry?.dispose());}model=createHinge(thickness,surfaceCheck?inspectionMaterial:material,window.d3.Delaunay);const bounds=new T.Box3().setFromObject(model),center=bounds.getCenter(new T.Vector3());model.position.sub(center);pivot.add(model);controls.setRadius(bounds.getSize(new T.Vector3()).length()/2);dirty=true;}
 function stopRotation(){autorotate=false;$('#rotate').setAttribute('aria-pressed','false');$('#rotate').textContent='Auto rotate';}
 function reset(){stopRotation();controls.reset();dirty=true;}
+
+function showFallback(){
+ renderer?.setAnimationLoop(null);scene=null;material=null;
+ canvas.hidden=true;
+ const photo=$('#hinge-fallback');if(photo){photo.hidden=false;stage.classList.add('has-photo');}
+ const bottom=$('.viewer-bottom');if(bottom)bottom.hidden=true;
+ const label=$('#view-label');if(label)label.textContent=photo?'Product photo':'3D preview unavailable';
+ const intro=$('.hinge-config .section-head>p');if(intro)intro.textContent='Select a finish and steel thickness, then send us your quantity and destination.';
+ state.hidden=false;state.textContent=photo?'3D preview unavailable on this device. Photo shows natural galvanized steel; your selected finish and thickness will be included in the quote request.':'The 3D view could not start on this device. You can still choose a finish and thickness and request a quote.';
+}
 try{
  renderer=new T.WebGLRenderer({canvas,antialias:true,alpha:true});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.toneMapping=T.ACESFilmicToneMapping;renderer.toneMappingExposure=.9;renderer.outputColorSpace=T.SRGBColorSpace;
  scene=new T.Scene();pivot=new T.Group();scene.add(pivot);camera=new T.PerspectiveCamera(36,1,.1,5000);controls=createViewControls(camera,canvas,pivot,z=>{dirty=true;$('#zoom-level').textContent=Math.round(z*100)+'%';},stopRotation);
@@ -51,5 +61,5 @@ roughnessFactor+=uZinc*(.035*(steelCloud-.5)+.02*(steelGrain-.5));`);
  const clock=new T.Clock();renderer.setAnimationLoop(()=>{const dt=Math.min(clock.getDelta(),.1);if(document.hidden)return;controls.update(dt,autorotate);if(dirty||autorotate){renderer.render(scene,camera);dirty=false;}});
  $('#reset').onclick=reset;$('#rotate').onclick=()=>{autorotate=!autorotate;$('#rotate').setAttribute('aria-pressed',String(autorotate));$('#rotate').textContent=autorotate?'Pause rotation':'Auto rotate';dirty=true;};
  $('#zoom-in').onclick=()=>{stopRotation();controls.scale(1.2);};$('#zoom-out').onclick=()=>{stopRotation();controls.scale(1/1.2);};$('#fit').onclick=()=>{stopRotation();controls.fit();};
- canvas.addEventListener('webglcontextlost',e=>{e.preventDefault();state.hidden=false;state.textContent='The 3D view was interrupted. Reload this page to continue. Your enquiry options remain available.';});
-}catch(error){console.error(error);state.hidden=false;state.textContent='The 3D view could not start on this device. You can still choose a finish and thickness and request a quote.';$('#rotate').disabled=$('#reset').disabled=true;}
+ canvas.addEventListener('webglcontextlost',e=>{e.preventDefault();showFallback();});
+}catch(error){console.error(error);showFallback();}

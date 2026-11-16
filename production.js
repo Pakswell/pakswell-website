@@ -29,7 +29,7 @@
  });
  // Existing home-page ad anchors continue to reach the relevant new page.
  if(location.pathname==='/'||location.pathname==='/index.html'){
-  const targets={'#contact':'/contact.html','#about':'/about.html'};
+  const targets={'#contact':'/contact','#about':'/about'};
   if(targets[location.hash])location.replace(targets[location.hash]+location.search);
  }
 })();

@@ -121,3 +121,35 @@ body .cta .button { border-radius: 5px; }
 @media (prefers-reduced-motion: reduce) {
   body .button, body .product-card { transition: none; }
 }
+
+/* Keep commercial descriptors in the heading without changing the display type. */
+h1 > .eyebrow,
+h2 > .eyebrow {
+  font-family: var(--sans);
+  line-height: 1.5;
+}
+.stock-hero .hero-copy > .pills { margin-top: 18px; }
+.hero-assembly .hero-demo-link { position: absolute; inset: 24px auto auto 24px; }
+.product-card .card-spec { font-size: 13px; font-weight: 600; }
+.product-card .card-spec small { font-size: inherit; font-weight: 400; }
+.feature .facts { flex-wrap: wrap; column-gap: 26px; row-gap: 14px; }
+.feature .feature-spec { margin-top: 18px; color: var(--paper); font-size: 13px; }
+.feature .feature-spec tr,
+.feature .feature-spec th,
+.feature .feature-spec td { border-color: #607367; }
+.feature .feature-spec th { color: #ced7ce; width: auto; }
+.sales-email-copy {
+  background: transparent;
+  border: 0;
+  padding: 5px 0;
+  color: inherit;
+  font-size: 12px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.sales-email-copy[hidden] { display: none; }
+.sales-email-status { display: block; font-size: 12px; }
+@media (max-width: 540px) {
+  .stock-hero .hero-copy > h1 > .eyebrow { margin-bottom: 17px; }
+  .stock-hero .hero-copy > .pills { order: 5; margin: 0; }
+}

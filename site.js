@@ -1,5 +1,72 @@
 const menu=document.querySelector('.menu-button'),nav=document.querySelector('#navigation');
 if(menu&&nav){const close=()=>{menu.setAttribute('aria-expanded','false');nav.classList.remove('open');};menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));nav.classList.toggle('open',open);});nav.addEventListener('click',e=>{if(e.target.closest('a'))close();});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav.classList.contains('open')){close();menu.focus();}});document.addEventListener('click',e=>{if(!e.target.closest('.header'))close();});}
+
+// Keep the WebGL iframe out of the initial render without changing its reserved space.
+const heroDemo=document.querySelector('iframe[data-hero-src]');
+if(heroDemo){
+ const start=()=>{heroDemo.src=heroDemo.dataset.heroSrc;};
+ requestAnimationFrame(()=>requestAnimationFrame(()=>{
+  if('requestIdleCallback' in window)window.requestIdleCallback(start,{timeout:1200});
+  else setTimeout(start,0);
+ }));
+}
+
+const salesAdsDestination='AW-18091479514';
+const salesAdsLabels={
+ request_quote_click:'sZnNCK-2o7kdENqj2LJD',
+ email_sales_click:'lHWlCLK2o7kdENqj2LJD',
+ copy_sales_email:'WI9ICLW2o7kdENqj2LJD'
+};
+const canTrackSalesIntent=()=>['pakswell.com','www.pakswell.com'].includes(location.hostname)&&typeof window.gtag==='function';
+function trackSalesIntent(name,onSent){
+ if(!canTrackSalesIntent())return;
+ try{
+  window.gtag('event',name,{send_to:salesAdsDestination,event_category:'engagement'});
+  const conversion={send_to:salesAdsDestination+'/'+salesAdsLabels[name]};
+  if(onSent)Object.assign(conversion,{event_callback:onSent,event_timeout:300});
+  window.gtag('event','conversion',conversion);
+ }catch{onSent?.();}
+}
+
+document.querySelectorAll('[data-copy-sales-email]').forEach(button=>{button.hidden=false;});
+document.addEventListener('click',async event=>{
+ const target=event.target;
+ const link=target.closest?.('a');
+ if(link?.matches('[data-quote-cta]')){
+  // Same-page, modified and new-tab clicks retain their native navigation.
+  const navigates=link.pathname!==location.pathname||link.search!==location.search;
+  if(navigates&&canTrackSalesIntent()&&!event.defaultPrevented&&event.button===0&&
+     !event.metaKey&&!event.ctrlKey&&!event.shiftKey&&!event.altKey&&
+     (!link.target||link.target==='_self')){
+   event.preventDefault();
+   let followed=false;
+   const follow=()=>{if(!followed){followed=true;location.assign(link.href);}};
+   setTimeout(follow,300);
+   trackSalesIntent('request_quote_click',follow);
+  }else trackSalesIntent('request_quote_click');
+ }
+ else if(link?.matches('.mobile-cta-email'))trackSalesIntent('email_sales_click');
+ const button=target.closest?.('[data-copy-sales-email]');
+ if(!button)return;
+ const email=button.parentElement.querySelector('[data-sales-email]');
+ const status=button.parentElement.querySelector('.sales-email-status');
+ if(!email||!status)return;
+ try{
+  await navigator.clipboard.writeText(email.textContent.trim());
+  status.textContent='Email address copied.';
+  trackSalesIntent('copy_sales_email');
+ }catch{
+  const selection=window.getSelection();
+  if(selection){
+   const range=document.createRange();
+   range.selectNodeContents(email);
+   selection.removeAllRanges();
+   selection.addRange(range);
+  }
+  status.textContent='Select and copy the email address shown above.';
+ }
+});
+
 const form=document.querySelector('#quote-form');
 if(form){
  const $=id=>document.getElementById(id),params=new URLSearchParams(location.search),status=$('quote-status'),send=$('send-enquiry');let prepared='',busy=false,lastAccepted='',reference='';
